@@ -1,0 +1,247 @@
+header .nav_bar a:nth-child(4){
+  background-color: #441111;
+}
+
+.banner{
+  height: 500px;
+  background: url('https://cdn.pixabay.com/photo/2020/03/02/16/19/vintage-4896141_960_720.jpg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 -200px 500px #000 inset; 
+}
+.banner h1{
+  margin-top: 300px;
+}
+
+
+main section:first-child{
+  margin-top: 500px;
+}
+
+.address{
+  line-height: 2em;
+  margin: auto;
+  padding: 60px 0 200px 0;
+  max-width: 1200px;
+  position: relative;
+  color: #ddd;
+  border-bottom: 2px dashed #280000;
+}
+.address::after{
+  content: url('https://cdn-icons-png.flaticon.com/512/24/24170.png');
+  filter: invert(100%);
+  position: absolute;
+  top: 100px;
+  left: 51%;
+  transform: translate(-50%,0);
+}
+.address input{
+  display: none;
+}
+.address label{
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+}
+.address label:nth-child(2){
+  margin-left: auto;
+}
+.address label .card_front_side p{
+  color: #bbb;
+  font-size: 16px;
+}
+.address label .card_front_side p:first-of-type{
+  overflow: hidden;
+  color: #ddd;
+  padding-bottom: 30px;
+  font-size: 18px;
+  transition: .5s;
+}
+/* 兩條槓 */
+.address label .card_front_side h2::after,
+.address label .card_front_side h2::before{
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%,0);  
+  height: 2px;
+  width: 0px;
+  transition: .3s;
+}
+.address label:hover .card_front_side h2::after,
+.address label:hover .card_front_side h2::before{
+  width: 200px;
+  background-color: #F3D764;
+}
+.address label .card_front_side h2::after{
+  top: 90px;
+}
+.address label:hover .card_front_side h2::after{
+  width: 100px;
+}
+/* 背景圖 */
+.address label:nth-child(1):hover .card_front_side{
+  height: 350px;
+  background-color:rgba(56, 0, 0, 0.747);
+  background-image: url('https://cdn.pixabay.com/photo/2018/09/18/03/46/cafe-3685260_960_720.jpg');
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-blend-mode: multiply;
+}
+.address label:nth-child(2):hover .card_front_side{
+  height: 350px;
+  background-color:rgba(56, 0, 0, 0.747);
+  background-image: url('https://cdn.pixabay.com/photo/2017/04/19/08/24/marilyn-monroe-2241487_960_720.jpg');
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-blend-mode: multiply;
+}
+.address label:nth-child(3):hover .card_front_side{
+  height: 350px;
+  background-color:rgba(56, 0, 0, 0.747);
+  background-image: url('https://cdn.pixabay.com/photo/2015/10/13/04/02/switzerland-985567_960_720.jpg');
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-blend-mode: multiply;
+}
+.address label:hover .card_front_side p:first-of-type{
+  height: 65px;
+}
+.address label .card_front_side h2{
+  margin-bottom: 20px;
+  color: #fff;
+}
+.address label .card_front_side button{
+  background-color: transparent;
+  color: #ddd;
+  border: none;
+}
+.address label h3{
+  padding-top: 20px;
+}
+
+
+
+/* 地圖點點 */
+.address label .place_point::after{
+  content: '';
+  height: 4px;
+  width: 390px;
+  background-color: brown;
+  position: absolute;
+  top: 100px;
+  right: -140px;
+  transition: .5s;
+  z-index: -1;
+}
+.address label:nth-child(2) .place_point::after{
+  width: 420px;
+  top: 30px;
+  right: auto;
+  left: -160px;
+}
+.address label:nth-child(3) .place_point::after{
+  width: 280px;
+  top: 40px;
+  right: -30px;
+}
+.address label .place_point::before{
+  content: '';
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  position: absolute;
+  top: 87px;
+  right: -150px;
+  box-shadow: inset 0 0 0 4px brown,inset 0 0 0 15px #ddd;
+  transition: .5s;
+}
+.address label:nth-child(2) .place_point::before{
+  top: 17px;
+  right: 0;
+  left: -170px;
+}
+.address label:nth-child(3) .place_point::before{
+  top: 27px;
+  right: -40px;
+}
+.address label:hover .place_point::before{
+  transform: scale(1.1);
+}
+.address input:checked ~ .place_point::after {
+  background-color: #F3D764;
+  width: 140px;
+}
+.address label:nth-child(2) input:checked ~ .place_point::after {
+  width: 160px;
+}
+.address label:nth-child(3) input:checked ~ .place_point::after {
+  width: 30px;
+}
+.address input:checked ~ .place_point::before{
+  box-shadow: inset 0 0 0 4px #F3D764,inset 0 0 0 15px #fff;
+}
+
+
+
+/* 翻頁效果 */
+.address label .card_front_side{
+  box-shadow: 0 0 15px #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: brown;
+  width: 500px;
+  height: 150px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.address label .card_back_side{
+  border-radius: 10px;
+  background-color: #0005;
+  box-shadow: 0 0 15px #888;
+  border-top: 3px solid #F3D764;
+  border-bottom: 3px solid #F3D764;
+  border-right: 1px dashed #F3D764;
+  border-left: 1px dashed #F3D764;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 500px;
+  height: 350px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+input:checked ~ .card_front_side {
+  transform: rotateY(180deg);
+}
+input:checked ~ .card_back_side {
+  transform: rotateY(360deg);
+}
+
+
+.branch_business{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+footer{
+  background-color: #000;
+}

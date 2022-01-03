@@ -1,0 +1,341 @@
+header .nav_bar a:nth-child(3){
+  background-color: #441111;
+}
+
+.banner{
+  height: 500px;
+  background: url('https://cdn.pixabay.com/photo/2015/06/22/23/32/articulated-male-818202_960_720.jpg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 -200px 500px #000 inset; 
+}
+.banner h1{
+  margin-top: 300px;
+}
+
+
+main section:first-child{
+  margin-top: 500px;
+}
+
+.team_building{
+  color: #fff;
+  margin: auto;
+  max-width: 1200px;
+  padding: 60px 0;
+  text-align: center;
+  line-height: 2em;
+}
+.team_building h1{
+  margin-bottom: 30px;
+  color: #F3D764;
+  width: 100%;
+  text-align: center;
+}
+
+/* 我們為您提供 */
+.our_support{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  /* overflow: hidden; */
+  /* max-width: 1400px; */
+  padding: 60px 0;
+}
+.our_support h2{
+  text-align: center;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.our_support h3{
+  padding-bottom: 15px;
+}
+.our_support .item{
+  width: 20%;
+  position: relative;
+  overflow: hidden;
+}
+.our_support .item .pic{
+  height: 300px;
+  overflow: hidden;
+}
+.our_support .item .pic img{
+  position: relative;
+  margin: auto;
+  left: 50%;
+  transform: translate(-50%);
+  height: 100%;
+}
+.our_support .item .txt{
+  position: absolute;
+  background-color: #0007;
+  line-height: 2em;
+  box-sizing: border-box;
+  margin-top: 250px;
+  padding: 10px 20px;
+  top: 0;
+  width: 100%;
+  transition: .5s;
+}
+.our_support .item:hover .txt{
+  background-color: #0009;
+  margin-top: 170px;
+}
+
+
+
+
+/* 您只需要 */
+.active{
+  position: relative;
+  margin: auto;
+  max-width: 1200px;
+  padding: 60px 0;
+}
+.active h2{
+  margin: auto;
+  padding-bottom: 30px;
+}
+.active .item{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.active .pic{
+  border-radius: 10px;
+  height: 300px;
+  width: 47%;
+}
+.active .txt {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 30px;
+  padding-top: 118px;
+  line-height: 2em;
+}
+.active .txt .title{
+  display: flex;
+  justify-content: space-between;
+}
+.active .txt .title p{
+  font-size: 16px;
+  color: #F3D764;
+  opacity: .5;
+}
+.active .txt p{
+  color: #ddd;
+}
+.active .item:not(:last-child)::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 180px;
+  margin: auto;
+  height: 360px;
+  width: 0;
+  border-radius: 2px;
+  border: 2px solid #F3D764;
+  background-color: #F3D764;
+}
+.active .item::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 165px;
+  margin: auto;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: #F3D764;
+  box-shadow: inset 0 0 0 4px #F3D764,
+              inset 0 0 0 15px #000;
+}
+.active .item:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+.active .item:nth-of-type(1) .pic{
+  background-blend-mode: multiply;
+  background-color: brown;
+  background: url("https://cdn.pixabay.com/photo/2017/06/13/13/10/lighthouse-2398832_960_720.jpg") no-repeat left/55%;
+  background-attachment: fixed;
+}
+.active .item:nth-of-type(2) .pic{
+  background: url("https://cdn.pixabay.com/photo/2021/01/29/11/33/game-5960731_960_720.jpg") no-repeat right/55%;
+  background-attachment: fixed;
+}
+.active .item:nth-of-type(3) .pic{
+  background: url("https://cdn.pixabay.com/photo/2017/06/02/17/47/friendship-2366955_960_720.jpg") no-repeat left/55%;
+  background-attachment: fixed;
+}
+.active .txt .title {
+  border-bottom: 2px dashed #aa8c12;
+}
+
+
+
+.email_us{
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 60px;
+}
+.email_us h2{
+  padding-bottom: 30px;
+  color: #F3D764;
+}
+.email_us p{
+  color: #aaa;
+  line-height: 2em;
+}
+.email_us label{
+  cursor: pointer;
+  color: brown;
+}
+.email_us img{
+  filter: invert(100%);
+  width: 50px;
+}
+
+
+
+
+
+.list > input{
+  display: none;
+}
+.list input:checked ~ .float_list{
+  display: block;
+}
+/* 浮動泡泡 */
+.float_list_btn {
+  z-index: 10;
+  position: fixed;
+  color: #fff;
+  right: 0;
+  bottom: 50%;
+  transform: translate(0,-50%);
+}
+.float_list_btn .pic{
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  background-color: brown;
+  border-radius: 50%;
+}
+.float_list_btn .pic img{
+  width: 70px;
+  filter: invert(100%);
+  transition: .5s;
+}
+.float_list_btn .txt{
+  width: 0;
+  height: 20px;
+  margin-right: 65px;
+  margin-bottom: -70px;
+  line-height: 2em;
+  padding: 0 0 10px 20px;
+  overflow: hidden;
+  transition: .5s;
+  background-color:  brown;
+  border-radius: 20px;
+}
+.float_list_btn:hover .txt{
+  width: 350px;
+}
+
+
+
+/* 表單 */
+.float_list {
+  display: none;
+  background-color: #0008;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.float_list_box{
+  max-height: 90vh;
+  box-sizing: border-box;
+  overflow: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  box-shadow: 0 0 10px 0 #fff;
+  background-color: #441111;
+  padding: 30px;
+  border-radius: 10px;
+  line-height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 卷軸 */
+.float_list_box::-webkit-scrollbar {
+  background-color: transparent;
+}
+.float_list_box::-webkit-scrollbar-thumb {
+  border: 3px solid #441111;
+  border-radius: 15px;
+  background-color: brown;
+}
+
+.float_list_box > label{
+  margin:0;
+}
+.float_list > label::before{
+  content: '';
+  width: 30px;
+  height: 10px;
+  background-color: brown;
+  position: absolute;
+  /* position: fixed; */
+  top: 5vh;
+  right: calc(50% - 300px);
+  border-radius: 5px;
+  transform: rotate(-45deg);
+}
+.float_list > label:first-child::after{
+  content: '';
+  width: 30px;
+  height: 10px;
+  background-color: brown;
+  position: absolute;
+  top: 5vh;
+  right: calc(50% - 300px);
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+.float_list_box input,
+.float_list_box textarea{
+  border-radius: 10px;
+  font-size: 16px;
+  display: block;
+  padding: 0 10px;
+}
+.float_list_box label{
+  margin-top: 10px;
+}
+.float_list_box > input{
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: -10px;
+  margin-left: auto;
+  background-color: brown;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+
+

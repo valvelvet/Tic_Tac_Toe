@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>井字遊戲Tic_Tac_Toe</title>
+  <!--網頁標題左側顯示-->
+  <link rel="icon" href="pic/Tic_Tac_Toe_logo.ico" type="image/x-icon">
+  <!--收藏夾顯示圖示-->
+  <link rel="shortcut icon" href="pic/Tic_Tac_Toe_logo.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="universal.css">
+  <link rel="stylesheet" href="home_page.css">
+  <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- logo -->
+      <a href="home_page.html">
+        <img class="logo" src="pic/Tic_Tac_Toe_full_logo.png" alt="Tic_Tac_Toe_logo">
+      </a>
+
+      <!-- 頁面連結 -->
+      <div class="nav_bar">
+        <a href="topic_page.html">密室主題</a>
+        <a href="reserve_page.html">線上預約</a>
+        <a href="business_activity_page.html">企業團體</a>
+        <a href="branch_page.html">場館資訊</a>
+        <a href="news_page.html">最新消息</a>
+        <a href="QA_page.html">Q&A</a>
+      </div>
+
+      <!-- 搜尋bar -->
+      <label class="search_bar">
+        <input type="text" placeholder="恐怖、解謎、簡單...">
+      </label>
+    </nav>
+
+    <!-- banner -->
+    <div class="banner">
+      <img class="logo" src="pic/Tic_Tac_Toe_logo.png" alt="Tic_Tac_Toe_logo">
+      <p>一間密室 一個故事<br>揚起船帆 盪起雙槳</p>
+      <a href="#content" class="backTop">
+        <p>來一場人生冒險吧！</p>
+        <img class="icon" src="pic/banner-arrow_down.png" alt="arrow-down">
+      </a>
+    </div>
+  </header>
+
+  <!-- <script>
+    $(document).ready(function () {
+      $(".backTop").on("click", function () {
+        var hrefLink = $(this).attr("href");
+        console.log(hrefLink);
+        $("html,body").animate(
+          {
+            scrollTop: $(hrefLink).offset().top //直接到相對位置
+          },800);
+        });
+      });
+  </script> -->
+
+  <main>
+    <!-- 人氣密室主題 -->
+    <section class="hot_topic" id="content">
+      <h1>人氣密室主題</h1>
+
+      <!-- 說謊的相機 -->
+      <article class="topic  lie_photo">
+        <h2>說謊的相機</h2>
+        
+        <div class="pic">
+          <div class="top">
+            <img src="http://jazko.com/wp-content/uploads/2018/03/1cxgISsKC1UcvZF0E6ib.jpg" alt="車廂">
+          </div>
+          <div class="front">
+            <img src="https://cdn.pixabay.com/photo/2021/11/30/13/21/vintage-camera-6835351_960_720.jpg" alt="說謊的相機主圖">
+          </div>
+          <div class="bottom">
+            <img src="https://i.pinimg.com/564x/36/da/6a/36da6a9e497f07c4e8168dd0f9fbc4da.jpg" alt="拍力得">
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="about">
+            <div class="game_hard">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+            </div>
+            <span class="game_players">
+              <img class="icon" src="pic/topic-user.png" alt="">6人
+            </span>
+            <span class="game_time">
+              <img class="icon" src="pic/topic-hour_glass.png" alt="">120min
+            </span>
+            <span class="game_place">
+              <img class="icon" src="pic/topic-place.png" alt="">台中小葉館
+            </span>
+          </div>
+          
+          <p>
+            被迫坐上了套著聖誕主題的皮，<br>
+            實際上是聯誼活動的列車，<br>
+            你湊巧和躲在掃具間的夥伴相遇，<br>
+            活動車廂突然傳來尖叫聲！...
+          </p>
+
+          <a href="reserve_page.html">立即預約></a>
+        </div>
+      </article>
+
+      <!-- 美麗實驗 -->
+      <article class="topic beauty">
+        <h2>美麗實驗</h2>
+
+        <div class="pic">
+          <div class="top">
+            <img src="https://pic.52112.com/180209/180209_82/QRJjRn5dr1.jpg" alt="手術工具">
+          </div>
+          <div class="front">
+            <img src="https://cdn.pixabay.com/photo/2018/04/07/06/25/depression-3297810_960_720.jpg" alt="美麗實驗主圖">
+          </div>
+          <div class="bottom">
+            <img src="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fas.chdev.tw%2Fweb%2Farticle%2F3%2F0%2F4%2F3871d18b-06a2-4b82-ae51-83474328be731618369930.jpg/?w=621" alt="手術室">
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="about">
+            <div class="game_hard">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+            </div>
+            <span class="game_players">
+              <img class="icon" src="pic/topic-user.png" alt="">6人
+            </span>
+            <span class="game_time">
+              <img class="icon" src="pic/topic-hour_glass.png" alt="">120min
+            </span>
+            <span class="game_place">
+              <img class="icon" src="pic/topic-place.png" alt="">桃園金萱館
+            </span>
+          </div>
+
+          <p>
+            美麗沒有終點，青春沒有極限。<br>
+            讓時光在你的身上停滯。<br>
+            <br>
+            為了這副漂亮的皮囊，<br>
+            你願意付出多少？...
+          </p>
+
+          <a href="reserve_page.html">立即預約></a>
+        </div>
+      </article>
+
+      <!-- 眼中的倒影 -->
+      <article class="topic circus">
+        <h2>眼中的倒影</h2>
+
+        <div class="pic">
+          <div class="top">
+            <img src="https://cdn.pixabay.com/photo/2018/01/22/17/57/streamer-3099550_960_720.jpg" alt="馬戲裝飾">
+          </div>
+          <div class="front">
+            <img src="https://cdn.pixabay.com/photo/2017/05/17/11/11/woman-2320581_960_720.jpg" alt="眼中的倒影主圖">
+          </div>
+          <div class="bottom">
+            <img src="https://cdn.pixabay.com/photo/2019/12/26/21/10/circus-4721247_960_720.jpg" alt="馬戲場景">
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="about">
+            <div class="game_hard">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+            </div>
+            
+            <span class="game_players">
+              <img class="icon" src="pic/topic-user.png" alt="">6人
+            </span>
+            <span class="game_time">
+              <img class="icon" src="pic/topic-hour_glass.png" alt="">120min
+            </span>
+            <span class="game_place">
+              <img class="icon" src="pic/topic-place.png" alt="">屏東四季館
+            </span>
+          </div>
+
+          <p>
+            馬戲團的籠子鑰匙被偷！<br>
+            猛獸出逃？<br>
+            小鎮警長把紀錄簿往你身上一丟，<br>
+            就帶著訓獸師追著足跡走了。<br>
+            前往馬戲團調查出真相吧！...
+          </p>
+
+          <a href="reserve_page.html">立即預約></a>
+        </div>
+      </article>
+
+      <!-- 白日夢 -->
+      <article class="topic daydream">
+        <h2>白日夢</h2>
+
+        <div class="pic">
+          <div class="top">
+            <img src="https://cdn.pixabay.com/photo/2015/05/11/14/44/pencils-762555_960_720.jpg" alt="筆筒">
+          </div>
+          <div class="front">
+            <img src="pic/topic-day_dream.jpg" alt="白日夢主圖">
+          </div>
+          <div class="bottom">
+            <img src="https://i.pinimg.com/564x/31/94/af/3194afc35963200bb13c4cf10cbef03a.jpg" alt="水灑了">
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="about">
+            <div class="game_hard">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+              <img class="icon" src="pic/topic-harder.png" alt="">
+            </div>
+            <span class="game_players">
+              <img class="icon" src="pic/topic-user.png" alt="">3人
+            </span>
+            <span class="game_time">
+              <img class="icon" src="pic/topic-hour_glass.png" alt="">60min
+            </span>
+            <span class="game_place">
+              <img class="icon" src="pic/topic-place.png" alt="">桃園金萱館
+            </span>
+          </div>
+          
+          <p>
+            你睡覺時做夢嗎？<br>
+            聽說彩色的夢是幻想，<br>
+            黑白的夢代表之後真的會發生。<br>
+            <br>
+            那...你找到廁所了嗎？...
+          </p>
+
+          <a href="reserve_page.html">立即預約></a>
+        </div>
+      </article>
+      
+      <!-- 手手 -->
+      <div class="more_topic">
+        <a href="topic_page.html">尋找更多密室主題 ></a>
+        <img class="key" src="pic/logo_key.png" alt="">
+        <img class="surprise" src="pic/zombie_hand.png" alt="">
+      </div>
+    </section>
+    
+
+    <!-- 警告 -->
+    <section class="warning">
+      <h2>WARNING</h2>
+      <div class="warning_icon">
+        <img src="pic/warning-12up.png" alt="">
+        <img src="pic/warning-pregnant.png" alt="">
+        <img src="pic/warning-hypertension.png" alt="">
+        <img src="pic/warning-stethoscope.png" alt="">
+        <img src="pic/warning-dizziness.png" alt="">
+      </div>
+      <p>
+        部分主題因遊戲模式及劇情故事，<br>
+        密室中可能會有驚悚情境，未滿12歲無法參與、孕婦不宜參加。<br>
+        <br>
+        患有高血壓、心臟疾病及精神方面疾病者，不宜觀賞。<br>
+      </p>
+      <img src="pic/warning-yellow_black_bar.png" alt="">
+    </section>
+  </main>
+
+  <footer>
+    <!-- 分館資訊 -->
+    <div class="branch_group">
+      <div class="branch">
+        <a href="branch_page.html">
+          <h3>桃園金萱館</h3>
+        </a>
+          <address>桃園市東方區茶園路24號</address>
+          <p>(金刷嘴茶園旁)</p><br>
+          <div class="tel">
+            03-8820202
+          </div>
+        </p>
+      </div>
+      <div class="branch">
+        <a href="branch_page.html">
+          <h3>台中小葉館</h3>
+        </a>
+        <address>台中市凍頂區觀音三街52號</address>
+        <p>(觀音無名指第一指節下)</p><br>
+        <div class="tel">
+          04-3353321
+        </div>
+      </div>
+      <div class="branch">
+        <a href="branch_page.html">
+          <h3>屏東四季館</h3>
+        </a>
+        <address>屏東縣碧螺鄉貴妃路36巷10弄8號</address>
+        <p>(御貢鐵路13號出口)</p><br>
+        <div class="tel">
+          08-7779444
+        </div>
+      </div>
+    </div>
+    
+    <!-- 營業時間 -->
+    <div class="business">
+      <h3>營業時間</h3>
+      <p>
+        平日 - 周一至周五<br>
+        13:00 - 20:00<br>
+        <br>
+        假日 - 周六、周日及國定假日<br>
+        11:00 - 21:00
+      </p>
+    </div>
+
+    <!-- 票價資訊 -->
+    <div class="fare">
+      <h3>票價資訊</h3>
+      <p>
+        平日 400 元/人<br>
+        假日 450 元/人
+      </p>
+    </div>
+
+    <!-- 關注我們 -->
+    <div class="follow">
+      <h3>關注我們</h3>
+      <div class="link">
+        <a href="#">
+          <img src="pic/footer-link-facebook.png" alt="facebook">
+        </a>
+        <a href="#">
+          <img src="pic/footer-link-instagram.png" alt="instagram">
+        </a>
+        <a href="#">
+          <img src="pic/footer-link-youtube.png" alt="youtube">
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- copyright -->
+  <div class="copyright">
+    <img class="logo" src="pic/Tic_Tac_Toe_logo.png" alt="Tic_Tac_Toe_logo"><br>
+    Copyright © 2021 Tic_Tac_Toe/Not true web/專題作品，僅供學習、展示之用。
+  </div>
+
+</body>
+</html>

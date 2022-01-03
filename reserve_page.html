@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>線上預約_井字遊戲Tic_Tac_Toe</title>
+  <!--網頁標題左側顯示-->
+  <link rel="icon" href="pic/Tic_Tac_Toe_logo.ico" type="image/x-icon">
+  <!--收藏夾顯示圖示-->
+  <link rel="shortcut icon" href="pic/Tic_Tac_Toe_logo.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="universal.css">
+  <link rel="stylesheet" href="reserve_page.css">
+  <link rel="stylesheet" href="grid.css">
+</head>
+
+
+<body>
+  <header>
+    <nav>
+      <!-- logo -->
+      <a href="home_page.html">
+        <img class="logo" src="pic/Tic_Tac_Toe_full_logo.png" alt="Tic_Tac_Toe_logo">
+      </a>
+
+      <!-- 頁面連結 -->
+      <div class="nav_bar">
+        <a href="topic_page.html">密室主題</a>
+        <a href="reserve_page.html">線上預約</a>
+        <a href="business_activity_page.html">企業團體</a>
+        <a href="branch_page.html">場館資訊</a>
+        <a href="news_page.html">最新消息</a>
+        <a href="QA_page.html">Q&A</a>
+      </div>
+
+      <!-- 搜尋bar -->
+      <label class="search_bar">
+        <input type="text" placeholder="恐怖、解謎...">
+      </label>
+    </nav>
+
+    <!-- 線上預約 -->
+    <div class="banner">
+      <h1>線上預約</h1>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- 預約流程 -->
+    <section class="reserve_process">
+      <h1>預約流程</h1>
+      <div>
+        <img src="pic/reserve_booking.png" alt="線上預約">
+        <h3>線上預約</h3>
+      </div>
+      <div>
+        <img src="pic/reserve_email.png" alt="信箱通知">
+        <h3>信箱通知</h3>
+      </div>
+      <div>
+        <img src="pic/reserve_checked.png" alt="預約完成">
+        <h3>預約完成</h3>
+      </div>
+      <div>
+        <img src="pic/reserve_fun.png" alt="準時參與">
+        <h3>準時參與</h3>
+      </div>
+    </section>
+
+    <section class="topic_reserve">
+
+      <div class="topic">
+        <h2>說謊的相機</h2>
+        <div class="pic"></div>
+        <div class="about">
+          <span class="game_hard">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <p>密室難度:5/5</p>
+          </span>
+          <span class="game_players">
+            <img class="icon" src="pic/topic-user.png" alt="">
+            <p>遊玩人數限制:6人</p>
+          </span>
+          <span class="game_time">
+            <img class="icon" src="pic/topic-hour_glass.png" alt="">
+            <p>遊玩時間:120min</p>
+          </span>
+          <span class="game_place">
+            <img class="icon" src="pic/topic-place.png" alt="">
+            <p>開放場館:台中小葉館</p>
+          </span>
+        </div>
+        <p>
+          聖誕節不能宅在家，被迫參加了一場在列車上舉辦的聯誼活動，社交能量飛速的被消耗，你好不容易找到空檔往列車尾的廁所躲去，好不湊巧的和你有相同想法的有五位夥伴，在廁所有味道的相遇時，活動車廂卻突如其來的傳來尖叫聲！<br><br>
+          活動聘請的攝影師突然翻臉，煙霧後除了散落一地相片，還有一個滴答響的古怪箱子，以及失速的列車...<br><br>
+          全車的人性命受到威脅，奇怪的攝影師下的戰帖，你敢應下嗎?
+        </p>
+      </div>
+      <div class="reserve">
+        <div class="choose">
+          <h3>選擇其他主題</h3>
+          <select name="" id="">
+            <optgroup label="桃園金萱館">
+              <option value="">美麗實驗</option>
+              <option value="">五十肩</option>
+              <option value="">閃到腰</option>
+              <option value="">你的名字</option>
+              <option value="">白日夢</option>
+            </optgroup>
+            <optgroup label="台中小葉館">
+              <option value="">剩蛋液</option>
+              <option value="">哩嘎挖店店</option>
+              <option value="">Hey!Johnny</option>
+              <option value="">我們在傘下準備失去對方</option>
+              <option value="">ㄌㄌ</option>
+              <option value="">追七火葬場</option>
+              <option value="">美麗實驗-EX</option>
+              <option value="" selected>說謊的相機</option>
+            </optgroup>
+            <optgroup label="屏東四季館">
+              <option value="">眼中的倒影</option>
+              <option value="">美凰有約</option>
+              <option value="">痛風</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="players">
+          <h3>參與人數</h3>
+          <label>
+            <input type="radio" name="player" checked>
+            <span>1</span>
+          </label>
+          <label>
+            <input type="radio" name="player">
+            <span>2</span>
+          </label>
+          <label>
+            <input type="radio" name="player">
+            <span>3</span>
+          </label>
+          <label>
+            <input type="radio" name="player">
+            <span>4</span>
+          </label>
+          <label>
+            <input type="radio" name="player">
+            <span>5</span>
+          </label>
+          <label>
+            <input type="radio" name="player">
+            <span>6</span>
+          </label>
+        </div>
+        
+        <div class="date">
+          <h3>日期</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <button class="arrow_left">
+                    <img src="pic/arrow.png" alt="">
+                  </button>
+                </th>
+                <th colspan="5">
+                  2021年 12月
+                </th>
+                <th>
+                  <button class="arrow_right">
+                    <img src="pic/arrow.png" alt="">
+                  </button>
+                </th>
+              </tr>
+              <tr>
+                <th>一</th>
+                <th>二</th>
+                <th>三</th>
+                <th>四</th>
+                <th>五</th>
+                <th>六</th>
+                <th>日</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span></span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span></span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>2</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>3</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>4</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>5</span>
+                  </label>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>6</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>7</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>8</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>9</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>10</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>11</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>12</span>
+                  </label>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>13</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>14</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>15</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>16</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>17</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>18</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>19</span>
+                  </label>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>20</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>21</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>22</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>23</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>24</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>25</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>26</span>
+                  </label>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>
+                    <input type="radio" name="data" disabled>
+                    <span>27</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data" checked>
+                    <span>28</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data">
+                    <span>29</span>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="data">
+                    <span>30</span>
+                  </label>
+                </td>
+              </tr>
+          
+            </tbody>
+          </table>
+        </div>
+
+        <div class="session">
+          <h3>場次</h3>
+          <div class="head">
+            <button class="arrow_left">
+              <img src="pic/arrow.png" alt="">
+            </button>
+            <p>2021年 12月 28日</p>
+            <button class="arrow_right">
+              <img src="pic/arrow.png" alt="">
+            </button>
+          </div>
+          <div class="empty">
+            <label>
+              <input type="radio" name="empty_time">
+              <p>13 : 00<br>空位: 6</p>
+            </label>
+            <label>
+              <input type="radio" name="empty_time">
+              <p>15 : 15<br>空位: 6</p>
+            </label>
+            <label>
+              <input type="radio" name="empty_time">
+              <p>18 : 00<br>空位: 6</p>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 預約確認 -->
+    <form action="" target="_self">
+      <h3>預約確認</h3>
+      <div class="check_data">
+        <label>
+          密室主題 : <input name="topic" type="text" value="說謊的相機" max="6" min="1" disabled>
+        </label>
+        <label>
+          參與人數 : <input name="players" type="number" value="6" disabled>
+        </label>
+        <label>
+          日期 : <input name="date" type="date" value="2021-12-28" disabled>
+        </label>
+        <label>
+          場次 : <input name="session" type="time" value="13:00" disabled>
+        </label>
+      </div>
+      <div class="contact_data">
+        <label>聯絡電話 : <input type="tel"></label>
+        <label>Email : <input type="email"></label>
+      </div>
+      <input type="submit" value="送出">
+    </form>
+
+
+    <script>
+      function init(){
+        let empty_times = document.getElementsByName('empty_time');
+        empty_times[0].onclick = jump;
+        empty_times[1].onclick = jump;
+        empty_times[2].onclick = jump;
+      }
+      function jump(){
+        document.getElementsByTagName('form')[0].style.display = 'block';
+
+        let people = document.getElementsByName('player');
+        for (var i=0;i<people.length;i++){
+          if(people[i].checked == true){
+            document.getElementsByName('players')[0].value = i+1;
+          }
+        }
+      }
+      window.addEventListener('load',init,false);
+    </script>
+
+
+    <!-- 更多密室主題 -->
+    <section class="see_more">
+      <h2>更多密室主題</h2>
+      <a href="reserve_page.html">
+        <img src="pic/topic-day_dream.jpg" alt="">
+        <div class="info">
+          <div class="game_hard">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+          </div>
+          <h3>白日夢</h3>
+          <span class="game_players">
+            <img class="icon" src="pic/topic-user.png" alt="">3
+          </span>
+          <span class="game_time">
+            <img class="icon" src="pic/topic-hour_glass.png" alt="">60
+          </span>
+          <span class="game_place">
+            <img class="icon" src="pic/topic-place.png" alt="">桃園金萱館
+          </span>
+        </div>
+      </a>
+
+      <a href="reserve_page.html">
+        <img src="https://cdn.pixabay.com/photo/2017/05/17/11/11/woman-2320581_960_720.jpg" alt="">
+        <div class="info">
+          <div class="game_hard">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+          </div>
+          <h3>眼中的倒影</h3>
+          <span class="game_players">
+            <img class="icon" src="pic/topic-user.png" alt="">6
+          </span>
+          <span class="game_time">
+            <img class="icon" src="pic/topic-hour_glass.png" alt="">120
+          </span>
+          <span class="game_place">
+            <img class="icon" src="pic/topic-place.png" alt="">屏東四季館
+          </span>
+        </div>
+      </a>
+
+      <a href="reserve_page.html">
+        <img src="https://cdn.pixabay.com/photo/2018/04/07/06/25/depression-3297810_960_720.jpg" alt="">
+        <div class="info">
+          <div class="game_hard">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+            <img class="icon" src="pic/topic-harder.png" alt="">
+          </div>
+          <h3>美麗實驗</h3>
+          <span class="game_players">
+            <img class="icon" src="pic/topic-user.png" alt="">6
+          </span>
+          <span class="game_time">
+            <img class="icon" src="pic/topic-hour_glass.png" alt="">120
+          </span>
+          <span class="game_place">
+            <img class="icon" src="pic/topic-place.png" alt="">桃園金萱館
+          </span>
+        </div>
+      </a>
+    </section>
+  </main>
+
+
+  <footer>
+    <!-- 分館資訊 -->
+    <div class="branch_group">
+      <div class="branch">
+        <a href="branch_page.html">
+          <h3>桃園金萱館</h3>
+        </a>
+          <address>桃園市東方區茶園路24號</address>
+          <p>(金刷嘴茶園旁)</p><br>
+          <div class="tel">
+            03-8820202
+          </div>
+        </p>
+      </div>
+      <div class="branch">
+        <a href="branch_page.html">
+          <h3>台中小葉館</h3>
+        </a>
+        <address>台中市凍頂區觀音三街52號</address>
+        <p>(觀音無名指第一指節下)</p><br>
+        <div class="tel">
+          04-3353321
+        </div>
+      </div>
+      <div class="branch">
+        <a href="branch_page.html">
+          <h3>屏東四季館</h3>
+        </a>
+        <address>屏東縣碧螺鄉貴妃路36巷10弄8號</address>
+        <p>(御貢鐵路13號出口)</p><br>
+        <div class="tel">
+          08-7779444
+        </div>
+      </div>
+    </div>
+    
+    <!-- 營業時間 -->
+    <div class="business">
+      <h3>營業時間</h3>
+      <p>
+        平日 - 周一至周五<br>
+        13:00 - 20:00<br>
+        <br>
+        假日 - 周六、周日及國定假日<br>
+        11:00 - 21:00
+      </p>
+    </div>
+
+    <!-- 票價資訊 -->
+    <div class="fare">
+      <h3>票價資訊</h3>
+      <p>
+        平日 400 元/人<br>
+        假日 450 元/人
+      </p>
+    </div>
+
+    <!-- 關注我們 -->
+    <div class="follow">
+      <h3>關注我們</h3>
+      <div class="link">
+        <a href="#">
+          <img src="pic/footer-link-facebook.png" alt="facebook">
+        </a>
+        <a href="#">
+          <img src="pic/footer-link-instagram.png" alt="instagram">
+        </a>
+        <a href="#">
+          <img src="pic/footer-link-youtube.png" alt="youtube">
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- copyright -->
+  <div class="copyright">
+    <img class="logo" src="pic/Tic_Tac_Toe_logo.png" alt="Tic_Tac_Toe_logo"><br>
+    Copyright © 2021 Tic_Tac_Toe/Not true web/專題作品，僅供學習、展示之用。
+  </div>
+</body>
+</html>

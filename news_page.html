@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最新消息_井字遊戲Tic_Tac_Toe</title>
+  <!--網頁標題左側顯示-->
+  <link rel="icon" href="pic/Tic_Tac_Toe_logo.ico" type="image/x-icon">
+  <!--收藏夾顯示圖示-->
+  <link rel="shortcut icon" href="pic/Tic_Tac_Toe_logo.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="universal.css">
+  <link rel="stylesheet" href="news_page.css">
+  <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- logo -->
+      <a href="home_page.html">
+        <img class="logo" src="pic/Tic_Tac_Toe_full_logo.png" alt="Tic_Tac_Toe_logo">
+      </a>
+
+      <!-- 頁面連結 -->
+      <div class="nav_bar">
+        <a href="topic_page.html">密室主題</a>
+        <a href="reserve_page.html">線上預約</a>
+        <a href="business_activity_page.html">企業團體</a>
+        <a href="branch_page.html">場館資訊</a>
+        <a href="news_page.html">最新消息</a>
+        <a href="QA_page.html">Q&A</a>
+      </div>
+
+      <!-- 搜尋bar -->
+      <label class="search_bar">
+        <input type="text" placeholder="恐怖、解謎...">
+      </label>
+    </nav>
+
+    <!-- 線上預約 -->
+    <div class="banner">
+      <h1>最新消息</h1>
+    </div>
+  </header>
+
+
+  <main>
+    <section>
+      <!-- 左欄 -->
+      <div class="classification">
+        <h3>分類</h3>
+        <ul class="categories">
+          <li>
+            <input type="radio" id="promotions" name="cate">
+            <label for="promotions">
+              優惠活動
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="business_cooperation" name="cate">
+            <label for="business_cooperation">
+              商業合作
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="player_experience" name="cate">
+            <label for="player_experience">
+              玩家心得
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="secret_story" name="cate">
+            <label for="secret_story">
+              密室故事
+            </label>
+          </li>
+        </ul>
+        <h3>#標籤</h3>
+        <ul class="tag">
+          <li>
+            <input type="checkbox" id="secret">
+            <label for="secret">
+              #職業病
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="perspective">
+            <label for="perspective">
+              #透視
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="forth">
+            <label for="forth">
+              #四次元
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="devil">
+            <label for="devil">
+              #小惡魔
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="customer_service">
+            <label for="customer_service">
+              #客服
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="angel">
+            <label for="angel">
+              #小天使
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="horror">
+            <label for="horror">
+              #驚悚
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="experience">
+            <label for="experience">
+              #心得
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="contract">
+            <label for="contract">
+              #契約
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="teams">
+            <label for="teams">
+              #團體
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="eazy_difficulty">
+            <label for="eazy_difficulty">
+              #輕鬆
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="high_difficulty">
+            <label for="high_difficulty">
+              #高難度
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="novice">
+            <label for="novice">
+              #新手
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="npc">
+            <label for="npc">
+              #NPC
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="bloody">
+            <label for="bloody">
+              #血腥
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="discount">
+            <label for="discount">
+              #優惠
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="revitalization_roll">
+            <label for="revitalization_roll">
+              #振興卷
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="rebate">
+            <label for="rebate">
+              #折扣
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="skill">
+            <label for="skill">
+              #技巧
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="xmas">
+            <label for="xmas">
+              #聖誕節
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 右欄 -->
+      <div class="new_articles">
+        <h2>最新文章</h2>
+        <div class="item row">
+          <div class="pic col-5">
+            <img src="https://cdn.pixabay.com/photo/2021/11/30/13/21/vintage-camera-6835351_960_720.jpg">
+          </div>
+          <div class="txt col-7">
+            <h3>燒腦大製作-說謊的相機-最短通關記錄心得</h3>
+            <p>炸彈鑰匙在第二車廂東北角，白色行李箱裡的微積分課本夾層裡，彩蛋一：在車掌休息室，車掌枕頭芯裡有清潔工阿姨的頭髮。彩蛋二：大廚手機裡有篇私密貼文，述說對清潔工阿姨的夜夜輾轉難眠 <button id="open"> ...more></button></p>
+            <div class="foot">
+              <p><time>2021.12.27</time></p>
+              <ul class="txt_tag">
+                <li>#心得</li>
+                <li>#高難度</li>
+                <li>#技巧</li>
+                <li>#透視</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item row">
+          <div class="pic col-5">
+            <img src="https://cdn.pixabay.com/photo/2017/10/13/03/59/fantasy-2846766_960_720.jpg">
+          </div>
+          <div class="txt col-7">
+            <h3>最新恐怖職業病主題密室--五十肩</h3>
+            <p>真正的「五十肩」又稱「冰凍肩」或「肩關節之攣縮」，其真實的學名應該是「粘連性肩關節囊炎」。主要是肩關節囊因發炎而導致粘連，同時造成肩關節之攣縮，關節活動一 <button> ...more></button></p>
+            <div class="foot">
+              <p><time>2021.12.25</time></p>
+              <ul class="txt_tag">
+                <li>#職業病</li>
+                <li>#驚悚</li>
+                <li>#輕鬆</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item row">
+          <div class="pic col-5">
+            <img src="https://cdn.pixabay.com/photo/2017/03/12/02/20/triangle-2136288_960_720.jpg">
+          </div>
+          <div class="txt col-7">
+            <h3>獨家黑科技四次元行李收納大揭密!</h3>
+            <p>通過把任意一個可以張出幾何圖形X的向量集合中的所有贅余向量移除，我們可以過的一組X的基底。選定的初始向量集合不同，獲得的能張出 X 的基底也可能不同；但是，可以證明所有這些基底中都含有相同數量的向量。這個數量就叫做X的維數。換句話說 <button> ...more></button></p>
+            <div class="foot">
+              <p><time>2021.12.24</time></p>
+              <ul class="txt_tag">
+                <li>#四次元</li>
+                <li>#小天使</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item row">
+          <div class="pic col-5">
+            <img src="https://cdn.pixabay.com/photo/2017/07/25/14/53/angel-2538427_960_720.jpg">
+          </div>
+          <div class="txt col-7">
+            <h3>小天使是什麼?可以吃嗎?</h3>
+            <p>天使作為神特殊的孩子享受着和神之間的親密關係，在天堂凝望着、愛着、讚美着神。有些天使經常從天上給人類帶來神的旨意。天使的數量是數之不盡的，他們存在在宇宙中的各個角落。天使專注於為所有的具有自由意識的實體的需求 <button> ...more></button></p>
+            <div class="foot">
+              <p><time>2021.12.23</time></p>
+              <ul class="txt_tag">
+                <li>#小天使</li>
+                <li>#透視</li>
+                <li>#NPC</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item row">
+          <div class="pic col-5">
+            <img src="https://cdn.pixabay.com/photo/2016/12/27/15/58/wtf-1934220_960_720.jpg">
+          </div>
+          <div class="txt col-7">
+            <h3>真實經歷!半夜的客服超性感!</h3>
+            <p>很多性感單品商品可以挑選，快來選購吧!! 性感貓女性感蕾絲三件組(黑) ...外站連結請確認安全性...如有接收到請立即撥打165反詐騙電話、或與客服諮詢。 <button> ...more></button></p>
+            <div class="foot">
+              <p><time>2021.12.20</time></p>
+              <ul class="txt_tag">
+                <li>#客服</li>
+                <li>#契約</li>
+                <li>#折扣</li>
+                <li>#小惡魔</li>
+                <li>#心得</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item row">
+          <div class="pic col-5">
+            <img src="https://cdn.pixabay.com/photo/2020/05/19/13/05/heart-5190672_960_720.jpg">
+          </div>
+          <div class="txt col-7">
+            <h3>眼中的倒影-原著作感人內情</h3>
+            <p>告訴你們一定要去看原著，哭的我半夜幫眼睛冰敷，老公還以為我的霜淇淋餵地球吃了，其實是拿去給眼睛冰敷了啦，想那麼多，他上次還說 <button> ...more></button></p>
+            <div class="foot">
+              <p><time>2021.12.7</time></p>
+              <ul class="txt_tag">
+                <li>#心得</li>
+                <li>#高難度</li>
+                <li>#技巧</li>
+                <li>#透視</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <article class="email_us">
+      <h2>Email Us!</h2>
+      <p>企業合作、玩家投稿</p>
+      <img src="pic/reserve_email.png" alt="">
+      <p>tic_tac_toe@thisisfake.email</p>
+    </article>
+  </main>
+
+
+
+  <div id="light_off" class="">
+    <div class="writings">
+      <div class="pic">
+        <img src="https://cdn.pixabay.com/photo/2021/11/30/13/21/vintage-camera-6835351_960_720.jpg">
+      </div>
+      <div class="txt">
+        <h3>燒腦大製作-說謊的相機-最短通關記錄心得</h3>
+        <p>炸彈鑰匙在第二車廂東北角，白色行李箱裡的微積分課本夾層裡，彩蛋一：在車掌休息室，車掌枕頭芯裡有清潔工阿姨的頭髮。彩蛋二：大廚手機裡有篇私密貼文，述說對清潔工阿姨的夜夜輾轉難眠。</p>
+        <p>炸彈鑰匙在第二車廂東北角，白色行李箱裡的微積分課本夾層裡，彩蛋一：在車掌休息室，車掌枕頭芯裡有清潔工阿姨的頭髮。彩蛋二：大廚手機裡有篇私密貼文，述說對清潔工阿姨的夜夜輾轉難眠。</p>
+        <p>炸彈鑰匙在第二車廂東北角，白色行李箱裡的微積分課本夾層裡，彩蛋一：在車掌休息室，車掌枕頭芯裡有清潔工阿姨的頭髮。彩蛋二：大廚手機裡有篇私密貼文，述說對清潔工阿姨的夜夜輾轉難眠。</p>
+        <div class="foot">
+          <p>By:我94愛暴雷 <time>2021.12.27</time></p>
+          <ul class="txt_tag">
+            <li>心得</li>
+            <li>高難度</li>
+            <li>技巧</li>
+            <li>透視</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let btn = document.getElementById('open');
+    let light = document.getElementById('light_off');
+
+    function init(){
+      btn.onclick = switch_light;
+      light.onclick = switch_light;
+    }
+    function switch_light(){
+      light.classList.toggle('on');
+    }
+
+    window.addEventListener('load',init,false);
+  </script>
+
+
+
+
+<footer>
+  <!-- 分館資訊 -->
+  <div class="branch_group">
+    <div class="branch">
+      <a href="branch_page.html">
+        <h3>桃園金萱館</h3>
+      </a>
+        <address>桃園市東方區茶園路24號</address>
+        <p>(金刷嘴茶園旁)</p><br>
+        <div class="tel">
+          03-8820202
+        </div>
+      </p>
+    </div>
+    <div class="branch">
+      <a href="branch_page.html">
+        <h3>台中小葉館</h3>
+      </a>
+      <address>台中市凍頂區觀音三街52號</address>
+      <p>(觀音無名指第一指節下)</p><br>
+      <div class="tel">
+        04-3353321
+      </div>
+    </div>
+    <div class="branch">
+      <a href="branch_page.html">
+        <h3>屏東四季館</h3>
+      </a>
+      <address>屏東縣碧螺鄉貴妃路36巷10弄8號</address>
+      <p>(御貢鐵路13號出口)</p><br>
+      <div class="tel">
+        08-7779444
+      </div>
+    </div>
+  </div>
+  
+  <!-- 營業時間 -->
+  <div class="business">
+    <h3>營業時間</h3>
+    <p>
+      平日 - 周一至周五<br>
+      13:00 - 20:00<br>
+      <br>
+      假日 - 周六、周日及國定假日<br>
+      11:00 - 21:00
+    </p>
+  </div>
+
+  <!-- 票價資訊 -->
+  <div class="fare">
+    <h3>票價資訊</h3>
+    <p>
+      平日 400 元/人<br>
+      假日 450 元/人
+    </p>
+  </div>
+
+  <!-- 關注我們 -->
+  <div class="follow">
+    <h3>關注我們</h3>
+    <div class="link">
+      <a href="#">
+        <img src="pic/footer-link-facebook.png" alt="facebook">
+      </a>
+      <a href="#">
+        <img src="pic/footer-link-instagram.png" alt="instagram">
+      </a>
+      <a href="#">
+        <img src="pic/footer-link-youtube.png" alt="youtube">
+      </a>
+    </div>
+  </div>
+
+</footer>
+
+
+  <!-- copyright -->
+  <div class="copyright">
+    <img class="logo" src="pic/Tic_Tac_Toe_logo.png" alt="Tic_Tac_Toe_logo"><br>
+    Copyright © 2021 Tic_Tac_Toe/Not true web/專題作品，僅供學習、展示之用。
+  </div>
+
+</body>
+</html>

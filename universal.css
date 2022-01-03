@@ -1,0 +1,186 @@
+*{
+  font-family:"微軟正黑體","Microsoft JhengHei","Times New Roman";
+}
+html{
+  --main-color: brown;
+}
+img{
+  vertical-align: middle;
+}
+h1{
+  text-align: center;
+  font-size: 44px;
+  font-weight: 600;
+}
+h2{
+  font-size: 36px;
+}
+h3{
+  font-size: 24px;
+}
+p{
+  font-size: 18px;
+}
+a{
+  text-decoration: none;
+}
+
+/* 卷軸 */
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: #220000;
+}
+::-webkit-scrollbar-button{
+  height: 2px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--main-color);
+}
+
+/* 導覽列 */
+nav{
+  background-color: rgba(165, 42, 42, .7);
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 5px;
+}
+nav .logo{
+  height: 40px;
+}
+nav .nav_bar{
+  font-size: 0;
+}
+nav .nav_bar a{
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  padding: 17px;
+}
+nav .nav_bar a::before{
+  content: " ";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  margin: auto;
+  background-color: #44111190;
+  transition: .8s;
+}
+nav .nav_bar a:hover::before{
+  height: 100%;
+}
+
+/* 搜尋欄 */
+nav label input{
+  width: 150px;
+  border: none;
+  background: url('pic/nav-search.png') no-repeat right/16px;
+  border-bottom: 2px solid #fff ;
+  caret-color: #aaa;
+  color: #fff;
+  opacity: .5;
+}
+nav .search_bar input::placeholder{
+  color: #fff;
+}
+nav .search_bar input:focus{
+  outline: none;
+  opacity: 1;
+}
+nav .search_bar input:focus::placeholder{
+  opacity: 0;
+}
+
+
+
+.banner{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+
+  color: #fff;
+  text-align: center;
+}
+
+
+main{
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+
+
+footer{
+  position: relative;
+  z-index: 1;
+  background-color: #220000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  color: #888;
+  line-height: 1.5em;
+  padding-top: 60px;
+}
+footer div p{
+  font-size: 16px;
+}
+footer h3{
+  margin-bottom: 10px;
+  color: #ddd;
+}
+footer .branch_group{
+  border: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer .branch_group .branch{
+  border-left: 3px solid #F3D764;
+  width: calc(100% / 3 - 100px);
+  max-width: 300px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+}
+/* footer .branch_group .tel::before{
+  content: "<br>";
+} */
+
+footer .business,
+footer .fare,
+footer .follow{
+  border-left: 3px solid var(--main-color);
+  width: calc(100% / 3 - 100px);
+  max-width: 300px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+}
+footer .follow .link img{
+  margin-right: 10px;
+  height: 40px;
+  filter: invert(100%);
+}
+
+.copyright{
+  background-color: #220000;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+.copyright .logo{
+  width: 50px;
+  margin-bottom: 5px;
+}
