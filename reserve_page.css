@@ -1,26 +1,18 @@
 header .nav_bar a:nth-child(2){
   background-color: #441111;
 }
-
 .banner{
-  height: 500px;
   background: url('https://cdn.pixabay.com/photo/2016/02/17/09/20/watches-1204696_960_720.jpg');
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
-  box-shadow: 0 -200px 500px #000 inset; 
 }
-.banner h1{
-  margin-top: 300px;
-}
-
 
 /* 預約流程 */
 .reserve_process{
   position: relative;
   margin: auto;
   max-width: 1200px;
-  margin-top: 500px;
   padding-top: 60px;
   padding-bottom: 60px;
   color: #fff;

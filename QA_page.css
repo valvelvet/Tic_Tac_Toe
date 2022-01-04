@@ -1,23 +1,13 @@
 header .nav_bar a:nth-child(6){
   background-color: #441111;
 }
-
 .banner{
-  height: 500px;
   background: url('https://cdn.pixabay.com/photo/2016/10/24/23/11/doors-1767563_960_720.jpg');
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
-  box-shadow: 0 -200px 500px #000 inset; 
-}
-.banner h1{
-  margin-top: 300px;
 }
 
-
-main section:first-child{
-  margin-top: 500px;
-}
 main section{
   margin: auto;
   max-width: 1200px;
