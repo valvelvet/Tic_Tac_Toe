@@ -69,6 +69,28 @@
   }
 }
 
+#lattice{
+  position: absolute;
+  top: 237px;
+  left: 50%;
+  transform: translate(calc(-50% + 28px),0);
+}
+#lattice td input{
+  color: brown;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  width: 55px;
+  height: 50px;
+}
+#lattice td input[value='O']{
+  color: #F3D764;
+}
+
+
+
+
+
 header:hover + main .more_topic{
   display: none;
 }
