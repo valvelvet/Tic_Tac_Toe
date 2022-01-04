@@ -38,69 +38,265 @@ a{
   background-color: var(--main-color);
 }
 
-/* 導覽列 */
-nav{
+.header_float{
   background-color: rgba(165, 42, 42, .7);
-  height: 40px;
+  height: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
-  padding: 5px;
+  padding: 10px 10px;
 }
-nav .logo{
-  height: 40px;
+.header_float > a{
+  height: 100%;
 }
-nav .nav_bar{
-  font-size: 0;
-}
-nav .nav_bar a{
-  display: inline-block;
-  position: relative;
-  font-size: 16px;
-  color: #fff;
-  padding: 17px;
-}
-nav .nav_bar a::before{
-  content: " ";
-  width: 100%;
-  height: 0;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  margin: auto;
-  background-color: #44111190;
-  transition: .8s;
-}
-nav .nav_bar a:hover::before{
+.header_float .logo{
   height: 100%;
 }
 
-/* 搜尋欄 */
-nav label input{
-  width: 150px;
-  border: none;
-  background: url('pic/nav-search.png') no-repeat right/16px;
-  border-bottom: 2px solid #fff ;
-  caret-color: #aaa;
-  color: #fff;
-  opacity: .5;
+/* 圓形選單 */
+.circular-menu {
+  position: fixed;
+  top: 5px;
+  right: 10px;
 }
-nav .search_bar input::placeholder{
-  color: #fff;
+.circular-menu .floating-btn {
+  cursor: pointer;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);
+  outline: 0;
 }
-nav .search_bar input:focus{
-  outline: none;
-  opacity: 1;
+.circular-menu.active .floating-btn {
+  box-shadow: inset 0 0 3px 2px hsla(0, 0%, 0%, .3);
 }
-nav .search_bar input:focus::placeholder{
+.circular-menu .floating-btn:active {
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
+}
+/* 叉叉 */
+.circular-menu .floating-btn::before,
+.circular-menu .floating-btn::after {
+  content: "";
+  position: absolute;
+  top: 37px;
+  left: 15px;
+  border-radius: 5px;
+  width: 30px;
+  height: 6px;
+  background-color: #441111;
+  transition: .3s;
+}
+.circular-menu .floating-btn::before {
+  top: 17px;
+  left: 15px;
+  box-shadow:0 10px 0 0  #441111;
+}
+.circular-menu.active .floating-btn::after {
+  top: 27px;
+  left: 15px;
+  transform: rotate(-315deg);
+}
+.circular-menu.active .floating-btn::before {
+  top: 27px;
+  left: 15px;
+  box-shadow: none;
+  transform: rotate(-225deg);
+}
+/* 圓型底 */
+.circular-menu:after {
+  display: block;
+  content: ' ';
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  background-color: var(--main-color);
+  box-shadow: inset 0 0 10px #441111;
+  transition: all .3s ease;
+}
+.circular-menu.active:after {
+  transform: scale(15, 15);
+  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+}
+/* 連結 */
+.circular-menu .menu-item {
   opacity: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0px;
+  left: -245px;
+  width: 550px;
+  height: 60px;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 21px 20px;
+  border-radius: 20px;
+  z-index: -1;
+  display: block;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(30deg, #0008 30%,#0000 70%);
+  transition: transform .3s ease;
+}
+/* 選單連結動態 */
+.circular-menu .menu-item:hover {
+  background: linear-gradient(30deg, #280000 40%,#0000 70%);
+}
+.circular-menu.active .menu-item {
+  opacity: 1;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: rotate(0deg);
+  position: absolute;
+}
+.circular-menu.active .menu-item:nth-child(1) {
+  left: -385px;
+  top: 30px;
+}
+.circular-menu.active .menu-item:nth-child(2) {
+  left: -370px;
+  top: 100px;
+}
+.circular-menu.active .menu-item:nth-child(3) {
+  left: -345px;
+  top: 170px;
+}
+.circular-menu.active .menu-item:nth-child(4) {
+  left: -300px;
+  top: 240px;
+}
+.circular-menu.active .menu-item:nth-child(5) {
+  left: -225px;
+  top: 310px;
+}
+.circular-menu.active .menu-item:nth-child(6) {
+  left: -70px;
+  top: 380px;
 }
 
+/* 搜尋欄 */
+.header_float label{
+  display: none;
+}
+
+
+
+
+@media screen and (min-width:768px) {
+  /* 導覽列 */
+  .header_float{
+    background-color: rgba(165, 42, 42, .7);
+    height: 40px;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  
+  /* 圓形選單 */
+  .circular-menu {
+    position: relative;
+  }
+  .circular-menu::after {
+    display: none;
+  }
+  .circular-menu .floating-btn {
+    display: none;
+  }
+  /* 連結 */
+  .circular-menu .menu-item {
+    opacity: 1;
+    transform: none;
+    position: relative;
+    top: -5px;
+    left: 0;
+    width: auto;
+    height: auto;
+    box-sizing: content-box;
+    font-size: 16px;
+    padding: 17px 10px;
+    border-radius: 0;
+    display: inline;
+    background: transparent;
+    display: inline-block;
+    z-index: 0;
+    color: #fff;
+  }
+  .circular-menu .menu-item:hover {
+    background: none;
+  }
+  .circular-menu nav{
+    font-size: 0;
+  }
+  .circular-menu .menu-item::before{
+    content: " ";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color: #44111190;
+    transition: .8s;
+  }
+  .circular-menu .menu-item:hover::before{
+    height: 100%;
+  }
+
+  /* 搜尋欄 */
+  .header_float .search_bar{
+    display: block;
+  }
+  .header_float label input{
+    width: 70px;
+    border: none;
+    background: url('pic/nav-search.png') no-repeat center/16px;
+    caret-color: #aaa;
+    color: #fff;
+    opacity: .8;
+  }
+  .header_float .search_bar input::placeholder{
+    opacity: 0;
+  }
+  .header_float .search_bar input:focus{
+    background: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    opacity: 1;
+  }
+  .header_float .search_bar input:focus::placeholder{
+    opacity: 0;
+  }
+
+}
+
+@media screen and (min-width:992px) {   
+  /* 選單 */
+  .circular-menu .menu-item {
+    padding: 17px;
+  }
+
+  /* 搜尋欄 */
+  .header_float label input{
+    background: url('pic/nav-search.png') no-repeat right/16px;
+    border-bottom: 2px solid #fff;
+    width: 150px;
+    opacity: .5;
+  }
+  .header_float .search_bar input::placeholder{
+    opacity: 1;
+    color: #fff;
+  }
+  .header_float .search_bar input:focus{
+    background: url('pic/nav-search.png') no-repeat right/16px;
+  }
+}
 
 
 .banner{

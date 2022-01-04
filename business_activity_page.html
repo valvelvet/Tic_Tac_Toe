@@ -15,29 +15,33 @@
   <link rel="stylesheet" href="business_activity_page.css">
   <link rel="stylesheet" href="grid.css">
 </head>
+
 <body>
   <header>
-    <nav>
+    <div class="header_float">
       <!-- logo -->
       <a href="home_page.html">
         <img class="logo" src="pic/Tic_Tac_Toe_full_logo.png" alt="Tic_Tac_Toe_logo">
       </a>
 
-      <!-- 頁面連結 -->
-      <div class="nav_bar">
-        <a href="topic_page.html">密室主題</a>
-        <a href="reserve_page.html">線上預約</a>
-        <a href="business_activity_page.html">企業團體</a>
-        <a href="branch_page.html">場館資訊</a>
-        <a href="news_page.html">最新消息</a>
-        <a href="QA_page.html">Q&A</a>
+      <!-- 選單頁面連結 -->
+      <div id="circularMenu" class="circular-menu">
+        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');"></a>
+      
+        <nav class="nav_bar">
+          <a href="topic_page.html" class="menu-item">密室主題</a>
+          <a href="reserve_page.html" class="menu-item">線上預約</a>
+          <a href="business_activity_page.html" class="menu-item">企業團體</a>
+          <a href="branch_page.html" class="menu-item">場館資訊</a>
+          <a href="news_page.html" class="menu-item">最新消息</a>
+          <a href="QA_page.html" class="menu-item">Q&A</a>
+        </nav>
       </div>
-
       <!-- 搜尋bar -->
       <label class="search_bar">
         <input type="text" placeholder="恐怖、解謎...">
       </label>
-    </nav>
+    </div>
 
     <!-- 線上預約 -->
     <div class="banner">
