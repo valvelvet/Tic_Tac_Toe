@@ -58,7 +58,7 @@
     background-image: url("https://pic.52112.com/180209/180209_82/QRJjRn5dr1.jpg");
   }
   20%{
-    background-image: url("http://jazko.com/wp-content/uploads/2018/03/1cxgISsKC1UcvZF0E6ib.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2015/05/11/14/44/pencils-762555_960_720.jpg");
   }
   40%{
     background-image: url("https://cdn.pixabay.com/photo/2014/02/02/17/40/photos-256887_960_720.jpg");
@@ -87,12 +87,6 @@
 }
 #lattice td input[value='O']{
   color: #F3D764;
-}
-
-
-
-header:hover ~ main .more_topic{
-  display: none;
 }
 
 
@@ -443,7 +437,8 @@ main::after{
 }
 
 /* 更多手手 */
-.more_topic{
+#more_topic{
+  display: none;
   margin-top: 0px;
   text-align: center;
   position: fixed;
@@ -452,7 +447,7 @@ main::after{
   transform: translate(-50%,0);
   z-index: 2;
 }
-.more_topic a{
+#more_topic a{
   color: #fff;
   font-size: 24px;
   /* filter: drop-shadow(0 0 3px #fff); */
@@ -461,7 +456,7 @@ main::after{
   z-index: 1;
 }
 /* 土 */
-.more_topic a::before{
+#more_topic a::before{
   content: url('pic/zombie_mud.png');
   filter: invert(11%) sepia(81%) saturate(3274%) hue-rotate(344deg) brightness(92%) contrast(116%);
   position: absolute;
@@ -469,14 +464,14 @@ main::after{
   top: -45px;
   left: -170px;
 }
-.more_topic .key{
+#more_topic .key{
   position: absolute;
   left: -20px;
   top: -110px;
   transform: rotate(10deg);
   transition: .2s;
 }
-.more_topic .surprise{
+#more_topic .surprise{
   filter: invert(15%) sepia(81%) saturate(3274%) hue-rotate(344deg) brightness(92%) contrast(116%);
   position: absolute;
   width: 150px;
@@ -486,16 +481,16 @@ main::after{
   transition: .2s;
 }
 /* 抓取動作 */
-.more_topic:hover .surprise{
+#more_topic:hover .surprise{
   transform: rotate(15deg);
   top: -110px;
 }
-.more_topic:active .surprise{
+#more_topic:active .surprise{
   transform: rotate(-40deg);
   left: -30px;
   top: -20px;
 }
-.more_topic:active .key{
+#more_topic:active .key{
   opacity: 0;
   top: 80px;
   transform: rotate(-10deg);
