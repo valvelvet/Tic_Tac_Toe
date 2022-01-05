@@ -408,14 +408,18 @@ main::after{
   padding: 60px 30px;
 }
 .warning h2{
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: #ffff64;
 }
 .warning_icon img{
-  height: 60px;
-  margin: 20px;
+  height: 50px;
+  margin: 5px;
   filter: invert(100%) drop-shadow(0 0 30px #000);
-} 
+}
+.warning_icon img:nth-child(3){
+  margin: 5px 0 5px 5px;
+}
+
 .warning p{
   padding-top: 30px;
   line-height: 2em;
@@ -427,4 +431,13 @@ footer,
 .copyright{
   position: relative;
   z-index: 3;
+}
+
+
+@media screen and (min-width:768px) {
+  .warning_icon img{
+    height: 60px;
+    margin: 20px;
+  }
+
 }
