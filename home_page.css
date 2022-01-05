@@ -8,7 +8,7 @@
   0 -500px 300px #0009 inset;
 }
 .banner .logo{
-  margin: 250px 0 20px;
+  margin: 25vh 0 20px;
   border-radius: 50px;
   filter:drop-shadow( 10px 10px 8px rgb(0, 0, 0));
   opacity: .9; 
@@ -18,16 +18,18 @@
   z-index: -1;
   position: absolute;
   top: 55%;
-  left: 40%;
-  transform: rotate(30deg) translate(-50%,-50%);
+  left: 50%;
+  transform: rotate(30deg) translate(-50%,0);
 }
 .banner > p{
+  position: relative;
+  top: 10vh;
   line-height: 2em;
   color: #aaa;
-  margin: 20px;
 }
 .banner a{
-  border: none;
+  position: relative;
+  top: 20vh;
   color: #fff;
   background-color: transparent;
   text-shadow: 1px 1px 1px #000;
@@ -37,7 +39,7 @@
 }
 .banner a img{
   height: 40px;
-  animation: Stepping .8s infinite alternate;
+  animation: Stepping 1s infinite alternate;
 }
 /* .banner button:hover{
   color: #fff;
@@ -71,7 +73,7 @@
 
 #lattice{
   position: absolute;
-  top: 237px;
+  top: 23vh;
   left: 50%;
   transform: translate(calc(-50% + 28px),0);
 }
@@ -107,7 +109,7 @@ main::after{
   content: url(" ");
   position: absolute;
   height: 0;
-  bottom: 460px;
+  bottom: 420px;
   left: 0;
   font-size: 0;
   width: 100%;
@@ -138,34 +140,19 @@ main::after{
 .topic{
   margin-bottom: 100px;
   width: 100%;
-  display: flex;
-  position: relative;
-}
-.hot_topic article:nth-child(even){
-  flex-direction: row-reverse;
 }
 .topic h2{
-  filter: drop-shadow(0 0 5px #000);
-  position: absolute;
-  top: 130px;
-  right: calc(50% - .5em);
-  z-index: 2;
+  text-align: center;
   color: #fff;
 }
-.hot_topic article:nth-child(even) h2{
-  left: calc(50% - .5em);
-  right: 0;
-}
-
-
 
 /* 圖片 */
 .topic .pic{
-  width: 50%;
-  height: 500px;
+  margin: 30px 0;
+  width: 100%;
+  height: 50vw;
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -173,12 +160,12 @@ main::after{
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  width: 50%;
+  height: 70%;
   filter: brightness(50%);
   transition: .3s;
 }
 .topic .pic .front {
-  width: 100%;
+  height: 100%;
   filter: brightness(100%);
   box-shadow: 0 0 30px 10px #000;
   position: absolute;
@@ -188,7 +175,7 @@ main::after{
   z-index: 1;
 }
 .topic .pic img{
-  width: 100%;
+  height: 100%;
 }
 
 /* 箭頭 */
@@ -196,89 +183,43 @@ main::after{
   content: '';
   height: 0;
   width: 0;
-  border: 40px solid #830007;
-  border-top: none;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
+  border: 5vw solid #ffffff90;
+  border-left: none;
+  border-top: 5vw solid transparent;
+  border-bottom: 5vw solid transparent;
   position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translate(-50%,0);
+  left: 20px;
+  top: 50%;
+  transform: translate(0,-50%);
   z-index: 3;
 }
 .topic .pic::after{
   content: '';
   height: 0;
   width: 0;
-  border: 40px solid #830007;
-  border-bottom: none;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
+  border: 5vw solid #ffffff90;
+  border-right: none;
+  border-top: 5vw solid transparent;
+  border-bottom: 5vw solid transparent;
   position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translate(-50%,0);
+  right: 20px;
+  bottom: 50%;
+  transform: translate(0,50%);
   z-index: 3;
 }
-.topic .pic:hover::before{
-  animation: Stepping_top .5s infinite alternate;
-}
-.topic .pic:hover::after{
-  animation: Stepping_bottom .5s infinite alternate;
-}
-
-
-
-@keyframes Stepping_top{
-  100%{
-    top: -25px;
-  }
-  0%{
-    top: -20px;
-  }
-}
-
-@keyframes Stepping_bottom{
-  100%{
-    bottom: -25px;
-  }
-  0%{
-    bottom: -20px;
-  }
-}
-
-
-
-/* 圖片動態
-.topic .pic div:nth-child(odd):hover{
-  width: 55%;
-  z-index: 2;
-  filter: brightness(100%);
-  box-shadow: 0 0 30px 10px #000;
-} */
 
 /* 文字 */
 .topic .text{
   background-blend-mode: multiply;
-  background-color: #0009;
+  background-color: #09000090;
   background-image: url('pic/Tic_Tac_Toe_red.png');
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 80%;
-  height: 280px;
-  flex-grow: 1;
-  padding: 50px;
-  padding-top: 110px;
+  background-position: center;
+  background-size: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   color: #fff;
-}
-.topic:nth-child(even) .text{
-  align-items: flex-end;
-}
-.topic:nth-child(even) .about{
-  text-align: end;
 }
 .topic .about .game_hard{
   margin-bottom: 20px;
@@ -294,8 +235,7 @@ main::after{
 }
 .topic .text p{
   filter: drop-shadow(0 0 2px #000);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   line-height: 1.5em;
 }
 
@@ -303,12 +243,9 @@ main::after{
   display: inline-block;
   background-color: brown;
   color: #fff;
-  border: none;
   border-radius: 20px;
   padding: 10px 15px;
   transition: .1s;
-  position: relative;
-  top: -3px;
   box-shadow: #830007 0 2px 0 0,
               #830007 0 3px 0 0,
               #470505 0 4px 2px 1px;
@@ -319,6 +256,179 @@ main::after{
               #830007 0 0 0 0,
               #470505 0 1px 0 1px;
             }
+
+
+
+@media screen and (min-width:768px) {
+  .topic{
+    display: flex;
+  position: relative;
+  }
+  .hot_topic article:nth-child(even){
+    flex-direction: row-reverse;
+  }
+  .topic h2{
+    filter: drop-shadow(0 0 5px #000);
+    position: absolute;
+    text-align: left;
+    top: 130px;
+    right: calc(50% - .5em);
+    z-index: 2;
+  }
+  .hot_topic article:nth-child(even) h2{
+    left: calc(50% - .5em);
+    right: 0;
+  }
+
+  /* 圖片 */
+  .topic .pic{
+    margin: 0;
+    width: 50%;
+    height: 500px;
+    flex-direction: column;
+  }
+  .topic .pic div{
+    width: 70%;
+    height: auto;
+  }
+  .topic .pic .front {
+    width: 100%;
+    height: auto;
+  }
+  .topic .pic img{
+    width: 100%;
+    height: auto;
+  }
+
+  /* 箭頭 */
+  .topic .pic::before{
+    border: 30px solid #ffffff90;
+    border-top: none;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .topic .pic::after{
+    border: 30px solid #ffffff90;
+    border-bottom: none;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .topic .pic:hover::before{
+    animation: Stepping_top .5s infinite alternate;
+  }
+  .topic .pic:hover::after{
+    animation: Stepping_bottom .5s infinite alternate;
+  }
+
+  /* 文字 */
+  .topic .text{
+    background-blend-mode: multiply;
+    background-color: #09000090;
+    background-image: url('pic/Tic_Tac_Toe_red.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 80%;
+    height: 280px;
+    flex-grow: 1;
+    padding: 50px;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+  }
+  .topic:nth-child(even) .text{
+    align-items: flex-end;
+  }
+  .topic:nth-child(even) .about{
+    text-align: end;
+  }
+  .topic .about .game_hard{
+    margin-bottom: 20px;
+    font-size: 0;
+  }
+  .topic .about .icon{
+    filter: invert(100%);
+    margin-right: 2px;
+    width: 16px;
+  }
+  .topic .about span:nth-of-type(-n+2){
+    margin-right: 10px;
+  }
+  .topic .text p{
+    filter: drop-shadow(0 0 2px #000);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+  }
+
+  .topic .text > a{
+    display: inline-block;
+    background-color: brown;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    transition: .1s;
+    position: relative;
+    top: -3px;
+    box-shadow: #830007 0 2px 0 0,
+                #830007 0 3px 0 0,
+                #470505 0 4px 2px 1px;
+  }
+  .topic .text a:hover{
+    top: 0;
+    box-shadow: #830007 0 0 0 0,
+                #830007 0 0 0 0,
+                #470505 0 1px 0 1px;
+              }
+
+}
+
+
+
+@media screen and (min-width:992px) {
+  .topic .pic div{
+    width: 50%;
+  }
+}
+
+
+
+
+@keyframes Stepping_top{
+  100%{
+    top: -5px;
+  }
+  0%{
+    top: 5px;
+  }
+}
+
+@keyframes Stepping_bottom{
+  100%{
+    bottom: -5px;
+  }
+  0%{
+    bottom: 5px;
+  }
+}
+
+
+
+/* 圖片動態
+.topic .pic div:nth-child(odd):hover{
+  width: 55%;
+  z-index: 2;
+  filter: brightness(100%);
+  box-shadow: 0 0 30px 10px #000;
+} */
 
 
 /* 難度 */
