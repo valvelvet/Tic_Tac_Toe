@@ -23,13 +23,13 @@
 }
 .banner > p{
   position: relative;
-  top: 10vh;
+  top: 7vh;
   line-height: 2em;
   color: #aaa;
 }
 .banner a{
   position: relative;
-  top: 20vh;
+  top: 10vh;
   color: #fff;
   background-color: transparent;
   text-shadow: 1px 1px 1px #000;
