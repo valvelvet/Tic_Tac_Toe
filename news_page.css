@@ -8,78 +8,59 @@
   background-size: cover;
 }
 
+
+
+
+
 main section{
-  padding: 30px 0 60px;
-  display: flex;
-  max-width: 1200px;
   margin: auto;
   line-height: 2em;
 }
-main section h2{
-  padding-top: 30px;
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-main section h2::after{
-  content: " ";
-  display: inline-block;
-  height: 0px;
-  width: 40px;
-  border-radius: 2px;
-  border: 2px solid #441111;
-  background-color: #441111;
-  flex-grow: 1;
-  margin-left: 30px;
-}
-main section .classification h3{
-  padding-top: 30px;
-  padding-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-.classification{
-  width: 200px;
-}
+
 /* 分類 */
+.classification h3:first-of-type{
+  display: none;
+}
+.classification .categories{
+  display: flex;
+  font-size: 0;
+}
 .classification .categories li{
+  width: 25%;
+  text-align: center;
+  border-radius: 10px 10px 0 0 ;
+  font-size: 16px;
   color: #ddd;
   position: relative;
+  display: block;
   z-index: 0;
-  padding-left: 20px;
 }
 .classification .categories input{
   display: none;
 }
 .classification .categories label{
+  background-color: #441111;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0 ;
+  display: block;
   height: 100%;
-  margin-left: -15px;
-  padding: 2px 60px 2px 10px;
+  width: 100%;
+  border: 1px solid #280000;
+  border-bottom: 1px solid #441111;
 }
 .classification .categories input:checked + label{
-  background-image: linear-gradient(110deg, brown 90%,#0000 90%);
+  background-color: black;
+  border: 1px solid #441111;
+  border-bottom: none;
 }
-.classification .categories input:not(:checked) + label:before{
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  bottom: 50%;
-  transform: translate(0,50%);
-  margin: 0 5px;
-  width: 2px;
-  height: 25px;
-  transition: 1s;
-  background-color: brown;
-}
-.classification .categories input:not(:checked) + label:hover::before{
-  background-color: transparent;
-  background-image: linear-gradient(110deg, brown 90%,#0000 90%);
-  width: 134px;
-}
+
+
 /* 標籤 */
+.classification h3:last-of-type{
+  margin: 20px;
+}
 .classification .tag{
+  margin: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -110,12 +91,26 @@ main section .classification h3{
 }
 
 
-
 /* 右欄 最新文章 */
 .new_articles{
-  padding-left: 50px;
-  width: 0;
+  padding: 20px;
+}
+.new_articles h2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.new_articles h2::after{
+  content: " ";
+  display: inline-block;
+  height: 0px;
+  width: 40px;
+  border-radius: 2px;
+  border: 2px solid #441111;
+  background-color: #441111;
   flex-grow: 1;
+  margin: 0 0 0 20px;
 }
 .new_articles .item{
   padding: 30px 0;
@@ -125,33 +120,35 @@ main section .classification h3{
   border-radius: 10px;
   width: 100%;
 }
+.new_articles .txt> p{
+  width: 100%;
+  overflow: hidden;
+  text-overflow : ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  cursor: pointer;
+}
 .new_articles .txt{
   position: relative;
   color: #ddd;
   border-radius: 10px;
-  margin: 50px 0 0 -60px;
-  padding: 30px 30px 10px;
+  margin-top: -20px;
+  padding: 20px 20px 5px;
   background-color: #280000;
 }
 .new_articles .txt h3{
   padding-bottom: 20px;
 }
-.new_articles .txt button{
-  cursor: pointer;
-  font-size: 16px;
-  color: #aaa;
-  background-color: transparent;
-  border: none;
-}
 .new_articles .txt .foot{
   margin-top: 20px;
   border-top: 2px dotted #441111;
-  display: flex;
-  justify-content: space-between;
   font-size: 16px;
   color: #aaa;
 }
 .new_articles .txt .foot p{
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
   color: #aaa;
 }
@@ -173,12 +170,10 @@ main section .classification h3{
 
 
 
-
 .email_us{
-  max-width: 1200px;
   margin: auto;
   text-align: center;
-  padding: 60px;
+  padding: 60px 0;
 }
 .email_us h2{
   padding-bottom: 30px;
@@ -189,7 +184,7 @@ main section .classification h3{
   line-height: 2em;
 }
 .email_us img{
-  filter: invert(100%);
+  filter: invert(80%);
   width: 50px;
 }
 
@@ -211,42 +206,46 @@ main section .classification h3{
 .writings{
   border-radius: 10px;
   line-height: 2em;
-  padding: 30px;
-  padding-bottom: 10px;
+  padding: 20px 20px 10px 20px;
   background-color: #280000;
   box-shadow: 0 0 10px 0 #fff;
-  width: 100%;
+  box-sizing: border-box;
+  width: 90vw;
+  height: 70vh;
   max-width: 1000px;
   color: #ddd;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  overflow: auto;
 }
 .writings img{
+  width: 100%;
   border-radius: 10px;
-  padding: 0 20px 20px 0;
-  width: 30%;
-  float: left;
+}
+.writings .pic{
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .writings .txt h3{
-  padding: 0 30px 20px 30px;
+  padding: 20px 0 20px;
 }
 .writings .txt> p{
   padding-bottom: 20px;
   text-indent: 2em;
   font-size: 18px;
 }
-
 .writings .txt .foot{
+  margin-top: 20px;
   border-top: 2px dotted #441111;
-  display: flex;
-  justify-content: space-between;
   font-size: 16px;
   color: #aaa;
 }
 .writings .txt .foot p{
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
   color: #aaa;
 }
@@ -260,5 +259,152 @@ main section .classification h3{
 }
 .writings .txt li{
   color: #aaa;
-  margin: 0 10px;
+  margin: 0 5px;
+}
+
+/* 卷軸 */
+.writings::-webkit-scrollbar {
+  background-color: transparent;
+}
+.writings::-webkit-scrollbar-thumb {
+  border: 3px solid #280000;
+  border-radius: 15px;
+  background-color: brown;
+}
+
+
+@media screen and (min-width:768px) {
+  main section{
+    padding: 60px 30px 30px;
+    display: flex;
+    max-width: 1200px;
+  }
+  main section .classification h3{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .classification{
+    width: 200px;
+  }
+
+  /* 分類 */
+  .classification h3:first-of-type{
+    display: block;
+  }
+  .classification .categories{
+    display: block; 
+  }
+  .classification .categories li{
+    border-radius: 0;
+    width: auto;
+    padding-left: 20px;
+    text-align: start;
+  }
+  .classification .categories label{
+    border: none;
+    width: 134px;
+    border-radius: 0;
+    display: inline;
+    background-color: transparent;
+    margin-left: -15px;
+    padding: 2px 60px 2px 10px;
+  }
+  .classification .categories input:checked + label{
+    border: none;
+    background-image: linear-gradient(110deg, rgba(165, 42, 42, 0.7) 90%,#0000 90%);
+  }
+  .classification .categories input:not(:checked) + label:before{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 50%;
+    transform: translate(0,50%);
+    margin: 0 5px;
+    width: 2px;
+    height: 25px;
+    transition: 1s;
+    background-color: brown;
+  }
+  .classification .categories input:not(:checked) + label:hover::before{
+    background-color: transparent;
+    background-image: linear-gradient(110deg, brown 90%,#0000 90%);
+    width: 134px;
+  }
+
+  /* 標籤 */
+  .classification h3:last-of-type{
+    margin: 0;
+  }
+  .classification .tag{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .classification .tag li{
+    color: #ddd;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .classification .tag label{
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px dotted brown;
+  }
+  .classification .tag label:hover{
+    border: 2px dotted brown;
+    background-color: #441111;
+  }
+  .classification .tag li input{
+    display: none;
+  }
+  .classification .tag li input:checked + label{
+    background-color: #441111;
+    border: 2px solid brown;
+  }
+
+  /* 右欄 最新文章 */
+  .new_articles{
+    padding-left: 30px;
+    width: 0;
+    flex-grow: 1;
+  }
+  .new_articles h2{
+    padding: 0;
+  }
+  .new_articles h2::after{
+    margin: 0 0 0 30px;
+  }
+  .new_articles .txt{
+    width: 100%;
+    margin: -15% 0 0 10%;
+    padding: 30px 30px 10px;
+  }
+
+  
+  .writings{
+    padding: 30px 30px 10px 30px;
+  }
+  .writings .pic{
+    width: 40%;
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+  .writings .txt h3{
+    padding: 0 0 20px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .new_articles .txt{
+    margin: -25% 0 0 40%;
+    padding: 30px 30px 10px;
+  }
 }
