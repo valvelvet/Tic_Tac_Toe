@@ -10,11 +10,8 @@
 
 /* 預約流程 */
 .reserve_process{
-  position: relative;
   margin: auto;
-  max-width: 1200px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -26,26 +23,55 @@
   width: 100%;
   text-align: center;
 }
-.reserve_process div{
+.reserve_process .item_group{
+  display: flex;
+  flex-direction: column;
+}
+.reserve_process .item_group div{
   position: relative;
-  width: calc(100% / 4 - 50px);
+  width: 100%;
   text-align: center;
 }
 .reserve_process img{
   width: 60px;
-  padding: 30px;
+  padding: 10px;
   filter: invert(100%);
 }
-.reserve_process div:nth-of-type(-n+3)::after{
+.reserve_process .item_group div:first-child img{
+  filter: invert(85%) sepia(40%) saturate(500%) hue-rotate(350deg);
+}
+.reserve_process h3{
+  display: inline-block;
+}
+.reserve_process .item_group div:first-child h3{
+  color: #F3D764;
+}
+.reserve_process .item_group div:nth-of-type(-n+3):after{
   content: " ";
   position: absolute;
-  border-left: 20px solid #fff;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  height: 100%;
+  width: 2px;
+  background-color: #fff;
   top: 50%;
-  right: 0;
-  transform: translate(50%,0);
-  font-size: 38px;
+  left: -5vw;
+  transform: translate(-50%,0);
+}
+.reserve_process .item_group div::before{
+  content: " ";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: -5vw;
+  transform: translate(-50%,-50%);
+}
+.reserve_process .item_group div:first-child:before{
+  height: 15px;
+  width: 15px;
+  background-color: #F3D764;
+  z-index: 1;
 }
 
 
@@ -61,9 +87,7 @@
 }
 /* 介紹左欄 */
 .topic{
-  width: 0;
-  flex-grow: 1;
-  padding: 20px;
+  /* padding: 20px; */
   position: relative;
 }
 .topic h2{
@@ -71,32 +95,30 @@
   left: 16px;
   top: 35px;
   background-color: rgb(165, 42, 42);
-  padding: 15px 15px;
+  padding: 15px;
   border-radius: 0 35px 35px 0;
 }
 .topic .pic{
-  width: 100%;
-  height: 500px;
+  margin: 20px;
+  width: calc(100% - 40px);
+  height: 50vh;
   border: 1px solid #888;
   border-radius: 10px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   animation: turn_pic 10s infinite steps(1, end);
-}
-.topic > p{
-  line-height: 1.5em;
-  margin: 10px;
-  color: #ddd;
 }
 .topic .about{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 20px 0;
-  margin: 10px;
+  justify-content: center;
+  margin: 20px;
 }
 .topic .about span{
-  margin-right: 20px;
+  width: 165px;
+  margin: 5px 0;
   display: flex;
   align-items: center;
 }
@@ -109,7 +131,12 @@
   display: inline-block;
   line-height: 1em;
   font-size: 16px;
-  /* margin-right: 20px; */
+}
+.topic > p{
+  line-height: 1.5em;
+  margin: 20px;
+  color: #ddd;
+  text-indent: 2em;
 }
 
 @keyframes turn_pic {
@@ -117,7 +144,7 @@
     background-image: url("https://cdn.pixabay.com/photo/2021/11/30/13/21/vintage-camera-6835351_960_720.jpg");
   }
   33%{
-    background-image: url("http://jazko.com/wp-content/uploads/2018/03/1cxgISsKC1UcvZF0E6ib.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2014/02/02/17/40/photos-256887_960_720.jpg");
   }
   66%{
     background-image: url("https://cdn.pixabay.com/photo/2014/11/03/10/44/camera-514992_960_720.jpg");
@@ -128,7 +155,13 @@
 
 /* 預約右欄 */
 .topic_reserve .reserve{
-  width: 300px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.topic_reserve .reserve div>div{
+  margin-bottom: 20px;
 }
 .reserve h3{
   font-size: 20px;
@@ -143,7 +176,6 @@
 .choose{
   border: 1px solid #888;
   padding: 20px;
-  margin: 20px 20px 20px 0;
   border-radius: 10px;
 }
 .choose select{
@@ -159,7 +191,6 @@
 .players{
   border: 1px solid #888;
   padding: 20px;
-  margin: 20px 20px 20px 0;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -192,7 +223,6 @@
 .date{
   border: 1px solid #888;
   padding: 20px;
-  margin: 20px 20px 20px 0;
   border-radius: 10px;
 }
 .date table{
@@ -247,17 +277,16 @@
 
 /* 場次 */
 .session{
-  margin: 20px 20px 20px 0;
+  width: 260px;
 }
 .session h3{
-  margin: 10px 0 10px 20px;
+  width: auto;
 }
 .session .head{
   display: flex;
   justify-content: space-between;
 }
 .session .head button{
-  margin: 0 15px;
   width: 20px;
   height: 20px;
   background-color: transparent;
@@ -281,10 +310,10 @@
 .session .empty p{
   display: block;
   border: 2px dotted brown;
-  margin: auto;
-  margin-top: 10px;
+  margin: 10px 0;
   border-radius: 30px;
-  width: 90%;
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 0;
   font-size: 18px;
 }
@@ -301,6 +330,234 @@
   color: #fff;
   background-color: brown;
 }
+
+
+@media screen and (min-width:535px) and (max-width:700px) {
+  .topic .about span{
+    width: 240px;
+  }
+  .topic > p{
+    margin: 40px;
+    text-indent: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  /* 預約流程 */
+  .reserve_process{
+    max-width: 1200px;
+  }
+  .reserve_process .item_group{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .reserve_process .item_group div{
+    width: calc(100% / 4 - 50px);
+  }
+  .reserve_process img{
+    width: 60px;
+    padding: 30px;
+  }
+  .reserve_process .item_group div:nth-of-type(-n+3):after{
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-left: 20px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 50%;
+    right: 0;
+    left: auto;
+    transform: translate(50%,0);
+  }
+  .reserve_process .item_group div::before{
+    content: none;
+  }
+  /* 預約密室 */
+  .topic_reserve{
+    background-color: #280000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    border-radius: 10px;
+    margin: auto;
+  }
+  /* 介紹左欄 */
+  .topic{
+    width: 0;
+    flex-grow: 1;
+  }
+  .topic .pic{
+    height: 503px;
+  }
+
+
+
+  /* 預約右欄 */
+  .topic_reserve .reserve{
+    padding: 20px 20px 20px 0;
+    width: 300px;
+  }
+  /* 選擇其他主題 */
+  .choose{
+    border: 1px solid #888;
+    margin: 0 20px 20px 0;
+    border-radius: 10px;
+  }
+  .choose select{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 18px;
+    background-color: brown;
+    color: #fff;
+    border: none;
+  }
+  /* 參與人數 */
+  .players{
+    border: 1px solid #888;
+    margin: 20px 20px 20px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .players label{
+    width: calc(100% / 6);
+  }
+  .players input{
+    position: absolute;
+    opacity: 0;
+  }
+  .players span{
+    display: inline-block;
+    width: 31px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .players input:checked + span{
+    background-color: brown;
+    color: #fff;
+  }
+  .players input:not(:checked) + span:hover{
+    background-color: #441111;
+  }
+
+  /* 日期 */
+  .date{
+    border: 1px solid #888;
+    margin: 20px 20px 20px 0;
+    border-radius: 10px;
+  }
+  .date table{
+    width: 100%;
+    text-align: center;
+  }
+  .date thead tr{
+    line-height: 30px;
+  }
+  /* 左右箭頭 */
+  .date thead button{
+    width: 30px;
+    height: 30px;
+    /* font-size: 24px; */
+    background-color: transparent;
+    border: none;
+  }
+  .date thead button img{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+  }
+  .date thead .arrow_right{
+    transform: rotate(180deg);
+  }
+  .date tbody td{
+    width: calc(100% / 7);
+    border: none;
+    color: #fff;
+    line-height: 24px;
+  }
+  .date tbody span{
+    display: inline-block;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .date tbody input{
+    position: absolute;
+    opacity: 0;
+  }
+  .date tbody input:disabled + span{
+    color: #666;
+  }
+  .date tbody input:checked + span{
+    background-color: brown;
+    color: #fff;
+  }
+  .date tbody input:not(:disabled):not(:checked) + span:hover{
+    background-color: #441111;
+  }
+
+  /* 場次 */
+  .session{
+    margin: 20px 20px 20px 0;
+  }
+  .session .head{
+    display: flex;
+    justify-content: space-between;
+  }
+  .session .head button{
+    margin: 0 15px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+  }
+  .session .head button img{
+    width: 20px;
+    height: 20px;
+    filter: invert(30%) sepia(25%) saturate(4958%) hue-rotate(338deg) brightness(97%) contrast(95%);
+  }
+  .session .arrow_right{
+    transform: rotate(180deg);
+  }
+  .session p{
+    display: inline-block;
+    font-size: 16px;
+  }
+  .session .empty{
+    text-align: center;
+  }
+  .session .empty p{
+    display: block;
+    border: 2px dotted brown;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 30px;
+    width: 90%;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+  .session .empty input{
+    position: absolute;
+    opacity: 0;
+  }
+  .session .empty input:hover +p{
+    border: 2px dotted brown;
+    background-color: #441111;
+  }
+  .session .empty input:checked+p{
+    border: 2px dotted transparent;
+    color: #fff;
+    background-color: brown;
+  }
+
+}
+
 
 
 /* 表單 */
