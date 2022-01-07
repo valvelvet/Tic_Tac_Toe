@@ -1,4 +1,4 @@
-header .nav_bar a:nth-child(3){
+.circular-menu .menu-item:nth-child(3){
   background-color: #441111;
 }
 .banner{

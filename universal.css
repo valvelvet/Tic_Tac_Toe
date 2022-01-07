@@ -271,12 +271,10 @@ footer .follow .link img{
 @media screen and (min-width:768px) {
   /* 導覽列 */
   .header_float{
-    background-color: rgba(165, 42, 42, .7);
-    height: 40px;
     justify-content: space-around;
     padding: 5px;
   }
-  /* 圓形選單 */
+  /* 選單 */
   .circular-menu {
     position: relative;
   }
