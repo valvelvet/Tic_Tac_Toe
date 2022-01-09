@@ -94,6 +94,7 @@ main section:first-child{
 
 main{
   position: relative;
+  /* overflow: hidden; */
 }
 main::before,
 main::after{
@@ -265,7 +266,115 @@ main::after{
   box-shadow: #830007 0 0 0 0,
               #830007 0 0 0 0,
               #470505 0 1px 0 1px;
-            }
+}
+
+
+/* 難度 */
+.topic .game_hard .icon{
+  filter: invert(30%);
+}
+.beauty .game_hard .icon,
+.circus .game_hard .icon:nth-of-type(-n+4),
+.daydream .game_hard .icon:nth-of-type(-n+3),
+.lie_photo .game_hard .icon{
+    filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
+}
+
+
+/* 更多手手 */
+#more_topic{
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  height: 180px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 2;
+}
+#more_topic.stop_moving{
+  position: absolute;
+  bottom: 418px;
+}
+
+/* 土 */
+#more_topic a{
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 1;
+}
+#more_topic a::before{
+  content: url('pic/zombie_mud.png');
+  filter: invert(11%) sepia(81%) saturate(3274%) hue-rotate(344deg) brightness(92%) contrast(116%);
+  position: absolute;
+  z-index: -1;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-55%,0);
+}
+#more_topic .key{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-55%,0) rotate(10deg);
+  transition: .2s;
+}
+#more_topic .surprise{
+  filter: invert(15%) sepia(81%) saturate(3274%) hue-rotate(344deg) brightness(92%) contrast(116%);
+  position: absolute;
+  width: 150px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-60%,0) rotate(10deg);
+  transition: .2s;
+}
+
+/* 警告 */
+.warning{
+  background: url('pic/warning-yellow_black_bar.png') no-repeat center;
+  background-color: #830007;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5em;
+  position: relative;
+  z-index: 3;
+}
+.warning .full_set{
+  background-color: #830007dd;
+  padding: 60px 30px;
+}
+.warning h2{
+  margin-bottom: 40px;
+  color: #ffff64;
+}
+.warning_icon img{
+  height: 50px;
+  margin: 5px;
+  filter: invert(100%) drop-shadow(0 0 30px #000);
+}
+.warning_icon img:nth-child(3){
+  margin: 5px 0 5px 5px;
+}
+
+.warning p{
+  padding-top: 30px;
+  line-height: 2em;
+  position: relative;
+  filter: drop-shadow(0 0 10px #000);
+}
+
+footer,
+.copyright{
+  position: relative;
+  z-index: 3;
+}
+
 
 
 
@@ -281,8 +390,9 @@ main::after{
   }
   .topic{
     display: flex;
-    position: relative;
+    align-items: center;
   }
+
   .hot_topic article:nth-child(even){
     flex-direction: row-reverse;
   }
@@ -293,6 +403,18 @@ main::after{
     top: 130px;
     right: calc(50% - .5em);
     z-index: 2;
+  }
+  article:nth-of-type(1) h2{
+    top: 307px;
+  }
+  article:nth-of-type(2) h2{
+    top: 907px;
+  }
+  article:nth-of-type(3) h2{
+    top: 1507px;
+  }
+  article:nth-of-type(4) h2{
+    top: 2107px;
   }
   .hot_topic article:nth-child(even) h2{
     left: calc(50% - .5em);
@@ -356,7 +478,6 @@ main::after{
     height: 280px;
     flex-grow: 1;
     padding: 50px;
-    padding-top: 110px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -406,11 +527,34 @@ main::after{
     box-shadow: #830007 0 0 0 0,
                 #830007 0 0 0 0,
                 #470505 0 1px 0 1px;
-              }
-
 }
+  /* 更多手手 */
+  #more_topic.stop_moving{
+    position: absolute;
+    bottom: 470px;
+  }
+  /* 抓取動作 */
+  #more_topic:hover .surprise{
+    transform: rotate(15deg);
+    top: -110px;
+  }
+  #more_topic:active .surprise{
+    transform: rotate(-40deg);
+    left: -30px;
+    top: -20px;
+  }
+  #more_topic:active .key{
+    opacity: 0;
+    top: 80px;
+    transform: rotate(-10deg);
+  }
+  
 
-
+  .warning_icon img{
+    height: 60px;
+    margin: 20px;
+  }
+}
 
 @media screen and (min-width:992px) {
   .topic .pic div{
@@ -440,134 +584,3 @@ main::after{
 }
 
 
-
-/* 圖片動態
-.topic .pic div:nth-child(odd):hover{
-  width: 55%;
-  z-index: 2;
-  filter: brightness(100%);
-  box-shadow: 0 0 30px 10px #000;
-} */
-
-
-/* 難度 */
-.topic .game_hard .icon{
-  filter: invert(30%);
-}
-.beauty .game_hard .icon,
-.circus .game_hard .icon:nth-of-type(-n+4),
-.daydream .game_hard .icon:nth-of-type(-n+3),
-.lie_photo .game_hard .icon{
-    filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
-}
-
-/* 更多手手 */
-#more_topic{
-  display: none;
-  margin-top: 0px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%,0);
-  z-index: 2;
-}
-#more_topic a{
-  color: #fff;
-  font-size: 24px;
-  /* filter: drop-shadow(0 0 3px #fff); */
-  position: relative;
-  top: -10px;
-  z-index: 1;
-}
-/* 土 */
-#more_topic a::before{
-  content: url('pic/zombie_mud.png');
-  filter: invert(11%) sepia(81%) saturate(3274%) hue-rotate(344deg) brightness(92%) contrast(116%);
-  position: absolute;
-  z-index: -1;
-  top: -45px;
-  left: -170px;
-}
-#more_topic .key{
-  position: absolute;
-  left: -20px;
-  top: -110px;
-  transform: rotate(10deg);
-  transition: .2s;
-}
-#more_topic .surprise{
-  filter: invert(15%) sepia(81%) saturate(3274%) hue-rotate(344deg) brightness(92%) contrast(116%);
-  position: absolute;
-  width: 150px;
-  top: 20px;
-  left: 5px;
-  transform: rotate(-40deg);
-  transition: .2s;
-}
-/* 抓取動作 */
-#more_topic:hover .surprise{
-  transform: rotate(15deg);
-  top: -110px;
-}
-#more_topic:active .surprise{
-  transform: rotate(-40deg);
-  left: -30px;
-  top: -20px;
-}
-#more_topic:active .key{
-  opacity: 0;
-  top: 80px;
-  transform: rotate(-10deg);
-}
-
-
-
-/* 警告 */
-.warning{
-  background: url('pic/warning-yellow_black_bar.png') no-repeat center;
-  background-color: #830007;
-  color: #fff;
-  text-align: center;
-  line-height: 1.5em;
-  position: relative;
-  z-index: 3;
-}
-.warning .full_set{
-  background-color: #830007dd;
-  padding: 60px 30px;
-}
-.warning h2{
-  margin-bottom: 40px;
-  color: #ffff64;
-}
-.warning_icon img{
-  height: 50px;
-  margin: 5px;
-  filter: invert(100%) drop-shadow(0 0 30px #000);
-}
-.warning_icon img:nth-child(3){
-  margin: 5px 0 5px 5px;
-}
-
-.warning p{
-  padding-top: 30px;
-  line-height: 2em;
-  position: relative;
-  filter: drop-shadow(0 0 10px #000);
-}
-
-footer,
-.copyright{
-  position: relative;
-  z-index: 3;
-}
-
-
-@media screen and (min-width:768px) {
-  .warning_icon img{
-    height: 60px;
-    margin: 20px;
-  }
-
-}
