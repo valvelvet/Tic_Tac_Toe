@@ -120,7 +120,7 @@
         <div class="txt">
           <div class="title">
             <h3>劇情冒險</h3>
-            <p>適合人數: 20人以下</p>
+            <div><p>適合人數: 20人以下</p></div>
           </div>
           <p>你與夥伴們一同踏上一段未知的冒險旅程。<br>跌宕起伏的旅程將成為團隊向心力的基石。</p>
         </div>
@@ -130,7 +130,7 @@
         <div class="txt">
           <div class="title">
             <h3>陣營對抗</h3>
-            <p>適合人數: 20-50人 / 分組建議: 6-10人/組</p>
+            <div><p>適合人數: 20-50人</p><p>分組建議: 6-10人/組</p></div>
           </div>
           <p>有限的陣營資源，考驗團隊的領導能力。<br>分析局勢，制定戰術，揮舞大旗向前邁進!</p>
         </div>
@@ -140,37 +140,32 @@
         <div class="txt">
           <div class="title">
             <h3>卡牌大逃殺</h3>
-            <p>適合人數: 50人以上</p>
+            <div><p>適合人數: 50人以上</p></div>
           </div>
-          <p>隨機的事件，狩獵者的氣息。<br>場地上處處藏著障礙，追尋著寶藏的味道小心前行吧!</p>
+          <p>隨機的事件，狩獵者的氣息。<br>場地上處處藏著障礙，追尋著寶藏的味道謹慎前行!</p>
         </div>
       </div>
       </div>
     </section>
 
-
-
     <article class="email_us">
       <h2>馬上訂製您的活動</h2>
-      <p><label for="list_switch">點選此處</label>或點擊浮動泡泡填寫表單，<br>也可以撥打24小時客服電話為您轉接專人<br>桃園金萱館：03-8820202 / 台中小葉館：04-3353321 / 屏東四季館：08-7779444<br>或者寄送郵件詢問</p>
+      <p><span id="list_switch">點選此處</span>或點擊浮動泡泡填寫表單<br>也可以撥打24小時客服電話為您轉接專人<br>北部：03-8820202<br>中部：04-3353321<br>南部：08-7779444<br>或者寄送郵件詢問</p>
       <img src="pic/reserve_email.png" alt="">
       <p>tic_tac_toe@thisisfake.email</p>
     </article>
 
-
     <article class="list">
-      <input type="checkbox" id="list_switch">
-      <label class="float_list_btn" for="list_switch">
+      <div class="float_list_btn">
         <div class="txt">
           <p>填寫表單，為您的團隊訂製專屬活動!</p>
         </div>
         <div class="pic">
           <img src="pic/list.png">
         </div>
-      </label>
+      </div>
 
-      <div class="float_list">
-        <label for="list_switch" class="cross"></label>
+      <div id="light_off">
         <div class="float_list_box">
           <h2>訂製專屬活動</h2>
           <label>
@@ -199,13 +194,33 @@
           </label>
           <label>
             備註
-            <textarea name="" id="" cols="50" rows="5"></textarea>
+            <textarea name="" id=""  rows="5"></textarea>
           </label>
           <input type="submit" value="送出">
         </div>
       </div>
     </article>
   </main>
+
+
+  <script>
+    function nothing_happen(e){
+      e.stopPropagation();    //阻斷蔓延
+    }
+  
+    function switch_light(){
+      document.getElementById('light_off').classList.toggle('on');
+    }
+  
+    window.addEventListener('load',function(){
+      document.querySelector('.float_list_btn').addEventListener('click',switch_light,false);
+      document.getElementById('light_off').addEventListener('click',switch_light,false);
+      document.getElementById('list_switch').addEventListener('click',switch_light,false);
+      document.querySelector('.float_list_box').addEventListener('click',nothing_happen,false);
+    },false);
+  </script>
+  
+
 
 
   <footer>

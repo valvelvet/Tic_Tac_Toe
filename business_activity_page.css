@@ -11,8 +11,7 @@
 .team_building{
   color: #fff;
   margin: auto;
-  max-width: 1200px;
-  padding: 60px 0;
+  padding: 60px 30px;
   text-align: center;
   line-height: 2em;
 }
@@ -25,12 +24,13 @@
 
 /* 我們為您提供 */
 .our_support{
-  position: relative;
   margin: auto;
   width: 100%;
-  /* overflow: hidden; */
-  /* max-width: 1400px; */
   padding: 60px 0;
+}
+.our_support .item_group{
+  display: flex;
+  flex-direction: column;
 }
 .our_support h2{
   text-align: center;
@@ -41,137 +41,97 @@
   padding-bottom: 15px;
 }
 .our_support .item{
-  width: 20%;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
 }
 .our_support .item .pic{
-  height: 300px;
+  margin: auto;
+  border-radius: 10px;
+  width: calc(100% - 40px);
   overflow: hidden;
 }
 .our_support .item .pic img{
-  position: relative;
-  margin: auto;
-  left: 50%;
-  transform: translate(-50%);
+  width: 100%;
   height: 100%;
 }
 .our_support .item .txt{
-  position: absolute;
-  background-color: #0007;
-  line-height: 2em;
-  box-sizing: border-box;
-  margin-top: 250px;
-  padding: 10px 20px;
-  top: 0;
-  width: 100%;
+  line-height: 1.5em;
+  margin: auto;
+  padding: 20px 0;
+  width: calc(100% - 40px);
   transition: .5s;
 }
 .our_support .item:hover .txt{
   background-color: #0009;
-  margin-top: 170px;
 }
 
 
 
 
-/* 您只需要 */
+/* 遊戲模式 */
 .game_mode{
-  position: relative;
-  margin: auto;
-  max-width: 1200px;
-  padding: 60px 0;
+  padding: 60px 20px;
 }
 .game_mode h2{
   margin: auto;
   padding-bottom: 30px;
+  color: #F3D764;
+}
+.game_mode h3{
+  padding-bottom: 10px;
 }
 .game_mode .item{
   width: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 30px 0;
+  flex-direction: column;
+  padding: 20px 0;
 }
 .game_mode .pic{
+  margin: auto;
+  height: 200px;
   border-radius: 10px;
-  height: 300px;
-  width: 47%;
+  width: 100%;
 }
 .game_mode .txt {
-  width: 50%;
-  box-sizing: border-box;
-  padding: 30px;
-  padding-top: 118px;
-  line-height: 2em;
-}
-.game_mode .txt .title{
-  display: flex;
-  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  padding: 20px 0;
+  line-height: 1.5em;
 }
 .game_mode .txt .title p{
   font-size: 16px;
   color: #F3D764;
   opacity: .5;
+  line-height: 1.5em;
+  padding: 0;
 }
 .game_mode .txt p{
+  padding-top: 10px;
   color: #ddd;
-}
-.game_mode .item:not(:last-child)::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 180px;
-  margin: auto;
-  height: 360px;
-  width: 0;
-  border-radius: 2px;
-  border: 2px solid #F3D764;
-  background-color: #F3D764;
-}
-.game_mode .item::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 165px;
-  margin: auto;
-  height: 30px;
-  width: 30px;
-  border-radius: 15px;
-  background-color: #F3D764;
-  box-shadow: inset 0 0 0 4px #F3D764,
-              inset 0 0 0 15px #000;
-}
-.game_mode .item:nth-of-type(even) {
-  flex-direction: row-reverse;
 }
 .game_mode .item:nth-of-type(1) .pic{
   background-blend-mode: multiply;
   background-color: brown;
-  background: url("https://cdn.pixabay.com/photo/2017/06/13/13/10/lighthouse-2398832_960_720.jpg") no-repeat left/55%;
+  background: url("https://cdn.pixabay.com/photo/2017/06/13/13/10/lighthouse-2398832_960_720.jpg") no-repeat center/200%;
   background-attachment: fixed;
 }
 .game_mode .item:nth-of-type(2) .pic{
-  background: url("https://cdn.pixabay.com/photo/2021/01/29/11/33/game-5960731_960_720.jpg") no-repeat right/55%;
+  background: url("https://cdn.pixabay.com/photo/2021/01/29/11/33/game-5960731_960_720.jpg") no-repeat center/200%;
   background-attachment: fixed;
 }
 .game_mode .item:nth-of-type(3) .pic{
-  background: url("https://cdn.pixabay.com/photo/2017/06/02/17/47/friendship-2366955_960_720.jpg") no-repeat left/55%;
+  background: url("https://cdn.pixabay.com/photo/2017/06/02/17/47/friendship-2366955_960_720.jpg") no-repeat center/200%;
   background-attachment: fixed;
 }
 .game_mode .txt .title {
   border-bottom: 2px dashed #aa8c12;
 }
 
-
-
 .email_us{
-  max-width: 1200px;
   margin: auto;
   text-align: center;
-  padding: 60px;
+  padding: 60px 20px;
 }
 .email_us h2{
   padding-bottom: 30px;
@@ -181,38 +141,28 @@
   color: #aaa;
   line-height: 2em;
 }
-.email_us label{
+.email_us #list_switch{
   cursor: pointer;
   color: brown;
 }
 .email_us img{
-  filter: invert(100%);
+  filter: invert(80%);
   width: 50px;
 }
 
-
-
-
-
-.list > input{
-  display: none;
-}
-.list input:checked ~ .float_list{
-  display: block;
-}
 /* 浮動泡泡 */
 .float_list_btn {
   z-index: 10;
   position: fixed;
   color: #fff;
   right: 0;
-  bottom: 50%;
-  transform: translate(0,-50%);
+  bottom: 0;
 }
 .float_list_btn .pic{
   cursor: pointer;
   position: absolute;
-  right: 30px;
+  bottom: 5px;
+  right: 5px;
   background-color: brown;
   border-radius: 50%;
 }
@@ -222,25 +172,14 @@
   transition: .5s;
 }
 .float_list_btn .txt{
-  width: 0;
-  height: 20px;
-  margin-right: 65px;
-  margin-bottom: -70px;
-  line-height: 2em;
-  padding: 0 0 10px 20px;
-  overflow: hidden;
-  transition: .5s;
-  background-color:  brown;
-  border-radius: 20px;
+  display: none;
 }
-.float_list_btn:hover .txt{
-  width: 350px;
-}
-
-
 
 /* 表單 */
-.float_list {
+#light_off.on {
+  display: block;
+}
+#light_off {
   display: none;
   background-color: #0008;
   height: 100vh;
@@ -251,23 +190,22 @@
   z-index: 10;
 }
 .float_list_box{
-  max-height: 90vh;
+  max-width: 500px;
+  width: 90vw;
+  height: 70vh;
   box-sizing: border-box;
   overflow: auto;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 500px;
   box-shadow: 0 0 10px 0 #fff;
   background-color: #441111;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
-  line-height: 2em;
   display: flex;
   flex-direction: column;
 }
-
 /* 卷軸 */
 .float_list_box::-webkit-scrollbar {
   background-color: transparent;
@@ -277,32 +215,10 @@
   border-radius: 15px;
   background-color: brown;
 }
-
-.float_list_box > label{
-  margin:0;
-}
-.float_list > label::before{
-  content: '';
-  width: 30px;
-  height: 10px;
-  background-color: brown;
-  position: absolute;
-  /* position: fixed; */
-  top: 5vh;
-  right: calc(50% - 300px);
-  border-radius: 5px;
-  transform: rotate(-45deg);
-}
-.float_list > label:first-child::after{
-  content: '';
-  width: 30px;
-  height: 10px;
-  background-color: brown;
-  position: absolute;
-  top: 5vh;
-  right: calc(50% - 300px);
-  border-radius: 5px;
-  transform: rotate(45deg);
+/* 表單內容 */
+.float_list_box label{
+  margin-top: 15px;
+  line-height: 1.5em;
 }
 .float_list_box input,
 .float_list_box textarea{
@@ -311,8 +227,8 @@
   display: block;
   padding: 0 10px;
 }
-.float_list_box label{
-  margin-top: 10px;
+.float_list_box textarea{
+  width: calc(100% - 20px);
 }
 .float_list_box > input{
   cursor: pointer;
@@ -327,4 +243,252 @@
 }
 
 
+@media screen and (min-width:480px) {
+  .our_support .item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .our_support .item:nth-child(even){
+    flex-direction: row-reverse;
+  }
+  .our_support .item .pic{
+    width: 45%;
+    height: 250px;
+    overflow: hidden;
+  }
+  .our_support .item .pic img{
+    width: auto;
+    position: relative;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+  }
+  .our_support .item .txt{
+    background-color: #0005;
+    line-height: 2em;
+    padding: 20px;
+    width: 55%;
+    transition: .5s;
+  }
+  .our_support .item:hover .txt{
+    background-color: #000b;
+  }
 
+  /* 遊戲模式 */
+  .game_mode{
+    margin: auto;
+    max-width: 1200px;
+  }
+  .game_mode h3{
+    padding-bottom: 0;
+  }
+  .game_mode .item{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 0;
+  }
+  .game_mode .pic{
+    margin: 0;
+    height: 300px;
+    width: 42%;
+  }
+  .game_mode .txt {
+    margin: 0;
+    width: 50%;
+    box-sizing: border-box;
+    line-height: 2em;
+    padding: 0 0 0 20px;
+  }
+  .game_mode .item:not(:last-child)::before{
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translate(-50%,0);
+    height: 100%;
+    width: 0;
+    border-radius: 2px;
+    border: 2px solid #F3D764;
+    background-color: #F3D764;
+  }
+  .game_mode .item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #F3D764;
+    box-shadow: inset 0 0 0 4px #F3D764,
+                inset 0 0 0 15px #000;
+  }
+  .game_mode .item:nth-of-type(1) .pic{
+    background: url("pic/game_type-5.jpg") no-repeat left/100%;
+    background-attachment: fixed;
+  }
+  .game_mode .item:nth-of-type(2) .pic{
+    background: url("pic/game_type-4.jpg") no-repeat left/100%;
+    background-attachment: fixed;
+  }
+  .game_mode .item:nth-of-type(3) .pic{
+    background: url("pic/game_type-0.jpg") no-repeat left/100%;
+    background-attachment: fixed;
+  }
+
+
+}
+
+@media screen and (min-width:768px) {
+  /* 我們為您提供 */
+  .our_support .item_group{
+    flex-direction: row;
+  }
+  .our_support .item{
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+  }
+  .our_support .item .pic{
+    border-radius: 0;
+    width: auto;
+    height: 300px;
+  }
+  .our_support .item .pic img{
+    width: auto;
+    position: relative;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+  }
+  .our_support .item .txt{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 45px 20px 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 浮動泡泡 */
+  .float_list_btn {
+    bottom: 50%;
+  }
+  .float_list_btn .pic{
+    right: 30px;
+    bottom: 0;
+    transform: translate(0,50%);
+  }
+  .float_list_btn .txt{
+    display: block;
+    line-height: 2em;
+    width: 0;
+    height: 20px;
+    margin-right: 65px;
+    margin-bottom: -70px;
+    padding: 0 0 10px 20px;
+    overflow: hidden;
+    transition: .5s;
+    background-color:  brown;
+    border-radius: 20px;
+  }
+  .float_list_btn:hover .txt{
+    width: 350px;
+  }
+
+  /* 表單 */
+  .float_list_box{
+    padding: 30px;
+    height: 80vh;
+  }
+  .float_list_box textarea{
+    width: calc(100% - 30px);
+  }
+
+}
+
+
+@media screen and (min-width:992px) {
+  /* 遊戲模式 */
+  .game_mode{
+    margin: auto;
+    max-width: 1200px;
+  }
+  .game_mode h3{
+    padding-bottom: 0;
+  }
+  .game_mode .item{
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 30px 0;
+  }
+  .game_mode .item:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  .game_mode .pic{
+    margin: auto;
+    width: 47%;
+  }
+  .game_mode .txt {
+    margin: auto;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-top: 75px;
+    line-height: 2em;
+  }
+  .game_mode .txt .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .game_mode .txt .title p{
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .game_mode .item:not(:last-child)::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 185px;
+    transform: none;
+    margin: auto;
+    height: 360px;
+    width: 0;
+    border-radius: 2px;
+    border: 2px solid #F3D764;
+    background-color: #F3D764;
+  }
+  .game_mode .item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 165px;
+    margin: auto;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #F3D764;
+    box-shadow: inset 0 0 0 4px #F3D764,
+                inset 0 0 0 15px #000;
+  }
+  .game_mode .item:nth-of-type(1) .pic{
+    background: url("https://cdn.pixabay.com/photo/2017/06/13/13/10/lighthouse-2398832_960_720.jpg") no-repeat left/55%;
+    background-attachment: fixed;
+  }
+  .game_mode .item:nth-of-type(2) .pic{
+    background: url("https://cdn.pixabay.com/photo/2021/01/29/11/33/game-5960731_960_720.jpg") no-repeat right/55%;
+    background-attachment: fixed;
+  }
+  .game_mode .item:nth-of-type(3) .pic{
+    background: url("https://cdn.pixabay.com/photo/2017/06/02/17/47/friendship-2366955_960_720.jpg") no-repeat left/55%;
+    background-attachment: fixed;
+  }
+
+}

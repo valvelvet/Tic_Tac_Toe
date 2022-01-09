@@ -328,7 +328,7 @@
 
 
   <div id="light_off" class="">
-    <div class="writings" id="nothing">
+    <div class="writings">
       <div class="pic">
         <img src="https://cdn.pixabay.com/photo/2021/11/30/13/21/vintage-camera-6835351_960_720.jpg">
       </div>
@@ -364,7 +364,7 @@
   window.addEventListener('load',function(){
     document.getElementById('open').addEventListener('click',switch_light,false);
     document.getElementById('light_off').addEventListener('click',switch_light,false);
-    document.getElementById('nothing').addEventListener('click',nothing_happen,false);
+    document.querySelector('.writings').addEventListener('click',nothing_happen,false);
   },false);
 </script>
 
