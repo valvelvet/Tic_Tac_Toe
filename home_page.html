@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="home_page.css">
   <link rel="stylesheet" href="grid.css">
 
+  <script src="jquery.js"></script>
   <script src="home_page-topic-scroll.js"></script>
 </head>
 
@@ -73,6 +74,15 @@
       </a>
     </div>
   </header>
+
+  <script>
+    $('.banner a').click(function () {
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+      return false;
+    });
+  </script>
 
   <script src="Tic_Tac_Toe.js"></script>
   <!-- <script>
