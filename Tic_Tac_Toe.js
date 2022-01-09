@@ -1,4 +1,7 @@
 let lattice = document.getElementById('lattice');
+let lattice_btn = document.querySelectorAll('#lattice input');
+let start_btn = document.getElementById('reset_lattice');
+let reset_btn = document.querySelector('#reset_lattice img');
 let i = 8;
 
 function lock_all(){
@@ -6,9 +9,15 @@ function lock_all(){
   for(let j=0;j<unlock.length;j++){
     unlock[j].disabled = "true";
   }
+  start_btn.innerHTML = '<img src="pic/undo-circular-arrow.png">';
+  start_btn.style.transform = "translate(calc(-50% + 140px),65px)";
+  reset_btn = document.querySelector('#reset_lattice img');
+  i = 8;
+  return;
 };
 
 function my_turn(e){
+  start_btn.innerHTML = '';
   i--;
   i--;
   //玩家落子
@@ -74,7 +83,7 @@ function my_turn(e){
 
     // 電腦落子
     computer_turn = document.querySelectorAll('#lattice input:not(:disabled)')[parseInt(Math.random()*i)];
-    console.log(i);
+    // console.log(i);
     computer_turn.value = "X";
     computer_turn.disabled = "true";
   
@@ -128,9 +137,20 @@ function my_turn(e){
       lock_all();
       return;
     };
-  }
-}
+  };
+};
+
+
 
 window.addEventListener("load",function(){
   lattice.addEventListener("click",my_turn,false);
+  console.log(reset_btn);
+  start_btn.addEventListener("click",function(){
+    for(let k=0;k<lattice_btn.length;k++){
+      lattice_btn[k].disabled = "";
+      lattice_btn[k].value = " ";
+    };
+    start_btn.innerHTML = '';
+    return;
+  },false);
 },false);

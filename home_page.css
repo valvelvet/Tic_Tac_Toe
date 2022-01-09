@@ -9,7 +9,6 @@
 }
 .banner .logo{
   margin: 25vh 0 20px;
-  border-radius: 50px;
   filter:drop-shadow( 10px 10px 8px rgb(0, 0, 0));
   opacity: .9; 
 }
@@ -68,11 +67,26 @@
   }
 }
 
+#reset_lattice{
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+  transform: translate(calc(-50% + 95px),100px);
+  width: 40px;
+  background-color: transparent;
+  border: transparent;
+}
+#reset_lattice img{
+  cursor: pointer;
+  width: 100%;
+  filter: invert(100%) drop-shadow(0 0 4px #000);
+}
 #lattice{
   position: absolute;
-  top: 23vh;
+  top: 25vh;
   left: 50%;
-  transform: translate(calc(-50% + 28px),0);
+  transform: translate(calc(-50% + 28px),-13px);
+  z-index: 1;
 }
 #lattice td input{
   color: brown;
@@ -81,9 +95,11 @@
   font-size: 30px;
   width: 55px;
   height: 50px;
+  filter: drop-shadow(0 0 4px #fff);
 }
 #lattice td input[value='O']{
   color: #F3D764;
+  filter: drop-shadow(0 0 4px #000);
 }
 
 
@@ -143,7 +159,7 @@ main::after{
   top: 0;
   left: -100vw;
   opacity: 0;
-  transition: left 1s, opacity 1s;
+  transition: left .7s, opacity .7s;
   margin: 30px 0;
   width: 100%;
   height: 50vw;
@@ -215,7 +231,7 @@ main::after{
   top: 0;
   right: -100vw;
   opacity: 0;
-  transition: right 1s, opacity 1s;
+  transition: right .7s, opacity .7s;
   background-blend-mode: multiply;
   background-color: #09000090;
   background-image: url('pic/Tic_Tac_Toe_red.png');
@@ -289,7 +305,7 @@ main::after{
   height: 180px;
   text-align: center;
   position: fixed;
-  bottom: 0;
+  bottom: -5px;
   left: 50%;
   transform: translate(-50%,0);
   z-index: 2;
@@ -385,9 +401,9 @@ footer,
   .banner a{
     top: 15vh;
   }
-  #lattice{
+  /* #lattice{
     top: 24vh;
-  }
+  } */
   .topic{
     display: flex;
     align-items: center;
@@ -469,6 +485,7 @@ footer,
 
   /* 文字 */
   .topic .text{
+    right: -50vw;
     background-blend-mode: multiply;
     background-color: #09000090;
     background-image: url('pic/Tic_Tac_Toe_red.png');
@@ -533,21 +550,28 @@ footer,
     position: absolute;
     bottom: 470px;
   }
+  #more_topic .surprise{
+    bottom: -90px;
+    left: 50%;
+    transform: translate(-55%,0) rotate(0deg);
+    transition: .2s;
+  }  
   /* 抓取動作 */
-  #more_topic:hover .surprise{
-    transform: rotate(15deg);
-    top: -110px;
+  #more_topic a:hover  ~ .surprise{
+    transform: rotate(15deg) translate(-65%,0);
+    bottom: -20px;
   }
-  #more_topic:active .surprise{
-    transform: rotate(-40deg);
-    left: -30px;
-    top: -20px;
+  #more_topic a:active ~  .surprise{
+    left: 50%;
+    transform: rotate(-40deg) translate(-55%,0);
+    bottom: -100px;
   }
-  #more_topic:active .key{
+  #more_topic a:active ~  .key{
     opacity: 0;
-    top: 80px;
-    transform: rotate(-10deg);
+    bottom: -100px;
+    transform: rotate(-10deg) translate(-55%,0);
   }
+  
   
 
   .warning_icon img{

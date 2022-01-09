@@ -25,10 +25,14 @@ window.addEventListener("scroll",function(){
     };
   };
   // console.log(document.getElementsByClassName("warning")[0].offsetTop);
+  // console.log(document.getElementsByClassName("warning")[0].offsetHeight);
+  
   if(document.documentElement.scrollTop > document.getElementsByClassName("warning")[0].offsetTop){
     document.getElementById("more_topic").classList.add('stop_moving');
+    document.querySelector('#more_topic').style.bottom = document.getElementsByClassName("warning")[0].offsetHeight - 5 + 'px';
   }else if(document.documentElement.scrollTop > 1000){
     document.getElementById("more_topic").classList.remove('stop_moving');
+    document.querySelector('#more_topic').style.bottom = "0px";
     document.getElementById("more_topic").style.display = "block";
   }else{
     document.getElementById("more_topic").style.display = "none";
