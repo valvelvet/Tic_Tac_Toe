@@ -73,13 +73,12 @@
   left: 50%;
   transform: translate(calc(-50% + 95px),100px);
   width: 40px;
+  height: 40px;
   background-color: transparent;
   border: transparent;
-}
-#reset_lattice img{
+  animation: tap 1s infinite steps(1, end);
+  /* background: url("pic/tap_1.png") no-repeat center/cover; */
   cursor: pointer;
-  width: 100%;
-  filter: invert(100%) drop-shadow(0 0 4px #000);
 }
 #lattice{
   position: absolute;
@@ -101,7 +100,14 @@
   color: #F3D764;
   filter: drop-shadow(0 0 4px #000);
 }
-
+@keyframes tap{
+  0%{
+    background: url("pic/tap_1.png") no-repeat center/cover;
+  }
+  50%{
+    background: url("pic/tap_2.png") no-repeat center/cover;
+  }
+}
 
 
 main section:first-child{
@@ -110,7 +116,6 @@ main section:first-child{
 
 main{
   position: relative;
-  /* overflow: hidden; */
 }
 main::before,
 main::after{
