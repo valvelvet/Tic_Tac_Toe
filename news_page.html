@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="universal.css">
   <link rel="stylesheet" href="news_page.css">
   <link rel="stylesheet" href="grid.css">
+  <script src="jquery.js"></script>
 </head>
 
 <body>
@@ -59,36 +60,43 @@
           <li>
             <input type="radio" id="show_all" name="cate" checked>
             <label for="show_all">
-              最新文章
+              <p>最新</p><p>文章</p>
             </label>
           </li>
           <li>
             <input type="radio" id="promotions" name="cate">
             <label for="promotions">
-              優惠活動
+              <p>優惠</p><p>活動</p>
             </label>
           </li>
           <li>
             <input type="radio" id="business_cooperation" name="cate">
             <label for="business_cooperation">
-              商業合作
+              <p>商業</p><p>合作</p>
             </label>
           </li>
           <li>
             <input type="radio" id="player_experience" name="cate">
             <label for="player_experience">
-              玩家心得
+              <p>玩家</p><p>心得</p>
             </label>
           </li>
           <li>
             <input type="radio" id="secret_story" name="cate">
             <label for="secret_story">
-              密室故事
+              <p>密室</p><p>故事</p>
             </label>
           </li>
         </ul>
-        <h3>#標籤</h3>
-        <ul class="tag">
+
+        <input type="checkbox" id="switchTag">
+        <label for="switchTag">
+          <h3>#標籤<span class="switchBtn"></span></h3>
+        </label>
+
+        <ul id="pickingTags"></ul>
+
+        <ul id="tags">
           <li>
             <input type="checkbox" id="secret">
             <label for="secret">
@@ -210,7 +218,34 @@
             </label>
           </li>
         </ul>
+
       </div>
+
+      <!-- 標籤交換位置 -->
+
+      <!-- 標籤開關 -->
+      <script>
+        $(function () {
+          if ($(window).width() > 768){
+            $('#switchTag').attr('disabled',true);
+            $('#switchTag').attr('checked',false);
+            $('.switchBtn').hide();
+          };
+
+          $(window).resize(function(){
+            if ($(window).width() > 768){
+              $('#switchTag').attr('disabled',true);
+              $('#switchTag').attr('checked',false);
+              $('.switchBtn').hide();
+            }else if($(window).width() <= 768){
+              $('#switchTag').attr('disabled',false);
+              // $('#switchTag').attr('checked',true);
+              $('.switchBtn').show();
+            };
+          });
+        });
+      </script>
+
 
       <!-- 右欄 -->
       <div class="new_articles">

@@ -38,7 +38,7 @@ section h3::before{
   width: 34px;
   height: 7px;
   border-radius: 2px;
-  background-color: brown;
+  background-color: var(--main-color);
   transition: .5s;
 }
 section h3::after{
@@ -49,7 +49,7 @@ section h3::after{
   width: 7px;
   height: 34px;
   border-radius: 2px;
-  background-color: brown;
+  background-color: var(--main-color);
   transition: .5s;
 }
 section p{

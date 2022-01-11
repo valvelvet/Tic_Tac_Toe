@@ -16,9 +16,12 @@ main section{
   margin: auto;
   line-height: 2em;
 }
+.classification input{
+  display: none;
+}
 
 /* 分類 */
-.classification h3:first-of-type{
+.classification >h3{
   display: none;
 }
 .classification .categories{
@@ -35,18 +38,23 @@ main section{
   display: block;
   z-index: 0;
 }
-.classification .categories input{
-  display: none;
-}
 .classification .categories label{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #441111;
   box-sizing: border-box;
   border-radius: 10px 10px 0 0 ;
-  display: block;
   height: 100%;
   width: 100%;
   border: 1px solid #280000;
   border-bottom: 1px solid #441111;
+  margin-top: -10px;
+  padding: 10px 5px 12px;
+}
+.classification .categories label p{
+  font-size: 16px;
+  line-height: 1.2em;
 }
 .classification .categories input:checked + label{
   background-color: black;
@@ -56,40 +64,65 @@ main section{
 
 
 /* 標籤 */
-.classification h3:last-of-type{
+.classification > label h3{
+  position: relative;
   margin: 20px;
 }
-.classification .tag{
+.classification > label .switchBtn{
+  border: 3px solid #ddd;
+  border-bottom: transparent;
+  border-left: transparent;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0,-50%) rotate(45deg) rotateY(180deg);
+  transition: .5s;
+}
+.classification > #switchTag:checked + label .switchBtn{
+  transform: translate(0,-50%) rotate(135deg);
+}
+.classification #pickingTags,
+.classification #tags{
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
+  transition: .5s;
 }
-.classification .tag li{
+.classification #pickingTags li,
+.classification #tags li{
   color: #ddd;
   margin-bottom: 10px;
   margin-right: 10px;
 }
-.classification .tag label{
+.classification #pickingTags label,
+.classification #tags label{
   padding: 0 10px;
   box-sizing: border-box;
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  border: 2px dotted brown;
+  border: 2px dotted var(--main-color);
 }
-.classification .tag label:hover{
-  border: 2px dotted brown;
+.classification #pickingTags label{
+  background-color: #441111;
+  border: 2px solid var(--main-color);
+}
+.classification #tags label:hover{
+  border: 2px dotted var(--main-color);
   background-color: #441111;
 }
-.classification .tag li input{
-  display: none;
-}
-.classification .tag li input:checked + label{
+.classification #tags li input:checked + label{
   background-color: #441111;
-  border: 2px solid brown;
+  border: 2px solid var(--main-color);
 }
-
+.classification > #switchTag:checked ~ #tags{
+  height: 0;
+  opacity: 0;
+  overflow: hidden; 
+}
 
 /* 右欄 最新文章 */
 .new_articles{
@@ -269,7 +302,7 @@ main section{
 .writings::-webkit-scrollbar-thumb {
   border: 3px solid #280000;
   border-radius: 15px;
-  background-color: brown;
+  background-color: var(--main-color);
 }
 
 
@@ -310,6 +343,10 @@ main section{
     background-color: transparent;
     margin-left: -15px;
     padding: 2px 60px 2px 10px;
+    margin: 0;
+  }
+  .classification .categories label p{
+    display: inline-block;
   }
   .classification .categories input:checked + label{
     border: none;
@@ -320,18 +357,18 @@ main section{
     display: block;
     position: absolute;
     z-index: -1;
-    left: 0;
+    left: 15px;
     bottom: 50%;
     transform: translate(0,50%);
     margin: 0 5px;
     width: 2px;
     height: 25px;
     transition: 1s;
-    background-color: brown;
+    background-color: var(--main-color);
   }
   .classification .categories input:not(:checked) + label:hover::before{
     background-color: transparent;
-    background-image: linear-gradient(110deg, brown 90%,#0000 90%);
+    background-image: linear-gradient(110deg, var(--main-color) 90%,#0000 90%);
     width: 134px;
   }
 
@@ -339,35 +376,38 @@ main section{
   .classification h3:last-of-type{
     margin: 0;
   }
-  .classification .tag{
+  .classification #pickingTags{
+    display: none;
+  }
+  .classification #tags{
     margin: 0;
     display: flex;
     flex-wrap: wrap;
   }
-  .classification .tag li{
+  .classification #tags li{
     color: #ddd;
     margin-bottom: 10px;
     margin-right: 10px;
   }
-  .classification .tag label{
+  .classification #tags label{
     padding: 0 10px;
     box-sizing: border-box;
     display: block;
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: 2px dotted brown;
+    border: 2px dotted var(--main-color);
   }
-  .classification .tag label:hover{
-    border: 2px dotted brown;
+  .classification #tags label:hover{
+    border: 2px dotted var(--main-color);
     background-color: #441111;
   }
-  .classification .tag li input{
+  .classification #tags li input{
     display: none;
   }
-  .classification .tag li input:checked + label{
+  .classification #tags li input:checked + label{
     background-color: #441111;
-    border: 2px solid brown;
+    border: 2px solid var(--main-color);
   }
 
   /* 右欄 最新文章 */

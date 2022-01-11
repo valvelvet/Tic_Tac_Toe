@@ -89,7 +89,7 @@
   z-index: 1;
 }
 #lattice td input{
-  color: brown;
+  color: var(--main-color);
   border: none;
   background-color: transparent;
   font-size: 30px;
@@ -268,7 +268,7 @@ main::after{
 
 .topic .text > a{
   display: inline-block;
-  background-color: brown;
+  background-color: var(--main-color);
   color: #fff;
   border-radius: 20px;
   padding: 10px 15px;
@@ -293,7 +293,7 @@ main::after{
 .circus .game_hard .icon:nth-of-type(-n+4),
 .daydream .game_hard .icon:nth-of-type(-n+3),
 .lie_photo .game_hard .icon{
-    filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
+  filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
 }
 
 
@@ -401,9 +401,6 @@ footer,
   .banner a{
     top: 15vh;
   }
-  /* #lattice{
-    top: 24vh;
-  } */
   .topic{
     display: flex;
     align-items: center;
@@ -510,11 +507,11 @@ footer,
     margin-bottom: 20px;
     font-size: 0;
   }
-  .topic .about .icon{
+  /* .topic .about .icon{
     filter: invert(100%);
     margin-right: 2px;
     width: 16px;
-  }
+  } */
   .topic .about span:nth-of-type(-n+2){
     margin-right: 10px;
   }
@@ -527,7 +524,7 @@ footer,
 
   .topic .text > a{
     display: inline-block;
-    background-color: brown;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     border-radius: 20px;

@@ -104,8 +104,8 @@
   width: 0;
   top: 30px;
   left: 0;
-  border: 15px solid brown;
-  border-left: 100px solid brown;
+  border: 15px solid var(--main-color);
+  border-left: 100px solid var(--main-color);
   border-right: 10px solid transparent;
   position: absolute;
   z-index: 1;

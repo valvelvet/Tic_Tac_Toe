@@ -43,7 +43,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: brown;
+  background-color: var(--main-color);
   border: 5px solid #441111;
 }
 .address a:nth-of-type(1){
@@ -74,7 +74,7 @@
   left: 40px;
   top: -10px;
   width: 50px;
-  background-color: brown;
+  background-color: var(--main-color);
   color: #ddd;
   padding: 5px 10px;
   border-radius: 10px;
@@ -87,7 +87,7 @@
   top: 6px;
   width: 0;
   height: 0;
-  border: 11px solid brown;
+  border: 11px solid var(--main-color);
   border-left: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
@@ -201,7 +201,7 @@ footer{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: brown;
+    background-color: var(--main-color);
     border: 5px solid #441111;
   }
   .address .row label:nth-of-type(1) .place_point{
@@ -235,7 +235,7 @@ footer{
     left: 40px;
     top: -10px;
     width: 50px;
-    background-color: brown;
+    background-color: var(--main-color);
     color: #ddd;
     padding: 5px 10px;
     border-radius: 10px;
@@ -248,7 +248,7 @@ footer{
     top: 6px;
     width: 0;
     height: 0;
-    border: 11px solid brown;
+    border: 11px solid var(--main-color);
     border-left: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;

@@ -183,7 +183,7 @@
   padding: 5px 10px;
   border-radius: 30px;
   font-size: 18px;
-  background-color: brown;
+  background-color: var(--main-color);
   color: #fff;
   border: none;
 }
@@ -212,7 +212,7 @@
   border-radius: 50%;
 }
 .players input:checked + span{
-  background-color: brown;
+  background-color: var(--main-color);
   color: #fff;
 }
 .players input:not(:checked) + span:hover{
@@ -268,7 +268,7 @@
   color: #666;
 }
 .date tbody input:checked + span{
-  background-color: brown;
+  background-color: var(--main-color);
   color: #fff;
 }
 .date tbody input:not(:disabled):not(:checked) + span:hover{
@@ -309,7 +309,7 @@
 }
 .session .empty p{
   display: block;
-  border: 2px dotted brown;
+  border: 2px dotted var(--main-color);
   margin: 10px 0;
   border-radius: 30px;
   width: 100%;
@@ -322,13 +322,13 @@
   opacity: 0;
 }
 .session .empty input:hover +p{
-  border: 2px dotted brown;
+  border: 2px dotted var(--main-color);
   background-color: #441111;
 }
 .session .empty input:checked+p{
   border: 2px dotted transparent;
   color: #fff;
-  background-color: brown;
+  background-color: var(--main-color);
 }
 
 
@@ -410,7 +410,7 @@
     padding: 5px 10px;
     border-radius: 30px;
     font-size: 18px;
-    background-color: brown;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
   }
@@ -439,7 +439,7 @@
     border-radius: 50%;
   }
   .players input:checked + span{
-    background-color: brown;
+    background-color: var(--main-color);
     color: #fff;
   }
   .players input:not(:checked) + span:hover{
@@ -495,7 +495,7 @@
     color: #666;
   }
   .date tbody input:checked + span{
-    background-color: brown;
+    background-color: var(--main-color);
     color: #fff;
   }
   .date tbody input:not(:disabled):not(:checked) + span:hover{
@@ -534,7 +534,7 @@
   }
   .session .empty p{
     display: block;
-    border: 2px dotted brown;
+    border: 2px dotted var(--main-color);
     margin: auto;
     margin-top: 10px;
     border-radius: 30px;
@@ -547,13 +547,13 @@
     opacity: 0;
   }
   .session .empty input:hover +p{
-    border: 2px dotted brown;
+    border: 2px dotted var(--main-color);
     background-color: #441111;
   }
   .session .empty input:checked+p{
     border: 2px dotted transparent;
     color: #fff;
-    background-color: brown;
+    background-color: var(--main-color);
   }
 
 }
@@ -596,7 +596,7 @@ form .check_data input{
 }
 form .contact_data input{
   width: 140px;
-  color: brown;
+  color: var(--main-color);
   border: none;
 }
 form .contact_data label:last-child input{
