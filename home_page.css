@@ -88,6 +88,7 @@
   z-index: 1;
 }
 #lattice td input{
+  font-weight: 900;
   color: var(--main-color);
   border: none;
   background-color: transparent;
