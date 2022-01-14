@@ -15,7 +15,7 @@ main section:first-child{
   margin-top: 0vh;
 }
 .topic_reserve{
-  background: linear-gradient(135deg,#280000 93%,#000 93%);
+  background: linear-gradient(135deg,#280000 93%,var(--main-color) 93%);
   color: #fff;
   max-width: 1200px;
   border-radius: 10px;
@@ -83,14 +83,13 @@ main section:first-child{
   font-size: 24px;
   color: #fff;
   border: none;
-  border-radius: 20px;
   padding: 10px 15px;
   transition: .1s;
   display: block;
   position: relative;
 }
 .topic_reserve > a::after{
-  content: '-->';
+  content: '>';
 }
 
 @keyframes turn_pic {

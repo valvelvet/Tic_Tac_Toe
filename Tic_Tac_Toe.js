@@ -3,6 +3,12 @@ let lattice_btn = document.querySelectorAll('#lattice input');
 let start_btn = document.getElementById('reset_lattice');
 let i = 8;
 
+function winnerGift(){
+  switch_light();
+  let gift = parseInt(Math.random()*7)+1;
+  $('#light_off .feedback .pic').html(`<img src="pic/gift-0${gift}.png" alt="">`);
+};
+
 function lock_all(){
   let unlock = document.querySelectorAll("#lattice input:not(:disabled)");
   for(let j=0;j<unlock.length;j++){
@@ -33,43 +39,8 @@ function my_turn(e){
     rc20 = document.getElementById("rc20").value;
     rc21 = document.getElementById("rc21").value;
     rc22 = document.getElementById("rc22").value;
-    if( rc00!=" " && rc01!=" " && rc02!=" " && rc00==rc01 && rc01==rc02){
-      alert("遊戲結束，恭喜獲勝");
-      lock_all();
-      return;
-    };
-    if( rc10!=" " && rc11!=" " && rc12!=" " && rc10==rc11 && rc11==rc12){
-      alert("遊戲結束，恭喜獲勝");
-      lock_all();
-      return;
-    };
-    if( rc20!=" " && rc21!=" " && rc22!=" " && rc20==rc21 && rc21==rc22){
-      alert("遊戲結束，恭喜獲勝");
-      lock_all();
-      return;
-    };
-    if( rc00!=" " && rc10!=" " && rc20!=" " && rc00==rc10 && rc10==rc20){
-      alert("遊戲結束，恭喜獲勝");
-      lock_all();
-      return;
-    };
-    if( rc01!=" " && rc11!=" " && rc21!=" " && rc01==rc11 && rc11==rc21){
-      alert("遊戲結束，恭喜獲勝");
-      lock_all();
-      return;
-    };
-    if( rc02!=" " && rc12!=" " && rc22!=" " && rc02==rc12 && rc12==rc22){
-      alert("遊戲結束，恭喜獲勝");
-      lock_all();
-      return;
-    };
-    if( rc02!=" " && rc11!=" " && rc20!=" " && rc02==rc11 && rc11==rc20){
-      alert("遊戲結束，恭喜獲勝");
-      lock_all();
-      return;
-    };
-    if( rc00!=" " && rc11!=" " && rc22!=" " && rc00==rc11 && rc11==rc22){
-      alert("遊戲結束，恭喜獲勝");
+    if( (rc00!=" " && rc01!=" " && rc02!=" " && rc00==rc01 && rc01==rc02) || (rc10!=" " && rc11!=" " && rc12!=" " && rc10==rc11 && rc11==rc12)||(rc20!=" " && rc21!=" " && rc22!=" " && rc20==rc21 && rc21==rc22)||(rc00!=" " && rc10!=" " && rc20!=" " && rc00==rc10 && rc10==rc20)||(rc01!=" " && rc11!=" " && rc21!=" " && rc01==rc11 && rc11==rc21)||(rc02!=" " && rc12!=" " && rc22!=" " && rc02==rc12 && rc12==rc22)||(rc02!=" " && rc11!=" " && rc20!=" " && rc02==rc11 && rc11==rc20)||(rc00!=" " && rc11!=" " && rc22!=" " && rc00==rc11 && rc11==rc22)){
+      winnerGift();
       lock_all();
       return;
     };
@@ -138,7 +109,13 @@ function my_turn(e){
   };
 };
 
+function nothing_happen(e){
+  e.stopPropagation();    //阻斷蔓延
+}
 
+function switch_light(){
+  document.getElementById('light_off').classList.toggle('on');
+}
 
 window.addEventListener("load",function(){
   lattice.addEventListener("click",my_turn,false);
@@ -150,4 +127,6 @@ window.addEventListener("load",function(){
     start_btn.style.background = '';
     return;
   },false);
+  document.getElementById('light_off').addEventListener('click',switch_light,false);
+  document.querySelector('.feedback').addEventListener('click',nothing_happen,false);
 },false);

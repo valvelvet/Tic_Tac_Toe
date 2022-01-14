@@ -9,7 +9,7 @@
 }
 
 
-/* 更多主題 */
+/* 主題 */
 .topic{
   color: #fff;
   display: flex;
@@ -43,7 +43,7 @@
   border-radius: 30px;
   margin: 20px;
   width: calc(100% - 40px);
-  height: 300px;
+  height: 250px;
   position: relative;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #0009;
+  background-color: #0004;
   transition: .2s;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@
 .topic .info .icon{
   height: 15px;
   margin-right: 5px;
-  filter: invert(60%);
+  filter: invert(90%);
 }
 .topic .game_hard .icon{
   filter: invert(30%);
@@ -150,6 +150,7 @@
     text-align: start;
   }
   .topic > a{
+    margin: 20px;
     width: calc(100% / 2 - 40px);
   }
 
@@ -163,7 +164,15 @@
   .topic{
     max-width: 900px;
   }
-
+  .topic .info{
+    text-align: start;
+    background-color: #0009;
+  }
+  .topic > a{
+    margin: 30px;
+    height: 350px;
+    width: calc(100% / 2 - 60px);
+  }
 }
 
 
@@ -174,6 +183,6 @@
     max-width: 1200px;
   }
   .topic > a{
-    width: calc(100% / 3 - 40px);
+    width: calc(100% / 3 - 60px);
   }
 }
