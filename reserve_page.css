@@ -236,37 +236,20 @@
 .date thead tr{
   line-height: 30px;
 }
-/* 左右箭頭 */
-.date thead button{
-  width: 30px;
-  height: 30px;
-  /* font-size: 24px; */
-  background-color: transparent;
-  border: none;
-}
-.date thead button img{
-  width: 30px;
-  height: 30px;
-  filter: invert(100%);
-}
-.date thead .arrow_right{
-  transform: rotate(180deg);
+.date thead select{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  width: 90%;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 14px;
 }
 .date tbody td{
   width: calc(100% / 7);
   border: none;
   color: #fff;
   line-height: 24px;
-}
-.date select{
-  appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  width: 90%;
-  margin-left: 10px;
-  padding: 5px 0;
-  text-align: center;
-  font-size: 14px;
 }
 .date tbody span{
   display: inline-block;
