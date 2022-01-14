@@ -110,6 +110,7 @@
   backface-visibility: hidden;
   transition: 0.6s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 .address label .card_back_side{
   border-radius: 10px;
@@ -128,9 +129,14 @@
   justify-content: space-between;
   flex-direction: column;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   backface-visibility: hidden;
   transition: 0.6s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 input:checked ~ .card_front_side {
   transform: rotateY(180deg);

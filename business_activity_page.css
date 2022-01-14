@@ -92,6 +92,19 @@
   height: 200px;
   border-radius: 10px;
   width: 100%;
+  position: relative;
+}
+.game_mode .item:nth-of-type(1) .pic::after{
+  background: url("pic/adventure.webp") no-repeat center/200%;
+  background-attachment: fixed;
+}
+.game_mode .item:nth-of-type(2) .pic::after{
+  background: url("pic/camp.webp") no-repeat center/200%;
+  background-attachment: fixed;
+}
+.game_mode .item:nth-of-type(3) .pic::after{
+  background: url("pic/battleroyale.webp") no-repeat center/200%;
+  background-attachment: fixed;
 }
 .game_mode .txt {
   margin: auto;
@@ -109,20 +122,6 @@
 .game_mode .txt p{
   padding-top: 10px;
   color: #ddd;
-}
-.game_mode .item:nth-of-type(1) .pic{
-  background-blend-mode: multiply;
-  background-color: var(--main-color);
-  background: url("pic/adventure.webp") no-repeat center/200%;
-  background-attachment: fixed;
-}
-.game_mode .item:nth-of-type(2) .pic{
-  background: url("pic/camp.webp") no-repeat center/200%;
-  background-attachment: fixed;
-}
-.game_mode .item:nth-of-type(3) .pic{
-  background: url("pic/battleroyale.webp") no-repeat center/200%;
-  background-attachment: fixed;
 }
 .game_mode .txt .title {
   border-bottom: 2px dashed #aa8c12;
