@@ -290,7 +290,7 @@ footer .follow .link img{
   .circular-menu .menu-item {
     opacity: 1;
     transform: rotate(0);
-    position: sticky;
+    position: static;
     display: inline-block;
     left: 0;
     width: auto;
@@ -304,7 +304,7 @@ footer .follow .link img{
     color: #fff;
   }
   .circular-menu.active .menu-item {
-    position: sticky;
+    position: static;
   }
   .circular-menu .menu-item:hover {
     background: none;

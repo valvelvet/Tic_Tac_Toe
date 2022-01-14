@@ -178,6 +178,7 @@
   padding: 20px;
   border-radius: 10px;
 }
+.date select,
 .choose select{
   width: 100%;
   padding: 5px 10px;
@@ -254,6 +255,16 @@
   color: #fff;
   line-height: 24px;
 }
+.date select{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  width: 90%;
+  margin-left: 10px;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 14px;
+}
 .date tbody span{
   display: inline-block;
   border-radius: 12px;
@@ -280,11 +291,11 @@
   width: 260px;
 }
 .session h3{
-  width: auto;
+  text-align: center;
 }
 .session .head{
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  color: #ddd;
 }
 .session .head button{
   width: 20px;
@@ -296,9 +307,6 @@
   width: 20px;
   height: 20px;
   filter: invert(30%) sepia(25%) saturate(4958%) hue-rotate(338deg) brightness(97%) contrast(95%);
-}
-.session .arrow_right{
-  transform: rotate(180deg);
 }
 .session p{
   display: inline-block;
@@ -506,10 +514,6 @@
   .session{
     margin: 20px 20px 20px 0;
   }
-  .session .head{
-    display: flex;
-    justify-content: space-between;
-  }
   .session .head button{
     margin: 0 15px;
     width: 20px;
@@ -521,9 +525,6 @@
     width: 20px;
     height: 20px;
     filter: invert(30%) sepia(25%) saturate(4958%) hue-rotate(338deg) brightness(97%) contrast(95%);
-  }
-  .session .arrow_right{
-    transform: rotate(180deg);
   }
   .session p{
     display: inline-block;
@@ -550,7 +551,7 @@
     border: 2px dotted var(--main-color);
     background-color: #441111;
   }
-  .session .empty input:checked+p{
+  .session .empty input:checked + p{
     border: 2px dotted transparent;
     color: #fff;
     background-color: var(--main-color);
@@ -561,49 +562,83 @@
 
 
 /* 表單 */
-form{
-  display: none;
-  /* opacity: .5; */
-  transition: 2s;
-  max-width: 1150px;
-  padding: 25px 25px 20px 25px;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 10px;
-  color: #fff;
-  background-color: rgb(177, 25, 25);
+#light_off.on {
+  display: block;
 }
-form h3{
-  margin: 10px 0;
+#light_off{
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: #0008;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+form{
+  width: 90vw;
+  max-height: 70vh;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+/* 卷軸 */
+form::-webkit-scrollbar {
+  background-color: transparent;
+}
+form::-webkit-scrollbar-thumb {
+  border: 3px solid var(--main-color);
+  border-radius: 15px;
+  background-color: #441111;
 }
 form div{
   padding: 10px;
 }
+form .check_data{
+  border-bottom: 2px dashed #441111;
+}
 form .check_data,
 form .contact_data{
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-form .check_data label{
-  width: 25%;
-}
+form .check_data label,
 form .contact_data label{
-  width: 25%;
+  margin-top: 15px;
+  line-height: 1.5em;
 }
 form .check_data input{
-  width: 140px;
-  color: #fff;
-  border: none;
+  max-width: 55vw;
+  color: #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  display: block;
+  padding: 0 10px;
 }
 form .contact_data input{
-  width: 140px;
-  color: var(--main-color);
-  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  display: block;
+  padding: 0 10px;
 }
 form .contact_data label:last-child input{
   width: 70%;
 }
 form > input{
-  display: block;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: -10px;
   margin-left: auto;
   background-color: #280000;
   color: #fff;

@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="universal.css">
   <link rel="stylesheet" href="reserve_page.css">
   <link rel="stylesheet" href="grid.css">
+  <script src="jquery.js"></script>
+  <script src="calender.js"></script>
 </head>
 
 <body>
@@ -113,26 +115,26 @@
             <h3>選擇其他主題</h3>
             <select name="" id="">
               <optgroup label="桃園金萱館">
-                <option value="">美麗實驗</option>
-                <option value="">五十肩</option>
-                <option value="">閃到腰</option>
-                <option value="">你的名字</option>
-                <option value="">白日夢</option>
+                <option>美麗實驗</option>
+                <option>五十肩</option>
+                <option>閃到腰</option>
+                <option>你的名字</option>
+                <option>白日夢</option>
               </optgroup>
               <optgroup label="台中小葉館">
-                <option value="">剩蛋液</option>
-                <option value="">哩嘎挖店店</option>
-                <option value="">Hey!Johnny</option>
-                <option value="">我們在傘下準備失去對方</option>
-                <option value="">ㄌㄌ</option>
-                <option value="">追七火葬場</option>
-                <option value="">美麗實驗-EX</option>
-                <option value="" selected>說謊的相機</option>
+                <option>剩蛋液</option>
+                <option>哩嘎挖店店</option>
+                <option>Hey!Johnny</option>
+                <option>我們在傘下準備失去對方</option>
+                <option>ㄌㄌ</option>
+                <option>追七火葬場</option>
+                <option>美麗實驗-EX</option>
+                <option selected>說謊的相機</option>
               </optgroup>
               <optgroup label="屏東四季館">
-                <option value="">眼中的倒影</option>
-                <option value="">美凰有約</option>
-                <option value="">痛風</option>
+                <option>眼中的倒影</option>
+                <option>美凰有約</option>
+                <option>痛風</option>
               </optgroup>
             </select>
           </div>
@@ -168,33 +170,44 @@
             <h3>日期</h3>
             <table>
               <thead>
-                <tr>
+                <tr id="yearMonth">
                   <th>
                     <button class="arrow_left">
-                      <img src="pic/arrow.png" alt="">
+                      <!-- <img src="pic/arrow.png" alt=""> -->
                     </button>
                   </th>
-                  <th colspan="5">
-                    2021年 12月
+                  <th colspan="2">
+                    <select name="" id="year">
+                    </select>
+                  </th>
+                  <th>
+                    年
+                  </th>
+                  <th>
+                    <select name=""  id="month">
+                    </select>
+                  </th>
+                  <th>
+                    月
                   </th>
                   <th>
                     <button class="arrow_right">
-                      <img src="pic/arrow.png" alt="">
+                      <!-- <img src="pic/arrow.png" alt=""> -->
                     </button>
                   </th>
                 </tr>
-                <tr>
+                <tr id="week">
+                  <th>日</th>
                   <th>一</th>
                   <th>二</th>
                   <th>三</th>
                   <th>四</th>
                   <th>五</th>
                   <th>六</th>
-                  <th>日</th>
                 </tr>
               </thead>
 
-              <tbody>
+              <tbody id='calenderDates'>
                 <tr>
                   <td>
                     <label>
@@ -211,193 +224,251 @@
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>1</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>2</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>3</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>4</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>5</span>
+                      <span></span>
                     </label>
                   </td>
                 </tr>
-                
                 <tr>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>6</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>7</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>8</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>9</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>10</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>11</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>12</span>
+                      <span></span>
                     </label>
                   </td>
                 </tr>
-                
                 <tr>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>13</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>14</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>15</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>16</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>17</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>18</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>19</span>
+                      <span></span>
                     </label>
                   </td>
                 </tr>
-                
                 <tr>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>20</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>21</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>22</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>23</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>24</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>25</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data" disabled>
-                      <span>26</span>
+                      <span></span>
                     </label>
                   </td>
                 </tr>
-
                 <tr>
                   <td>
                     <label>
-                      <input type="radio" name="data" disabled>
-                      <span>27</span>
-                    </label>
-                  </td>
-                  <td>
-                    <label>
-                      <input type="radio" name="data" checked>
-                      <span>28</span>
+                      <input type="radio" name="data">
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data">
-                      <span>29</span>
+                      <span></span>
                     </label>
                   </td>
                   <td>
                     <label>
                       <input type="radio" name="data">
-                      <span>30</span>
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="radio" name="data">
+                      <span></span>
                     </label>
                   </td>
                 </tr>
@@ -409,13 +480,7 @@
         <div class="session">
           <h3>場次</h3>
           <div class="head">
-            <button class="arrow_left">
-              <img src="pic/arrow.png" alt="">
-            </button>
             <p>2021年 12月 28日</p>
-            <button class="arrow_right">
-              <img src="pic/arrow.png" alt="">
-            </button>
           </div>
           <div class="empty">
             <label>
@@ -436,48 +501,46 @@
     </section>
 
     <!-- 預約確認 -->
-    <form action="" target="_self">
-      <h3>預約確認</h3>
-      <div class="check_data">
-        <label>
-          密室主題 : <input name="topic" type="text" value="說謊的相機" max="6" min="1" disabled>
-        </label>
-        <label>
-          參與人數 : <input name="players" type="number" value="6" disabled>
-        </label>
-        <label>
-          日期 : <input name="date" type="date" value="2021-12-28" disabled>
-        </label>
-        <label>
-          場次 : <input name="session" type="time" value="13:00" disabled>
-        </label>
-      </div>
-      <div class="contact_data">
-        <label>聯絡電話 : <input type="tel"></label>
-        <label>Email : <input type="email"></label>
-      </div>
-      <input type="submit" value="送出">
-    </form>
-
+    
+    <div id="light_off">
+      <form action="" target="_self">
+        <h2>預約確認</h2>
+        <div class="check_data">
+          <label>
+            密室主題 : <input class="topic" type="text" value="說謊的相機" disabled>
+          </label>
+          <label>
+            參與人數 : <input class="players" type="number" value="6" disabled>
+          </label>
+          <label>
+            日期 : <input class="date" type="date" value="2021-01-28" disabled>
+          </label>
+          <label>
+            場次 : <input class="session" type="time" value="13:00" disabled>
+          </label>
+        </div>
+        <div class="contact_data">
+          <label>聯絡電話 : <input type="tel"></label>
+          <label>Email : <input type="email"></label>
+        </div>
+        <input type="submit" value="送出">
+      </form>
+    </div>
 
     <script>
-      function init(){
-        let empty_times = document.getElementsByName('empty_time');
-        empty_times[0].onclick = jump;
-        empty_times[1].onclick = jump;
-        empty_times[2].onclick = jump;
+      function nothing_happen(e){
+        e.stopPropagation();    //阻斷蔓延
       }
-      function jump(){
-        document.getElementsByTagName('form')[0].style.display = 'block';
-
-        let people = document.getElementsByName('player');
-        for (var i=0;i<people.length;i++){
-          if(people[i].checked == true){
-            document.getElementsByName('players')[0].value = i+1;
-          }
-        }
+    
+      function switch_light(){
+        document.getElementById('light_off').classList.toggle('on');
       }
-      window.addEventListener('load',init,false);
+    
+      window.addEventListener('load',function(){
+        $('.session label input[name=empty_time]').on('click',switch_light);
+        document.getElementById('light_off').addEventListener('click',switch_light,false);
+        $('form').on('click',nothing_happen);
+      },false);
     </script>
 
 
