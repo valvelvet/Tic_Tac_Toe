@@ -359,7 +359,7 @@
 form{
   width: 90vw;
   max-height: 70vh;
-  max-width: 1000px;
+  max-width: 600px;
   border-radius: 10px;
   box-sizing: border-box;
   position: fixed;
@@ -399,19 +399,21 @@ form .contact_data label{
   margin-top: 15px;
   line-height: 1.5em;
 }
-form .check_data input{
-  max-width: 55vw;
-  color: #ddd;
-  border-radius: 10px;
-  font-size: 16px;
-  display: block;
-  padding: 0 10px;
-}
+form .check_data input,
 form .contact_data input{
+  min-width: 170px;
+  max-width: 55vw;
   border-radius: 10px;
   font-size: 16px;
   display: block;
   padding: 0 10px;
+  height: 24px;
+  margin: 0;
+}
+form .check_data input{
+  color: #ddd;
+  background-color: #280000;
+  border: none;
 }
 form .contact_data label:last-child input{
   width: 70%;

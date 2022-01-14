@@ -219,17 +219,24 @@
   margin-top: 15px;
   line-height: 1.5em;
 }
+.float_list_box input{
+  min-width: 60px;
+  max-width: 60vw;
+  height: 24px;
+}
 .float_list_box input,
 .float_list_box textarea{
   border-radius: 10px;
   font-size: 16px;
   display: block;
   padding: 0 10px;
+  margin: 0;
 }
 .float_list_box textarea{
   width: calc(100% - 20px);
 }
 .float_list_box > input{
+  height: auto;
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: -10px;
