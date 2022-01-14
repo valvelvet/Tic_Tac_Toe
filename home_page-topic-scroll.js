@@ -2,13 +2,7 @@ var topices_left = document.getElementsByClassName("scroll-left_in");
 var topices_right = document.getElementsByClassName("scroll-right_in");
 
 window.addEventListener("scroll",function(){
-  // console.log( window.scrollY);
-  // console.log( topices_right[0].offsetTop);
   for (let i=0; i<topices_right.length; i++){
-    // console.log( topices_right[i].offsetParent);
-    // console.log( topices_right[i].offsetTop);
-    // console.log( topices_left[i].offsetTop);
-    // document.documentElement.scrollTop
     if( topices_right[i].offsetTop > window.scrollY){
       topices_right[i].style.opacity = '0';
       topices_right[i].style.right = '-100vw';
@@ -24,8 +18,6 @@ window.addEventListener("scroll",function(){
       topices_left[i].style.left = '0';
     };
   };
-  // console.log(document.getElementsByClassName("warning")[0].offsetTop);
-  // console.log(document.getElementsByClassName("warning")[0].offsetHeight);
   
   if(document.documentElement.scrollTop > document.getElementsByClassName("warning")[0].offsetTop){
     document.getElementById("more_topic").classList.add('stop_moving');
