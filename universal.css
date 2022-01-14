@@ -234,7 +234,7 @@ footer .other_info{
 }
 footer .branch_group > div,
 footer .other_info > div{
-  border-left: 3px solid #F3D764;
+  border-left: 3px solid hsl(48, 86%, 67%);
   width: 70%;
   max-width: 235px;
   margin-bottom: 30px;
@@ -243,8 +243,15 @@ footer .other_info > div{
 footer .other_info > div{
   border-left: 3px solid var(--main-color);
 }
+footer .follow .link{
+  font-size: 0;
+}
+footer .follow .link a{
+  display: inline-block;
+  padding: 5px 10px 5px 5px;
+  height: 40px;
+}
 footer .follow .link img{
-  margin-right: 10px;
   height: 40px;
   filter: invert(100%);
 }

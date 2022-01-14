@@ -97,13 +97,13 @@
         
         <div class="pic scroll-right_in">
           <div class="top">
-            <img src="https://cdn.pixabay.com/photo/2014/02/02/17/40/photos-256887_960_720.jpg" alt="很多照片">
+            <img src="pic/lie_photo-01.webp" alt="很多照片">
           </div>
           <div class="front">
-            <img src="https://cdn.pixabay.com/photo/2021/11/30/13/21/vintage-camera-6835351_960_720.jpg" alt="說謊的相機主圖">
+            <img src="pic/lie_photo-02.webp" alt="說謊的相機主圖">
           </div>
           <div class="bottom">
-            <img src="https://i.pinimg.com/564x/36/da/6a/36da6a9e497f07c4e8168dd0f9fbc4da.jpg" alt="拍力得">
+            <img src="pic/lie_photo-03.jpg" alt="拍力得">
           </div>
         </div>
 
@@ -144,16 +144,16 @@
 
         <div class="pic scroll-left_in">
           <div class="top">
-            <img src="https://pic.52112.com/180209/180209_82/QRJjRn5dr1.jpg" alt="手術工具">
+            <img src="pic/beauty-01.jpg" alt="手術工具">
           </div>
           <div class="front">
-            <img src="https://cdn.pixabay.com/photo/2018/04/07/06/25/depression-3297810_960_720.jpg" alt="美麗實驗主圖">
+            <img src="pic/beauty-02.webp" alt="美麗實驗主圖">
           </div>
           <div class="bottom">
-            <img src="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fas.chdev.tw%2Fweb%2Farticle%2F3%2F0%2F4%2F3871d18b-06a2-4b82-ae51-83474328be731618369930.jpg/?w=621" alt="手術室">
+            <img src="pic/beauty-03.jfif" alt="手術室">
           </div>
         </div>
-
+        
         <div class="text scroll-right_in">
           <div class="about">
             <div class="game_hard">
@@ -192,13 +192,13 @@
 
         <div class="pic scroll-right_in">
           <div class="top">
-            <img src="https://cdn.pixabay.com/photo/2018/01/22/17/57/streamer-3099550_960_720.jpg" alt="馬戲裝飾">
+            <img src="pic/circus-01.webp" alt="馬戲裝飾">
           </div>
           <div class="front">
-            <img src="https://cdn.pixabay.com/photo/2017/05/17/11/11/woman-2320581_960_720.jpg" alt="眼中的倒影主圖">
+            <img src="pic/circus-02.webp" alt="眼中的倒影主圖">
           </div>
           <div class="bottom">
-            <img src="https://cdn.pixabay.com/photo/2019/12/26/21/10/circus-4721247_960_720.jpg" alt="馬戲場景">
+            <img src="pic/circus-03.webp" alt="馬戲場景">
           </div>
         </div>
 
@@ -241,13 +241,13 @@
 
         <div class="pic scroll-left_in">
           <div class="top">
-            <img src="https://cdn.pixabay.com/photo/2015/05/11/14/44/pencils-762555_960_720.jpg" alt="筆筒">
+            <img src="pic/daydream-01.webp" alt="筆筒">
           </div>
           <div class="front">
-            <img src="pic/topic-day_dream.jpg" alt="白日夢主圖">
+            <img src="pic/daydream-02.jpg" alt="白日夢主圖">
           </div>
           <div class="bottom">
-            <img src="https://i.pinimg.com/564x/31/94/af/3194afc35963200bb13c4cf10cbef03a.jpg" alt="水灑了">
+            <img src="pic/daydream-03.jpg" alt="水灑了">
           </div>
         </div>
 
@@ -282,6 +282,40 @@
           <a href="reserve_page.html">立即預約></a>
         </div>
       </article>
+
+<!-- slider -->
+<script>
+  function slider(windowSize){
+    // 重置
+    // let curIndex = 0;
+    // let maxIndex = 0;
+    // if(windowSize>992){
+    //   maxIndex = 2;
+    // }else if(windowSize>768){
+    //   maxIndex = 3;
+    // };
+    // $(".btnGroup input:first-of-type").attr('disabled',true);
+    // $(".btnGroup input:last-of-type").attr('disabled',false);
+    // 點擊事件
+    $('.btnGroup input:first-of-type').on('click',function(){
+
+    });
+    
+    $('.btnGroup input:last-of-type').on('click',function(){
+      
+    });
+  };
+  $(function(){
+    console.log($('.topic .pic .top'));
+    slider($(window).width());
+    $(window).resize(function(){
+      // $('.topicGroup').css({
+      //   left:`0`,
+      // });
+      // slider($(window).width());
+    });
+  });
+</script>
 
       <!-- 手手 -->
       <div id="more_topic" class=" ">
