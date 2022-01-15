@@ -240,6 +240,9 @@ function slider(windowSize){
   // 重置
   let curIndex = 0;
   let maxIndex = 0;
+  $('.topicGroup').css({
+    left:`0px`,
+  });
   if(windowSize>992){
     maxIndex = 2;
   }else if(windowSize>768){
@@ -271,6 +274,27 @@ function slider(windowSize){
   });
 };
 $(function(){
+  // 滑鼠拖動
+  // $('.see_more').mousedown(function(e){
+  //   var start = e.pageX;
+  //   $(document).mousemove(function(e){
+  //     let x = (e.pageX - start)/20 + parseInt($('.topicGroup').css('left'));
+  //     if(x>0){
+  //       x = 0;
+  //     }else if(x < -$('.topicGroup').width() + ($('.see_more').width()+10)){
+  //       x = -$('.topicGroup').width() + ($('.see_more').width()+10);
+  //     };
+  //     console.log(-2130);
+  //     console.log(-$('.topicGroup').width() + ($('.see_more').width()+10));
+  //     $('.topicGroup').css({
+  //       left:`${x}px`,
+  //     });
+  //     $(document).mouseup(function(){
+  //       $(document).off('mousemove');
+  //     });
+  //   });
+  // });
+
   slider($(window).width()+10);
   $(window).resize(function(){
     $('.topicGroup').css({

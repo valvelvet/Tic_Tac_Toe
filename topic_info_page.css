@@ -131,7 +131,10 @@ main section:first-child{
   height: calc(var(--topicWidth) + 60px);
 }
 .see_more .topicGroup{
+  position: relative;
+  left: 0;
   width: calc((var(--topicWidth) + 40px) * 6);
+  transition: 0s;
 }
 .see_more h2{
   margin: 60px 0 20px;
@@ -253,8 +256,6 @@ main section:first-child{
     height: calc(var(--topicWidth) + 40px);
   }
   .see_more .topicGroup{
-    position: relative;
-    left: 0;
     transition: left .5s;
   }
   .btnGroup{
