@@ -630,18 +630,7 @@ form > input{
     line-height: 30px;
   }
   /* 左右箭頭 */
-  .date thead button{
-    width: 30px;
-    height: 30px;
-    /* font-size: 24px; */
-    background-color: transparent;
-    border: none;
-  }
-  .date thead button img{
-    width: 30px;
-    height: 30px;
-    filter: invert(100%);
-  }
+  
   .date thead .arrow_right{
     transform: rotate(180deg);
   }
@@ -721,8 +710,9 @@ form > input{
 
   /* 更多主題 */
   .see_more{
-    --topicWidth: calc(100vw / 3 - 40px);
+    --topicWidth: calc((100vw - 40px) / 3 - 40px);
     max-width: 1200px;
+    box-sizing: border-box;
     margin: auto;
   }
   .see_more > div:first-of-type{
@@ -773,7 +763,13 @@ form > input{
 @media screen and (min-width:992px) {
   /* 更多主題 */
   .see_more{
-    --topicWidth: calc(100vw / 4 - 40px);
+    --topicWidth: calc((100vw - 40px) / 4 - 40px);
+  }
+}
+@media screen and (min-width:1200px) {
+  /* 更多主題 */
+  .see_more{
+    --topicWidth: calc((1200px - 40px) / 4 - 40px);
   }
 }
 

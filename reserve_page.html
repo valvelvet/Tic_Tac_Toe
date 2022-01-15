@@ -684,49 +684,49 @@
 
 <!-- slider -->
 <script>
-function slider(windowSize){
-  // 重置
-  let curIndex = 0;
-  let maxIndex = 0;
-  if(windowSize>992){
-    maxIndex = 2;
-  }else if(windowSize>768){
-    maxIndex = 3;
-  };
-  $(".btnGroup input:first-of-type").attr('disabled',true);
-  $(".btnGroup input:last-of-type").attr('disabled',false);
-  // 點擊事件
-  $('.btnGroup input:first-of-type').on('click',function(){
-    curIndex--;
-    $('.topicGroup').css({
-      left:`-${curIndex*($('.see_more a').width()+40)}px`,
-    });
-    if(curIndex == 0){
-      $(".btnGroup input:first-of-type").attr('disabled',true);
+  function slider(windowSize){
+    // 重置
+    let curIndex = 0;
+    let maxIndex = 0;
+    if(windowSize>992){
+      maxIndex = 2;
+    }else if(windowSize>768){
+      maxIndex = 3;
     };
+    $(".btnGroup input:first-of-type").attr('disabled',true);
     $(".btnGroup input:last-of-type").attr('disabled',false);
-  });
-  
-  $('.btnGroup input:last-of-type').on('click',function(){
-    curIndex++;
-    $('.topicGroup').css({
-      left:`-${curIndex*($('.see_more a').width()+40)}px`,
+    // 點擊事件
+    $('.btnGroup input:first-of-type').on('click',function(){
+      curIndex--;
+      $('.topicGroup').css({
+        left:`-${curIndex*($('.see_more a').width()+40)}px`,
+      });
+      if(curIndex == 0){
+        $(".btnGroup input:first-of-type").attr('disabled',true);
+      };
+      $(".btnGroup input:last-of-type").attr('disabled',false);
     });
-    if(curIndex == maxIndex){
-      $(".btnGroup input:last-of-type").attr('disabled',true);
-    };
-    $(".btnGroup input:first-of-type").attr('disabled',false);
-  });
-};
-$(function(){
-  slider($(window).width());
-  $(window).resize(function(){
-    $('.topicGroup').css({
-      left:`0`,
+    
+    $('.btnGroup input:last-of-type').on('click',function(){
+      curIndex++;
+      $('.topicGroup').css({
+        left:`-${curIndex*($('.see_more a').width()+40)}px`,
+      });
+      if(curIndex == maxIndex){
+        $(".btnGroup input:last-of-type").attr('disabled',true);
+      };
+      $(".btnGroup input:first-of-type").attr('disabled',false);
     });
+  };
+  $(function(){
     slider($(window).width());
+    $(window).resize(function(){
+      $('.topicGroup').css({
+        left:`0`,
+      });
+      slider($(window).width());
+    });
   });
-});
 </script>
 
   <footer>
