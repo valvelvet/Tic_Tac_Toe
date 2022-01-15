@@ -15,7 +15,7 @@ main section:first-child{
   margin-top: 0vh;
 }
 .topic_reserve{
-  background: linear-gradient(135deg,#280000 93%,var(--main-color) 93%);
+  background: linear-gradient(160deg,#280000 90%,var(--main-color) 90%);
   color: #fff;
   max-width: 1200px;
   border-radius: 10px;
@@ -75,6 +75,7 @@ main section:first-child{
   text-indent: 2em;
 }
 .topic > p:last-of-type{
+  padding-bottom: 20px;
   border-bottom: 2px dashed #470505;
   margin-bottom: 0;
 }
