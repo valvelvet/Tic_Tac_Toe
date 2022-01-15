@@ -271,7 +271,7 @@ function slider(windowSize){
   });
 };
 $(function(){
-  slider($(window).width());
+  slider($(window).width()+10);
   $(window).resize(function(){
     $('.topicGroup').css({
       left:`0`,

@@ -109,12 +109,10 @@ main section:first-child{
 
 /* 更多主題 */
 .see_more{
+  --topicWidth: calc((100vw - 40px) * 2 / 3 - 40px);
   color: #fff;
   padding: 20px;
   padding-bottom: 60px;
-}
-.see_more .topicGroup{
-  width: 1740px;
 }
 /* 卷軸 */
 .see_more > div::-webkit-scrollbar {
@@ -129,21 +127,20 @@ main section:first-child{
   font-size: 0;
   overflow: auto;
   width: 100%;
-  height: 310px;
+  height: calc(var(--topicWidth) + 60px);
+}
+.see_more .topicGroup{
+  width: calc((var(--topicWidth) + 40px) * 6);
 }
 .see_more h2{
   margin: 60px 0 20px;
-}
-.see_more h3{
-  color: #fff;
-  margin: 10px 5px;
 }
 .see_more a{
   box-shadow: 1px 2px 10px 3px #fff5;
   border-radius: 30px;
   margin: 20px;
-  width: 250px;
-  height: 250px;
+  width: var(--topicWidth);
+  height: var(--topicWidth);
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -161,7 +158,7 @@ main section:first-child{
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   background-color: #0009;
   transition: .2s;
@@ -173,12 +170,12 @@ main section:first-child{
   background-color: #0001;
 }
 .see_more .game_hard{
-  margin: 5px;
+  margin: 3px;
   font-size: 0;
 }
 .see_more .info .icon{
   height: 15px;
-  margin-right: 5px;
+  margin-right: 3px;
   filter: invert(60%);
 }
 .see_more .game_hard .icon{
@@ -189,21 +186,64 @@ main section:first-child{
 .see_more .topicGroup a.difficulty .game_hard .icon{
     filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
 }
+.see_more h3{
+  color: #fff;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow : ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 .see_more .info span{
   font-size: 16px;
-  margin: 5px;
+  margin: 3px;
   color: #888;
+}
+.see_more .info .game_place{
+  display: none;
 }
 .btnGroup{
   display: none;
 }
 
+@media screen and (min-width:305px) {
+  .see_more .info .game_place{
+    display: block;
+  }
+}
+
+@media screen and (min-width:480px) {
+  .see_more .info{
+    padding: 20px;
+  }
+  .see_more .game_hard{
+    margin: 5px;
+  }
+  .see_more .info .icon{
+    margin-right: 5px;
+  }
+  .see_more h3{
+    padding: 5px;
+    line-height: 1.5;
+  }
+  .see_more .info span{
+    margin: 5px;
+  }
+}
+
+@media screen and (min-width:535px) and (max-width:700px) {
+  .topic .about span{
+    width: 240px;
+  }
+}
 
 @media screen and (min-width:768px) {
   /* 更多主題 */
   .see_more{
-    --topicWidth: calc(100vw / 3 - 40px);
+    --topicWidth: calc((100vw - 80px) / 3 - 40px);
     max-width: 1200px;
+    box-sizing: border-box;
     margin: auto;
   }
   .see_more > div:first-of-type{
@@ -214,14 +254,7 @@ main section:first-child{
   .see_more .topicGroup{
     position: relative;
     left: 0;
-    width: calc((var(--topicWidth) + 40px) * 6);
     transition: left .5s;
-  }
-  .see_more a{
-    max-width: 270px;
-    max-height: 270px;
-    width: var(--topicWidth);
-    height: var(--topicWidth);
   }
   .btnGroup{
     display: block;
@@ -254,7 +287,13 @@ main section:first-child{
 @media screen and (min-width:992px) {
   /* 更多主題 */
   .see_more{
-    --topicWidth: calc(100vw / 4 - 40px);
+    --topicWidth: calc((100vw - 80px) / 4 - 40px);
+  }
+}
+@media screen and (min-width:1200px) {
+  /* 更多主題 */
+  .see_more{
+    --topicWidth: calc((1200px - 40px) / 4 - 40px);
   }
 }
 

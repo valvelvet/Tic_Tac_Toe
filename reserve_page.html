@@ -178,9 +178,7 @@
                   <th>
                     年
                   </th>
-                  <th>
-                  </th>
-                  <th>
+                  <th colspan="2">
                     <select name=""  id="month">
                     </select>
                   </th>
@@ -719,7 +717,7 @@
     });
   };
   $(function(){
-    slider($(window).width());
+    slider($(window).width()+10);
     $(window).resize(function(){
       $('.topicGroup').css({
         left:`0`,
