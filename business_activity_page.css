@@ -94,17 +94,17 @@
   width: 100%;
   position: relative;
 }
-.game_mode .item:nth-of-type(1) .pic::after{
-  background: url("pic/adventure.webp") no-repeat center/200%;
-  background-attachment: fixed;
+.game_mode .item:nth-of-type(1) .pic{
+  background: url("pic/adventure.webp") no-repeat left/cover;
+  /* background-attachment: fixed; */
 }
-.game_mode .item:nth-of-type(2) .pic::after{
-  background: url("pic/camp.webp") no-repeat center/200%;
-  background-attachment: fixed;
+.game_mode .item:nth-of-type(2) .pic{
+  background: url("pic/camp.webp") no-repeat left/cover;
+  /* background-attachment: fixed; */
 }
-.game_mode .item:nth-of-type(3) .pic::after{
-  background: url("pic/battleroyale.webp") no-repeat center/200%;
-  background-attachment: fixed;
+.game_mode .item:nth-of-type(3) .pic{
+  background: url("pic/battleroyale.webp") no-repeat left/cover;
+  /* background-attachment: fixed; */
 }
 .game_mode .txt {
   margin: auto;
@@ -333,16 +333,16 @@
                 inset 0 0 0 15px #000;
   }
   .game_mode .item:nth-of-type(1) .pic{
-    background: url("pic/game_type-5.jpg") no-repeat left/100%;
-    background-attachment: fixed;
+    background: url("pic/game_type-5.jpg") no-repeat left/cover;
+    /* background-attachment: fixed; */
   }
   .game_mode .item:nth-of-type(2) .pic{
-    background: url("pic/game_type-4.jpg") no-repeat left/100%;
-    background-attachment: fixed;
+    background: url("pic/game_type-4.jpg") no-repeat left/cover;
+    /* background-attachment: fixed; */
   }
   .game_mode .item:nth-of-type(3) .pic{
-    background: url("pic/game_type-0.jpg") no-repeat left/100%;
-    background-attachment: fixed;
+    background: url("pic/game_type-0.jpg") no-repeat left/cover;
+    /* background-attachment: fixed; */
   }
 
 
@@ -485,16 +485,16 @@
                 inset 0 0 0 15px #000;
   }
   .game_mode .item:nth-of-type(1) .pic{
-    background: url("pic/adventure.webp") no-repeat left/55%;
-    background-attachment: fixed;
+    background: url("pic/adventure.webp") no-repeat left/cover;
+    /* background-attachment: fixed; */
   }
   .game_mode .item:nth-of-type(2) .pic{
-    background: url("pic/camp.webp") no-repeat right/55%;
-    background-attachment: fixed;
+    background: url("pic/camp.webp") no-repeat right/cover;
+    /* background-attachment: fixed; */
   }
   .game_mode .item:nth-of-type(3) .pic{
-    background: url("pic/battleroyale.webp") no-repeat left/55%;
-    background-attachment: fixed;
+    background: url("pic/battleroyale.webp") no-repeat left/cover;
+    /* background-attachment: fixed; */
   }
 
 }
