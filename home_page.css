@@ -258,6 +258,7 @@ main::after{
   border-radius: 10px;
   height: 100%;
   filter: brightness(100%);
+  box-shadow: 0 0 50px #000;
   width: 66%;
   z-index: 1;
 }
@@ -271,35 +272,6 @@ main::after{
 }
 
 /* 箭頭 */
-.btnGroup{
-  display: block;
-  position: relative;
-}
-.btnGroup input{
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  background-color: transparent;
-  width: 30px;
-  height: 30px;
-  border: 5px solid transparent;
-  border-top: 5px solid #fff;
-  border-left: 5px solid #fff;
-}
-.btnGroup input:disabled{
-  border: 5px solid transparent;
-}
-.btnGroup input:first-of-type{
-  top: 0;
-  left: 10px;
-  transform: translate(0,-500%) rotate(-45deg);
-}
-.btnGroup input:last-of-type{
-  top: 0;
-  right: 10px;
-  transform: translate(0,-500%) rotate(135deg);
-}
 
 /* 文字 */
 .topic .text{
@@ -353,7 +325,6 @@ main::after{
               #470505 0 4px 2px 1px;
 }
 
-
 /* 難度 */
 .topic .game_hard .icon{
   filter: invert(30%);
@@ -364,7 +335,6 @@ main::after{
 .lie_photo .game_hard .icon{
   filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
 }
-
 
 /* 更多手手 */
 #more_topic{
@@ -518,42 +488,24 @@ footer,
   }
   .topic .pic div{
     width: 70%;
-    height: auto;
+    height: 25%;
   }
   .topic .pic .front {
     width: 100%;
-    height: auto;
+    height: 50%;
   }
   .topic .pic img{
+    transform: scale(1.2);
     width: 100%;
     height: auto;
   }
-
+  .topic .pic div:nth-of-type(1), 
+  .topic .pic div:nth-of-type(5), 
+  .topic .pic div:nth-of-type(6){
+    width: 50%;
+    height: 0;
+  }  
   /* 箭頭 */
-  .topic .pic::before{
-    border: 30px solid #ffffff90;
-    border-top: none;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    top: 5px;
-    left: 50%;
-    transform: translate(-50%,0);
-  }
-  .topic .pic::after{
-    border: 30px solid #ffffff90;
-    border-bottom: none;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    bottom: 5px;
-    left: 50%;
-    transform: translate(-50%,0);
-  }
-  .topic .pic:hover::before{
-    animation: Stepping_top .5s infinite alternate;
-  }
-  .topic .pic:hover::after{
-    animation: Stepping_bottom .5s infinite alternate;
-  }
 
   /* 文字 */
   .topic .text{
@@ -643,7 +595,11 @@ footer,
 
 @media screen and (min-width:992px) {
   .topic .pic div{
-    width: 50%;
+    width: 60%;
+    height: 20%;
+  }
+  .topic .pic .front {
+    height: 60%;
   }
 }
 
