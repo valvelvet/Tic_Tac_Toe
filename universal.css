@@ -189,7 +189,7 @@ input {
 
 /* 頭 */
 .banner{
-  height: 70vh;
+  height: 65vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -206,7 +206,7 @@ main{
   color: #fff;
 }
 main section:first-child{
-  margin-top: 70vh;
+  margin-top: 60vh;
 }
 
 /* 底 */

@@ -57,10 +57,10 @@
     <section class="reserve_process">
       <h1>預約流程</h1>
       <div class="item_group">
-        <div>
+        <a href="#reserve">
           <img src="pic/reserve_booking.png" alt="線上預約">
           <h3>線上預約</h3>
-        </div>
+        </a>
         <div>
           <img src="pic/reserve_email.png" alt="信箱通知">
           <h3>信箱通知</h3>
@@ -75,6 +75,15 @@
         </div>
     </div>
     </section>
+
+    <script>
+      $('.item_group a').click(function () {
+        $('html, body').animate({
+          scrollTop: `${$($.attr(this, 'href')).offset().top-70}`
+        }, 500);
+        return false;
+      });
+    </script>
 
     <section class="topic_reserve">
 
@@ -109,10 +118,10 @@
           全車的人性命受到威脅，奇怪的攝影師下的戰帖，你敢應下嗎?
         </p>
       </div>
-      <div class="reserve">
+      <div id="reserve">
         <div>
           <div class="choose">
-            <h3>選擇其他主題</h3>
+            <h3>密室主題</h3>
             <select name="" id="">
               <optgroup label="桃園金萱館">
                 <option>美麗實驗</option>

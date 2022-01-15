@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
 }
+.reserve_process .item_group a,
 .reserve_process .item_group div{
   position: relative;
   width: 100%;
@@ -37,25 +38,26 @@
   padding: 10px;
   filter: invert(100%);
 }
-.reserve_process .item_group div:first-child img{
+.reserve_process .item_group a img{
   filter: invert(85%) sepia(40%) saturate(500%) hue-rotate(350deg);
 }
 .reserve_process h3{
   display: inline-block;
 }
-.reserve_process .item_group div:first-child h3{
+.reserve_process .item_group a h3{
   color: #F3D764;
 }
-.reserve_process .item_group div:nth-of-type(-n+3):after{
+.reserve_process .item_group div:after{
   content: " ";
   position: absolute;
   height: 100%;
   width: 2px;
   background-color: #fff;
-  top: 50%;
+  top: -50%;
   left: -5vw;
   transform: translate(-50%,0);
 }
+.reserve_process .item_group a::before,
 .reserve_process .item_group div::before{
   content: " ";
   position: absolute;
@@ -67,7 +69,7 @@
   left: -5vw;
   transform: translate(-50%,-50%);
 }
-.reserve_process .item_group div:first-child:before{
+.reserve_process .item_group a:before{
   height: 15px;
   width: 15px;
   background-color: #F3D764;
@@ -157,22 +159,22 @@
 
 
 /* 預約右欄 */
-.topic_reserve .reserve{
+.topic_reserve #reserve{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.topic_reserve .reserve div>div{
+.topic_reserve #reserve div>div{
   margin-bottom: 20px;
 }
-.reserve h3{
+#reserve h3{
   font-size: 20px;
   width: 100%;
   margin-bottom: 10px;
 }
-.reserve select,
-.reserve label{
+#reserve select,
+#reserve label{
   cursor: pointer;
 }
 /* 選擇其他主題 */
@@ -465,7 +467,7 @@ form > input{
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
-  background-color: #0009;
+  background-color: #0003;
   transition: .2s;
   display: flex;
   flex-direction: column;
@@ -521,6 +523,7 @@ form > input{
 @media screen and (min-width:480px) {
   .see_more .info{
     padding: 20px;
+    background-color: #0009;
   }
   .see_more .game_hard{
     margin: 5px;
@@ -552,6 +555,7 @@ form > input{
     flex-direction: row;
     justify-content: center;
   }
+  .reserve_process .item_group a,
   .reserve_process .item_group div{
     width: calc(100% / 4 - 50px);
   }
@@ -559,7 +563,7 @@ form > input{
     width: 60px;
     padding: 30px;
   }
-  .reserve_process .item_group div:nth-of-type(-n+3):after{
+  .reserve_process .item_group div:after{
     width: 0;
     height: 0;
     background-color: transparent;
@@ -567,10 +571,9 @@ form > input{
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     top: 50%;
-    right: 0;
-    left: auto;
-    transform: translate(50%,0);
+    left: 0;
   }
+  .reserve_process .item_group a::before,
   .reserve_process .item_group div::before{
     content: none;
   }
@@ -594,7 +597,7 @@ form > input{
   }
 
   /* 預約右欄 */
-  .topic_reserve .reserve{
+  .topic_reserve #reserve{
     padding: 20px 20px 20px 0;
     width: 300px;
   }
