@@ -94,7 +94,8 @@
           <h3>#標籤<span class="switchBtn"></span></h3>
         </label>
 
-        <ul id="pickingTags"></ul>
+        <ul id="pickingTags">
+        </ul>
 
         <ul id="tags">
           <li>
@@ -221,30 +222,47 @@
 
       </div>
 
-      <!-- 標籤交換位置 -->
 
-      <!-- 標籤開關 -->
-      <script>
-        $(function () {
-          if ($(window).width() > 768){
-            $('#switchTag').attr('disabled',true);
-            $('#switchTag').attr('checked',false);
-            $('.switchBtn').hide();
-          };
-
-          $(window).resize(function(){
-            if ($(window).width() > 768){
-              $('#switchTag').attr('disabled',true);
-              $('#switchTag').attr('checked',false);
-              $('.switchBtn').hide();
-            }else if($(window).width() <= 768){
-              $('#switchTag').attr('disabled',false);
-              // $('#switchTag').attr('checked',true);
-              $('.switchBtn').show();
-            };
-          });
+<!-- 標籤開關 -->
+<script>
+  $(function () {
+    if ($(window).width()+10 >= 768){
+      $('#switchTag').attr('disabled',true);
+      $('#switchTag').attr('checked',false);
+      $('.switchBtn').hide();
+    }else if($(window).width()+10 < 768){
+      $('#switchTag').attr('checked',true);
+      // 標籤交換位置
+      $(document).on('click','#pickingTags',function(){
+        $('#pickingTags input:not(:checked)').parent('li').appendTo('#tags');
+      });
+      $(document).on('click','#tags',function(){
+        $('#tags input:checked').parent('li').appendTo('#pickingTags');
+      });
+    };
+    $(window).resize(function(){
+      if ($(window).width()+10 >= 768){
+        $('#switchTag').attr('disabled',true);
+        $('#switchTag').attr('checked',false);
+        $('.switchBtn').hide();
+        $('#pickingTags li').prependTo('#tags');
+        $(document).off('click');
+      }else if($(window).width()+10 < 768){
+        $('#switchTag').attr('disabled',false);
+        $('#switchTag').attr('checked',true);
+        $('.switchBtn').show();
+        // 標籤交換位置
+        $('#tags input:checked').parent('li').appendTo('#pickingTags');
+        $(document).on('click','#pickingTags',function(){
+          $('#pickingTags input:not(:checked)').parent('li').appendTo('#tags');
         });
-      </script>
+        $(document).on('click','#tags',function(){
+          $('#tags input:checked').parent('li').appendTo('#pickingTags');
+        });
+      };
+    });
+  });
+</script>
 
 
       <!-- 右欄 -->
