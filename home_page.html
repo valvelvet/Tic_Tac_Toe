@@ -106,14 +106,23 @@
         <h2>說謊的相機</h2>
         
         <div class="pic scroll-right_in">
-          <div class="top">
+          <div>
+            <img src="pic/lie_photo-04.webp" alt="行李箱相機">
+          </div>
+          <div>
             <img src="pic/lie_photo-01.webp" alt="很多照片">
           </div>
           <div class="front">
             <img src="pic/lie_photo-02.webp" alt="說謊的相機主圖">
           </div>
-          <div class="bottom">
-            <img src="pic/lie_photo-03.jpg" alt="拍力得">
+          <div>
+            <img src="pic/lie_photo-04.webp" alt="行李箱相機">
+          </div>
+          <div>
+            <img src="pic/lie_photo-01.webp" alt="很多照片">
+          </div>
+          <div>
+            <img src="pic/lie_photo-02.webp" alt="說謊的相機主圖">
           </div>
         </div>
 
@@ -153,14 +162,23 @@
         <h2>美麗實驗</h2>
 
         <div class="pic scroll-left_in">
-          <div class="top">
+          <div>
+            <img src="pic/beauty-03.jfif" alt="手術室">
+          </div>
+          <div>
             <img src="pic/beauty-01.jpg" alt="手術工具">
           </div>
           <div class="front">
             <img src="pic/beauty-02.webp" alt="美麗實驗主圖">
           </div>
-          <div class="bottom">
+          <div>
             <img src="pic/beauty-03.jfif" alt="手術室">
+          </div>
+          <div>
+            <img src="pic/beauty-01.jpg" alt="手術工具">
+          </div>
+          <div>
+            <img src="pic/beauty-02.webp" alt="美麗實驗主圖">
           </div>
         </div>
         
@@ -201,15 +219,28 @@
         <h2>眼中的倒影</h2>
 
         <div class="pic scroll-right_in">
-          <div class="top">
-            <img src="pic/circus-01.webp" alt="馬戲裝飾">
+          <div>
+            <img src="pic/circus-03.webp" alt="馬戲場景">
+          </div>
+          <div>
+            <img src="pic/circus-04.jpg" alt="門票">
           </div>
           <div class="front">
             <img src="pic/circus-02.webp" alt="眼中的倒影主圖">
           </div>
-          <div class="bottom">
+          <div>
             <img src="pic/circus-03.webp" alt="馬戲場景">
           </div>
+          <div>
+            <img src="pic/circus-04.jpg" alt="門票">
+          </div>
+          <div>
+            <img src="pic/circus-02.webp" alt="眼中的倒影主圖">
+          </div>
+          <!-- <div>
+            <img src="pic/circus-01.webp" alt="馬戲裝飾">
+            <img src="pic/circus-04.jpg" alt="門票">
+          </div> -->
         </div>
 
         <div class="text scroll-left_in">
@@ -250,15 +281,27 @@
         <h2>白日夢</h2>
 
         <div class="pic scroll-left_in">
-          <div class="top">
+          <div>
+            <img src="pic/daydream-04.jpg" alt="浴缸">
+          </div>
+          <div>
             <img src="pic/daydream-01.webp" alt="筆筒">
           </div>
           <div class="front">
             <img src="pic/daydream-02.jpg" alt="白日夢主圖">
           </div>
-          <div class="bottom">
-            <img src="pic/daydream-03.jpg" alt="水灑了">
+          <div>
+            <img src="pic/daydream-04.jpg" alt="浴缸">
           </div>
+          <div>
+            <img src="pic/daydream-01.webp" alt="筆筒">
+          </div>
+          <div class="front">
+            <img src="pic/daydream-02.jpg" alt="白日夢主圖">
+          </div>
+          <!-- <div>
+            <img src="pic/daydream-03.jpg" alt="水灑了">
+          </div> -->
         </div>
 
         <div class="text scroll-right_in">
@@ -295,34 +338,16 @@
 
 <!-- slider -->
 <script>
-  function slider(windowSize){
-    // 重置
-    // let curIndex = 0;
-    // let maxIndex = 0;
-    // if(windowSize>992){
-    //   maxIndex = 2;
-    // }else if(windowSize>768){
-    //   maxIndex = 3;
-    // };
-    // $(".btnGroup input:first-of-type").attr('disabled',true);
-    // $(".btnGroup input:last-of-type").attr('disabled',false);
-    // 點擊事件
-    $('.btnGroup input:first-of-type').on('click',function(){
-
-    });
-    
-    $('.btnGroup input:last-of-type').on('click',function(){
-      
-    });
-  };
   $(function(){
-    console.log($('.topic .pic .top'));
-    slider($(window).width());
-    $(window).resize(function(){
-      // $('.topicGroup').css({
-      //   left:`0`,
-      // });
-      // slider($(window).width());
+    $(document).on('click','.topic .pic div:nth-of-type(2)',function(){
+      $(this).next().removeClass('front');
+      $(this).addClass('front');
+      $(this).parent().prepend($(this).next().next().next().next());
+    });
+    $(document).on('click','.topic .pic div:nth-of-type(4)',function(){
+      $(this).prev().removeClass('front');
+      $(this).addClass('front');
+      $(this).parent().append($(this).prev().prev().prev());
     });
   });
 </script>
