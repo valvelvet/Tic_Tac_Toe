@@ -21,7 +21,6 @@
   margin-bottom: 30px;
   color: #F3D764;
   width: 100%;
-  text-align: center;
 }
 .reserve_process .item_group{
   display: flex;
@@ -284,43 +283,33 @@
   text-align: center;
   color: #ddd;
 }
-.session .head button{
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-}
-.session .head button img{
-  width: 20px;
-  height: 20px;
-  filter: invert(30%) sepia(25%) saturate(4958%) hue-rotate(338deg) brightness(97%) contrast(95%);
-}
-.session p{
+.session label div{
+  line-height: 1.5;
   display: inline-block;
   font-size: 16px;
 }
 .session .empty{
   text-align: center;
 }
-.session .empty p{
+.session .empty label div{
   display: block;
   border: 2px dotted var(--main-color);
   margin: 10px 0;
-  border-radius: 30px;
+  border-radius: 35px;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 5px 0;
   font-size: 18px;
 }
 .session .empty input{
   position: absolute;
   opacity: 0;
 }
-.session .empty input:hover +p{
+.session .empty input:hover + div{
   border: 2px dotted var(--main-color);
   background-color: #441111;
 }
-.session .empty input:checked+p{
+.session .empty input:checked + div{
   border: 2px dotted transparent;
   color: #fff;
   background-color: var(--main-color);
@@ -560,7 +549,6 @@ form > input{
     width: calc(100% / 4 - 50px);
   }
   .reserve_process img{
-    width: 60px;
     padding: 30px;
   }
   .reserve_process .item_group div:after{
@@ -603,74 +591,17 @@ form > input{
   }
   /* 選擇其他主題 */
   .choose{
-    border: 1px solid #888;
     margin: 0 20px 20px 0;
-    border-radius: 10px;
-  }
-  .choose select{
-    width: 100%;
-    padding: 5px 10px;
-    border-radius: 30px;
-    font-size: 18px;
-    background-color: var(--main-color);
-    color: #fff;
-    border: none;
   }
   /* 參與人數 */
   .players{
-    border: 1px solid #888;
     margin: 20px 20px 20px 0;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
   }
-  .players label{
-    width: calc(100% / 6);
-  }
-  .players input{
-    position: absolute;
-    opacity: 0;
-  }
-  .players span{
-    display: inline-block;
-    width: 31px;
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 50%;
-  }
-  .players input:checked + span{
-    background-color: var(--main-color);
-    color: #fff;
-  }
-  .players input:not(:checked) + span:hover{
-    background-color: #441111;
-  }
-
   /* 日期 */
   .date{
     border: 1px solid #888;
     margin: 20px 20px 20px 0;
     border-radius: 10px;
-  }
-  .date table{
-    width: 100%;
-    text-align: center;
-  }
-  .date thead tr{
-    line-height: 30px;
-  }
-  /* 左右箭頭 */
-  
-  .date thead .arrow_right{
-    transform: rotate(180deg);
-  }
-  .date tbody td{
-    width: calc(100% / 7);
-    border: none;
-    color: #fff;
-    line-height: 24px;
   }
   .date tbody span{
     display: inline-block;
@@ -678,66 +609,18 @@ form > input{
     width: 100%;
     font-size: 16px;
   }
-  .date tbody input{
-    position: absolute;
-    opacity: 0;
-  }
-  .date tbody input:disabled + span{
-    color: #666;
-  }
-  .date tbody input:checked + span{
-    background-color: var(--main-color);
-    color: #fff;
-  }
-  .date tbody input:not(:disabled):not(:checked) + span:hover{
-    background-color: #441111;
-  }
-
   /* 場次 */
   .session{
     margin: 20px 20px 20px 0;
   }
-  .session .head button{
-    margin: 0 15px;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border: none;
-  }
-  .session .head button img{
-    width: 20px;
-    height: 20px;
-    filter: invert(30%) sepia(25%) saturate(4958%) hue-rotate(338deg) brightness(97%) contrast(95%);
-  }
-  .session p{
+  .session label div{
     display: inline-block;
     font-size: 16px;
   }
-  .session .empty{
-    text-align: center;
-  }
-  .session .empty p{
-    display: block;
-    border: 2px dotted var(--main-color);
+  .session .empty label div{
     margin: auto;
     margin-top: 10px;
-    border-radius: 30px;
     width: 90%;
-    padding: 10px 0;
-    font-size: 18px;
-  }
-  .session .empty input{
-    position: absolute;
-    opacity: 0;
-  }
-  .session .empty input:hover +p{
-    border: 2px dotted var(--main-color);
-    background-color: #441111;
-  }
-  .session .empty input:checked + p{
-    border: 2px dotted transparent;
-    color: #fff;
-    background-color: var(--main-color);
   }
 
   /* 更多主題 */
@@ -748,14 +631,13 @@ form > input{
     margin: auto;
   }
   .see_more > div:first-of-type{
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
     height: calc(var(--topicWidth) + 40px);
   }
   .see_more .topicGroup{
     position: relative;
     left: 0;
-    width: calc((var(--topicWidth) + 40px) * 6);
     transition: left .5s;
   }
   .see_more a{
