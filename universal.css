@@ -43,6 +43,7 @@ input {
   border-radius: 5px;
   background-color: var(--main-color);
 }
+
 /* loading畫面 */
 #loading{
   position: fixed;
@@ -136,6 +137,7 @@ input {
     box-shadow: -5px 0 30px #fff;
   }
 }
+
 /* 導覽列 */
 .header_float{
   background-color: rgba(165, 42, 42, .7);
@@ -155,7 +157,6 @@ input {
 .header_float .logo{
   height: 100%;
 }
-
 /* 圓形選單 */
 .circular-menu .floating-btn {
   cursor: pointer;
@@ -195,7 +196,6 @@ input {
   transform: rotate(-225deg);
   background-color: #441111;
 }
-
 /* 圓型底 */
 .circular-menu:after {
   display: none;
@@ -216,7 +216,6 @@ input {
   transform: scale(16, 16);
   transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
 }
-
 /* 連結 */
 .circular-menu .menu-item {
   opacity: 0;
@@ -236,7 +235,6 @@ input {
   background: linear-gradient(30deg, #0008 30%,#0000 70%);
   transition: transform .3s ease;
 }
-
 /* 選單連結動態 */
 .circular-menu .menu-item:hover {
   background: linear-gradient(30deg, #280000 40%,#0000 70%);
@@ -278,7 +276,6 @@ input {
   display: none;
 }
 
-
 /* 頭 */
 .banner{
   height: 65vh;
@@ -301,7 +298,38 @@ main section:first-child{
   margin-top: 60vh;
 }
 
-/* 底 */
+/* 燈箱 */
+#light_off.on {
+  display: block;
+}
+#light_off{
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: #0008;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+/* 叉叉 */
+#light_off::after,
+#light_off::before{
+  content: '';
+  width: 40px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: brown;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%,calc(-50% + 50px)) rotate(45deg);
+}
+#light_off::after{
+  transform: translate(50%,calc(-50% + 50px)) rotate(-45deg);
+}
+
+/* 尾 */
 footer{
   position: relative;
   z-index: 1;

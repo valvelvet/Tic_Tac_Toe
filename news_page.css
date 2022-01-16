@@ -217,20 +217,7 @@ main section{
   width: 50px;
 }
 
-
-#light_off.on {
-  display: block;
-}
-#light_off{
-  display: none;
-  height: 100vh;
-  width: 100%;
-  background-color: #0008;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
+/* 內文 */
 .writings{
   width: 90vw;
   height: 70vh;

@@ -545,11 +545,13 @@
     <script>
       function nothing_happen(e){
         e.stopPropagation();    //阻斷蔓延
-      }
+      };
     
-      function switch_light(){
+      function switch_light(){ //燈箱開關
         document.getElementById('light_off').classList.toggle('on');
-      }
+        // 燈箱叉叉
+        $('head').append(`<style>#light_off::before,#light_off::after{ bottom: calc(50% - ${$('#light_off > form').outerHeight()/2}px); }</style>`);
+      };
     
       window.addEventListener('load',function(){
         $('.session label input[name=empty_time]').on('click',switch_light);

@@ -175,19 +175,6 @@
 }
 
 /* 表單 */
-#light_off.on {
-  display: block;
-}
-#light_off {
-  display: none;
-  height: 100vh;
-  width: 100%;
-  background-color: #0008;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
 .float_list_box{
   width: 90vw;
   height: 70vh;
