@@ -184,13 +184,19 @@
 }
 .date select,
 .choose select{
+  position: relative;
   width: 100%;
   padding: 5px 20px;
   border-radius: 30px;
   font-size: 18px;
   background-color: var(--main-color);
+  background-image: url("pic/banner-arrow_down.png");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: right ;
   color: #fff;
   border: none;
+  border-right: 10px solid var(--main-color);
 }
 /* 參與人數 */
 .players{
@@ -242,7 +248,7 @@
   -moz-appearance:none;
   -webkit-appearance:none;
   width: 70%;
-  text-align: end;
+  padding: 5px 10px;
   font-size: 14px;
 }
 .date tbody td{
