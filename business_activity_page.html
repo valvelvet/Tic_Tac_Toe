@@ -14,9 +14,20 @@
   <link rel="stylesheet" href="universal.css">
   <link rel="stylesheet" href="business_activity_page.css">
   <link rel="stylesheet" href="grid.css">
+  <script src="jquery.js"></script>
 </head>
 
 <body>
+  <!-- loading畫面  -->
+  <div id="loading">
+    <div class="loadingAnimation"></div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('#loading').delay(1000).fadeOut(300);
+    });
+  </script>
+  
   <header>
     <div class="header_float">
       <!-- logo -->

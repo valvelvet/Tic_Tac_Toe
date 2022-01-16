@@ -26,7 +26,7 @@ a{
 }
 select,
 input {
-  -webkit-appearance: none;  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -webkit-appearance: none;  /* Sdc2f02ri 和 Chrome，常用於iOS下移除內建樣式 */
   -moz-appearance: none;     /* FireFox */
   appearance: none;
 }
@@ -43,7 +43,99 @@ input {
   border-radius: 5px;
   background-color: var(--main-color);
 }
-
+/* loading畫面 */
+#loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000c;
+  color: #fff;
+  z-index: 100;
+}
+#loading .loadingAnimation{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background-color: #fff;
+  animation: loading  2s linear  infinite alternate;
+}
+@keyframes loading{
+  0%{
+    box-shadow: 0 -30px 0 #ffba08,
+                0 -30px 0 #ffba08,
+                0 -30px 0 #ffba08;
+  }
+  8%{
+    box-shadow: 0 -30px 0 #ffba08,
+                0 -30px 0 #ffba08,
+                -15px -15px 0 #faa307;
+  }
+  16%{
+    box-shadow: 0 -30px 0 #ffba08,
+                -15px -15px 0 #faa307,
+                -30px 0 0 #f48c06;
+  }
+  24%{
+    box-shadow: -15px -15px 0 #faa307,
+                -30px 0 0 #f48c06,
+                -15px 15px 0 #e85d04;
+  }
+  32%{
+    box-shadow: -30px 0 0 #f48c06,
+                -15px 15px 0 #e85d04,
+                0 30px 0 #dc2f02;
+  }
+  40%{
+    box-shadow: -15px 15px 0 #e85d04,
+                0 30px 0 #dc2f02,
+                15px 15px 0 #d00000;
+  }
+  48%{
+    box-shadow: 0 30px 0 #dc2f02,
+                15px 15px 0 #d00000,
+                30px 0 0 #9d0208;
+  }
+  56%{
+    box-shadow: 15px 15px 0 #d00000,
+                30px 0 0 #9d0208,
+                15px -15px 0 #6a040f;
+  }
+  64%{
+    box-shadow: 30px 0 0 #9d0208,
+                15px -15px 0 #6a040f,
+                0 -30px 0 #370617;
+  }
+  72%{
+    box-shadow: 15px -15px 0 #6a040f,
+                0 -30px 0 #370617;
+  }
+  80%{
+    background-color: #fff;
+    box-shadow: 0 -30px 0 #370617;
+  }
+  85%{
+    background-color: #03071e;
+    box-shadow: 0 -5px 30px #fff;
+  }
+  90%{
+    background-color: #03071e;
+    box-shadow: 5px 0 30px #fff;
+  }
+  95%{
+    background-color: #03071e;
+    box-shadow: 0 5px 30px #fff;
+  }
+  100%{
+    background-color: #03071e;
+    box-shadow: -5px 0 30px #fff;
+  }
+}
 /* 導覽列 */
 .header_float{
   background-color: rgba(165, 42, 42, .7);
