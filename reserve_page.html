@@ -534,15 +534,59 @@
           </label>
         </div>
         <div class="contact_data">
-          <label>聯絡電話 : <input type="tel"></label>
-          <label>Email : <input type="email"></label>
+          <label>聯絡電話 : <span></span><input type="tel"></label>
+          <label>Email : <span></span><input type="email"></label>
         </div>
-        <input type="submit" value="送出">
+        <input type="submit" value="送出" disabled>
       </form>
     </div>
 
     <script>
+      function IsEmail(email) {
+        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(!regex.test(email)) {
+          return false;
+        }else{
+          return true; 
+        };
+      };
+
+      function checkTel(){
+        let telCheck = $('.contact_data label:first-of-type input');
+        if ($(telCheck).val() == '') {
+          $(telCheck).prev().text('*請輸入您的手機號碼');
+          return false;
+        }else{
+          $(telCheck).prev().text('');
+          return true;
+        };
+      };
+      function checkEmail(){
+        let mailCheck = $('.contact_data label:last-of-type input');
+        if ($(mailCheck).val() == '') {
+          $(mailCheck).prev().text('*請輸入信箱');
+          return false;
+        }else if(IsEmail($(mailCheck).val())==false){
+          $(mailCheck).prev().text('*請輸入正確的信箱格式');
+          return false;
+        }else{
+          $(mailCheck).prev().text('');
+          return true;
+        };
+      };
+    
       function nothing_happen(e){
+        let telCheck = false;
+        let emailCheck = false;
+        telCheck = checkTel();
+        emailCheck = checkEmail();
+        if(telCheck && emailCheck){
+          console.log(telCheck);
+          console.log(emailCheck);
+          $('form > input').attr('disabled',false).css('background-color','#280000');
+        }else{
+          $('form > input').attr('disabled',true).css('background-color','#aaa');
+        };
         e.stopPropagation();    //阻斷蔓延
       };
     
@@ -551,7 +595,7 @@
         // 燈箱叉叉
         $('head').append(`<style>#light_off::before,#light_off::after{ bottom: calc(50% - ${$('#light_off > form').outerHeight()/2}px); }</style>`);
       };
-    
+
       window.addEventListener('load',function(){
         $('.session label input[name=empty_time]').on('click',switch_light);
         document.getElementById('light_off').addEventListener('click',switch_light,false);

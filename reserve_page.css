@@ -90,6 +90,7 @@
 .topic{
   /* padding: 20px; */
   position: relative;
+  text-align: center;
 }
 .topic h2{
   position: absolute;
@@ -129,14 +130,13 @@
 }
 .topic .about p{
   color: #aaa;
-  display: inline-block;
   line-height: 1em;
   font-size: 16px;
 }
 .topic a{
-  display: block;
+  display: inline-block;
   line-height: 2em;
-  margin: 20px;
+  margin-bottom: 60px;
   color: #ddd;
   text-align: center;
 }
@@ -382,19 +382,25 @@ form .check_data input{
   background-color: #280000;
   border: none;
 }
+form .contact_data input:focus{
+  background-color: #ffd;
+}
 form .contact_data label:last-child input{
   width: 70%;
 }
 form > input{
-  cursor: pointer;
   margin-top: 20px;
   margin-bottom: -10px;
   margin-left: auto;
-  background-color: #280000;
+  background-color: #aaa;
   color: #fff;
   padding: 10px 40px;
   border-radius: 20px;
   border: none;
+}
+form span{
+  font-size: 14px;
+  color: #aaa;
 }
 
 /* 更多主題 */
@@ -495,12 +501,6 @@ form > input{
 }
 .btnGroup{
   display: none;
-}
-
-@media screen and (min-width:305px) {
-  .see_more .info .game_place{
-    display: block;
-  }
 }
 
 @media screen and (min-width:480px) {
