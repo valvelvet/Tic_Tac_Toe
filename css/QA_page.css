@@ -1,37 +1,37 @@
-.circular-menu .menu-item:nth-child(6){
+.circular-menu .menu-item:nth-child(6) {
   background-color: #441111;
 }
-.banner{
-  background: url('pic/QA_page.webp');
-  background-repeat:no-repeat;
+.banner {
+  background: url('../pic/QA_page.webp');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-main section{
+main section {
   margin: auto;
   max-width: 80vw;
   padding: 60px 0 30px;
 }
-section .question{
+section .question {
   position: relative;
   padding: 0 0 0 45px;
 }
-section .question{
+section .question {
   margin-bottom: 30px;
 }
-section input{
+section input {
   display: none;
 }
-section h3{
+section h3 {
   cursor: pointer;
   padding: 5px 0;
 }
-section a{
-  color: #F3D764;
+section a {
+  color: #f3d764;
 }
-section h3::before{
-  content: "";
+section h3::before {
+  content: '';
   position: absolute;
   top: 13px;
   left: 0;
@@ -39,10 +39,10 @@ section h3::before{
   height: 7px;
   border-radius: 2px;
   background-color: var(--main-color);
-  transition: .5s;
+  transition: 0.5s;
 }
-section h3::after{
-  content: "";
+section h3::after {
+  content: '';
   position: absolute;
   top: 0;
   left: 13px;
@@ -50,36 +50,35 @@ section h3::after{
   height: 34px;
   border-radius: 2px;
   background-color: var(--main-color);
-  transition: .5s;
+  transition: 0.5s;
 }
-section p{
+section p {
   opacity: 0;
   padding-right: 0;
   color: #aaa;
   overflow: hidden;
   line-height: 0em;
-  transition: .5s;
+  transition: 0.5s;
 }
-section input:checked + label h3::before{
+section input:checked + label h3::before {
   transform: rotate(-180deg);
-  background-color: #F3D764;
+  background-color: #f3d764;
 }
-section input:checked + label h3::after{
+section input:checked + label h3::after {
   transform: rotate(-270deg);
-  background-color: #F3D764;
+  background-color: #f3d764;
 }
-section input:checked ~ p{
+section input:checked ~ p {
   opacity: 1;
   line-height: 1.5em;
 }
 
-
-@media screen and (min-width:768px) {
-  section h3{
+@media screen and (min-width: 768px) {
+  section h3 {
     cursor: pointer;
     padding: 5px 30px 5px 0;
   }
-  section p{
+  section p {
     padding-right: 30px;
   }
 }

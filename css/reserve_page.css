@@ -1,15 +1,15 @@
-.circular-menu .menu-item:nth-child(2){
+.circular-menu .menu-item:nth-child(2) {
   background-color: #441111;
 }
-.banner{
-  background: url('pic/reserve_page.webp');
-  background-repeat:no-repeat;
+.banner {
+  background: url('../pic/reserve_page.webp');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 /* 預約流程 */
-.reserve_process{
+.reserve_process {
   margin: auto;
   padding: 60px 0;
   color: #fff;
@@ -17,48 +17,48 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.reserve_process h1{
+.reserve_process h1 {
   margin-bottom: 30px;
-  color: #F3D764;
+  color: #f3d764;
   width: 100%;
 }
-.reserve_process .item_group{
+.reserve_process .item_group {
   display: flex;
   flex-direction: column;
 }
 .reserve_process .item_group a,
-.reserve_process .item_group div{
+.reserve_process .item_group div {
   position: relative;
   width: 100%;
   text-align: center;
 }
-.reserve_process img{
+.reserve_process img {
   width: 60px;
   padding: 10px;
   filter: invert(100%);
 }
-.reserve_process .item_group a img{
+.reserve_process .item_group a img {
   filter: invert(85%) sepia(40%) saturate(500%) hue-rotate(350deg);
 }
-.reserve_process h3{
+.reserve_process h3 {
   display: inline-block;
 }
-.reserve_process .item_group a h3{
-  color: #F3D764;
+.reserve_process .item_group a h3 {
+  color: #f3d764;
 }
-.reserve_process .item_group div:after{
-  content: " ";
+.reserve_process .item_group div:after {
+  content: ' ';
   position: absolute;
   height: 100%;
   width: 2px;
   background-color: #fff;
   top: -50%;
   left: -5vw;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
 }
 .reserve_process .item_group a::before,
-.reserve_process .item_group div::before{
-  content: " ";
+.reserve_process .item_group div::before {
+  content: ' ';
   position: absolute;
   height: 10px;
   width: 10px;
@@ -66,18 +66,17 @@
   background-color: #fff;
   top: 50%;
   left: -5vw;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.reserve_process .item_group a:before{
+.reserve_process .item_group a:before {
   height: 15px;
   width: 15px;
-  background-color: #F3D764;
+  background-color: #f3d764;
   z-index: 1;
 }
 
-
 /* 預約密室 */
-.topic_reserve{
+.topic_reserve {
   background-color: #280000;
   color: #fff;
   display: flex;
@@ -87,12 +86,12 @@
   margin: auto;
 }
 /* 介紹左欄 */
-.topic{
+.topic {
   /* padding: 20px; */
   position: relative;
   text-align: center;
 }
-.topic h2{
+.topic h2 {
   position: absolute;
   left: 16px;
   top: 35px;
@@ -100,7 +99,7 @@
   padding: 15px;
   border-radius: 0 35px 35px 0;
 }
-.topic .pic{
+.topic .pic {
   margin: 20px;
   width: calc(100% - 40px);
   height: 50vh;
@@ -111,29 +110,29 @@
   background-size: cover;
   animation: turn_pic 15s infinite steps(1, end);
 }
-.topic .about{
+.topic .about {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 20px;
 }
-.topic .about span{
+.topic .about span {
   width: 165px;
   margin: 5px 0;
   display: flex;
   align-items: center;
 }
-.topic .about img{
+.topic .about img {
   filter: invert(80%);
   height: 16px;
 }
-.topic .about p{
+.topic .about p {
   color: #aaa;
   line-height: 1em;
   font-size: 16px;
 }
-.topic a{
+.topic a {
   display: inline-block;
   line-height: 2em;
   margin-bottom: 60px;
@@ -142,79 +141,77 @@
 }
 
 @keyframes turn_pic {
-  0%{
-    background-image: url("pic/lie_photo-01.webp");
+  0% {
+    background-image: url('../pic/lie_photo-01.webp');
   }
-  25%{
-    background-image: url("pic/lie_photo-02.webp");
+  25% {
+    background-image: url('../pic/lie_photo-02.webp');
   }
-  50%{
-    background-image: url("pic/lie_photo-03.jpg");
+  50% {
+    background-image: url('../pic/lie_photo-03.jpg');
   }
-  75%{
-    background-image: url("pic/lie_photo-04.webp");
+  75% {
+    background-image: url('../pic/lie_photo-04.webp');
   }
 }
 
-
-
 /* 預約右欄 */
-.topic_reserve #reserve{
+.topic_reserve #reserve {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.topic_reserve #reserve div>div{
+.topic_reserve #reserve div > div {
   margin-bottom: 20px;
 }
-#reserve h3{
+#reserve h3 {
   font-size: 20px;
   width: 100%;
   margin-bottom: 10px;
 }
 #reserve select,
-#reserve label{
+#reserve label {
   cursor: pointer;
 }
 /* 選擇其他主題 */
-.choose{
+.choose {
   border: 1px solid #888;
   padding: 20px;
   border-radius: 10px;
 }
 .date select,
-.choose select{
+.choose select {
   position: relative;
   width: 100%;
   padding: 5px 20px;
   border-radius: 30px;
   font-size: 18px;
   background-color: var(--main-color);
-  background-image: url("pic/banner-arrow_down.png");
+  background-image: url('../pic/banner-arrow_down.png');
   background-size: 10px;
   background-repeat: no-repeat;
-  background-position: right ;
+  background-position: right;
   color: #fff;
   border: none;
   border-right: 10px solid var(--main-color);
 }
 /* 參與人數 */
-.players{
+.players {
   border: 1px solid #888;
   padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
 }
-.players label{
+.players label {
   width: calc(100% / 6);
 }
-.players input{
+.players input {
   position: absolute;
   opacity: 0;
 }
-.players span{
+.players span {
   display: inline-block;
   width: 31px;
   font-size: 18px;
@@ -223,82 +220,82 @@
   text-align: center;
   border-radius: 50%;
 }
-.players input:checked + span{
+.players input:checked + span {
   background-color: var(--main-color);
   color: #fff;
 }
-.players input:not(:checked) + span:hover{
+.players input:not(:checked) + span:hover {
   background-color: #441111;
 }
 
 /* 日期 */
-.date{
+.date {
   border: 1px solid #888;
   padding: 20px;
   border-radius: 10px;
 }
-.date table{
+.date table {
   width: 100%;
   text-align: center;
 }
-.date thead tr{
+.date thead tr {
   line-height: 30px;
 }
-.date thead select{
-  appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;
+.date thead select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   width: 70%;
   padding: 5px 10px;
   font-size: 14px;
 }
-.date tbody td{
+.date tbody td {
   width: calc(100% / 7);
   border: none;
   color: #fff;
   line-height: 24px;
 }
-.date tbody span{
+.date tbody span {
   display: inline-block;
   border-radius: 12px;
   width: 100%;
   font-size: 16px;
 }
-.date tbody input{
+.date tbody input {
   position: absolute;
   opacity: 0;
 }
-.date tbody input:disabled + span{
+.date tbody input:disabled + span {
   color: #666;
 }
-.date tbody input:checked + span{
+.date tbody input:checked + span {
   background-color: var(--main-color);
   color: #fff;
 }
-.date tbody input:not(:disabled):not(:checked) + span:hover{
+.date tbody input:not(:disabled):not(:checked) + span:hover {
   background-color: #441111;
 }
 
 /* 場次 */
-.session{
+.session {
   width: 260px;
 }
-.session h3{
+.session h3 {
   text-align: center;
 }
-.session .head{
+.session .head {
   text-align: center;
   color: #ddd;
 }
-.session label div{
+.session label div {
   line-height: 1.5;
   display: inline-block;
   font-size: 16px;
 }
-.session .empty{
+.session .empty {
   text-align: center;
 }
-.session .empty label div{
+.session .empty label div {
   display: block;
   border: 2px dotted var(--main-color);
   margin: 10px 0;
@@ -308,22 +305,22 @@
   padding: 5px 0;
   font-size: 18px;
 }
-.session .empty input{
+.session .empty input {
   position: absolute;
   opacity: 0;
 }
-.session .empty input:hover + div{
+.session .empty input:hover + div {
   border: 2px dotted var(--main-color);
   background-color: #441111;
 }
-.session .empty input:checked + div{
+.session .empty input:checked + div {
   border: 2px dotted transparent;
   color: #fff;
   background-color: var(--main-color);
 }
 
 /* 表單 */
-form{
+form {
   width: 90vw;
   max-height: 70vh;
   max-width: 600px;
@@ -332,7 +329,7 @@ form{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: #fff;
   background-color: var(--main-color);
   padding: 20px;
@@ -349,25 +346,25 @@ form::-webkit-scrollbar-thumb {
   border-radius: 15px;
   background-color: #441111;
 }
-form div{
+form div {
   padding: 10px;
 }
-form .check_data{
+form .check_data {
   border-bottom: 2px dashed #441111;
 }
 form .check_data,
-form .contact_data{
+form .contact_data {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 form .check_data label,
-form .contact_data label{
+form .contact_data label {
   margin-top: 15px;
   line-height: 1.5em;
 }
 form .check_data input,
-form .contact_data input{
+form .contact_data input {
   min-width: 170px;
   max-width: 55vw;
   border-radius: 10px;
@@ -377,18 +374,18 @@ form .contact_data input{
   height: 24px;
   margin: 0;
 }
-form .check_data input{
+form .check_data input {
   color: #ddd;
   background-color: #280000;
   border: none;
 }
-form .contact_data input:focus{
+form .contact_data input:focus {
   background-color: #ffd;
 }
-form .contact_data label:last-child input{
+form .contact_data label:last-child input {
   width: 70%;
 }
-form > input{
+form > input {
   margin-top: 20px;
   margin-bottom: -10px;
   margin-left: auto;
@@ -398,13 +395,13 @@ form > input{
   border-radius: 20px;
   border: none;
 }
-form span{
+form span {
   font-size: 14px;
   color: #aaa;
 }
 
 /* 更多主題 */
-.see_more{
+.see_more {
   --topicWidth: calc((100vw - 40px) * 2 / 3 - 40px);
   color: #fff;
   padding: 20px;
@@ -419,19 +416,19 @@ form span{
   border-radius: 15px;
   background-color: var(--main-color);
 }
-.see_more > div:first-of-type{
+.see_more > div:first-of-type {
   font-size: 0;
   overflow: auto;
   width: 100%;
   height: calc(var(--topicWidth) + 60px);
 }
-.see_more .topicGroup{
+.see_more .topicGroup {
   width: calc((var(--topicWidth) + 40px) * 6);
 }
-.see_more h2{
+.see_more h2 {
   margin: 60px 0 20px;
 }
-.see_more a{
+.see_more a {
   box-shadow: 1px 2px 10px 3px #fff5;
   border-radius: 30px;
   margin: 20px;
@@ -441,14 +438,14 @@ form span{
   overflow: hidden;
   display: inline-block;
 }
-.see_more a > img{
+.see_more a > img {
   height: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
-.see_more a:hover > img{
-  transform:scale(1.1,1.1);
+.see_more a:hover > img {
+  transform: scale(1.1, 1.1);
 }
-.see_more .info{
+.see_more .info {
   position: absolute;
   top: 0;
   left: 0;
@@ -457,95 +454,95 @@ form span{
   padding: 10px;
   box-sizing: border-box;
   background-color: #0003;
-  transition: .2s;
+  transition: 0.2s;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.see_more a:hover .info{
+.see_more a:hover .info {
   background-color: #0001;
 }
-.see_more .game_hard{
+.see_more .game_hard {
   margin: 3px;
   font-size: 0;
 }
-.see_more .info .icon{
+.see_more .info .icon {
   height: 15px;
   margin-right: 3px;
   filter: invert(60%);
 }
-.see_more .game_hard .icon{
+.see_more .game_hard .icon {
   filter: invert(30%);
 }
-.see_more .topicGroup a.eazy .game_hard .icon:nth-of-type(-n+3),
-.see_more .topicGroup a.ordinary .game_hard .icon:nth-of-type(-n+4),
-.see_more .topicGroup a.difficulty .game_hard .icon{
-    filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
+.see_more .topicGroup a.eazy .game_hard .icon:nth-of-type(-n + 3),
+.see_more .topicGroup a.ordinary .game_hard .icon:nth-of-type(-n + 4),
+.see_more .topicGroup a.difficulty .game_hard .icon {
+  filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
 }
-.see_more h3{
+.see_more h3 {
   color: #fff;
   line-height: 1.2;
   overflow: hidden;
-  text-overflow : ellipsis;
+  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.see_more .info span{
+.see_more .info span {
   font-size: 16px;
   margin: 3px;
   color: #888;
 }
-.see_more .info .game_place{
+.see_more .info .game_place {
   display: none;
 }
-.btnGroup{
+.btnGroup {
   display: none;
 }
 
-@media screen and (min-width:480px) {
-  .see_more .info{
+@media screen and (min-width: 480px) {
+  .see_more .info {
     padding: 20px;
     background-color: #0009;
   }
-  .see_more .game_hard{
+  .see_more .game_hard {
     margin: 5px;
   }
-  .see_more .info .icon{
+  .see_more .info .icon {
     margin-right: 5px;
   }
-  .see_more h3{
+  .see_more h3 {
     padding: 5px;
     line-height: 1.5;
   }
-  .see_more .info span{
+  .see_more .info span {
     margin: 5px;
   }
 }
 
-@media screen and (min-width:535px) and (max-width:700px) {
-  .topic .about span{
+@media screen and (min-width: 535px) and (max-width: 700px) {
+  .topic .about span {
     width: 240px;
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /* 預約流程 */
-  .reserve_process{
+  .reserve_process {
     max-width: 1200px;
   }
-  .reserve_process .item_group{
+  .reserve_process .item_group {
     flex-direction: row;
     justify-content: center;
   }
   .reserve_process .item_group a,
-  .reserve_process .item_group div{
+  .reserve_process .item_group div {
     width: calc(100% / 4 - 50px);
   }
-  .reserve_process img{
+  .reserve_process img {
     padding: 30px;
   }
-  .reserve_process .item_group div:after{
+  .reserve_process .item_group div:after {
     width: 0;
     height: 0;
     background-color: transparent;
@@ -556,11 +553,11 @@ form span{
     left: 0;
   }
   .reserve_process .item_group a::before,
-  .reserve_process .item_group div::before{
+  .reserve_process .item_group div::before {
     content: none;
   }
   /* 預約密室 */
-  .topic_reserve{
+  .topic_reserve {
     background-color: #280000;
     color: #fff;
     display: flex;
@@ -570,81 +567,81 @@ form span{
     margin: auto;
   }
   /* 介紹左欄 */
-  .topic{
+  .topic {
     width: 0;
     flex-grow: 1;
   }
-  .topic .pic{
+  .topic .pic {
     height: 450px;
   }
 
   /* 預約右欄 */
-  .topic_reserve #reserve{
+  .topic_reserve #reserve {
     padding: 20px 20px 20px 0;
     width: 300px;
   }
   /* 選擇其他主題 */
-  .choose{
+  .choose {
     margin: 0 20px 20px 0;
   }
   /* 參與人數 */
-  .players{
+  .players {
     margin: 20px 20px 20px 0;
   }
   /* 日期 */
-  .date{
+  .date {
     border: 1px solid #888;
     margin: 20px 20px 20px 0;
     border-radius: 10px;
   }
-  .date tbody span{
+  .date tbody span {
     display: inline-block;
     border-radius: 12px;
     width: 100%;
     font-size: 16px;
   }
   /* 場次 */
-  .session{
+  .session {
     margin: 20px 20px 20px 0;
   }
-  .session label div{
+  .session label div {
     display: inline-block;
     font-size: 16px;
   }
-  .session .empty label div{
+  .session .empty label div {
     margin: auto;
     margin-top: 10px;
     width: 90%;
   }
 
   /* 更多主題 */
-  .see_more{
+  .see_more {
     --topicWidth: calc((100vw - 40px) / 3 - 40px);
     max-width: 1200px;
     box-sizing: border-box;
     margin: auto;
   }
-  .see_more > div:first-of-type{
+  .see_more > div:first-of-type {
     overflow: hidden;
     position: relative;
     height: calc(var(--topicWidth) + 40px);
   }
-  .see_more .topicGroup{
+  .see_more .topicGroup {
     position: relative;
     left: 0;
-    transition: left .5s;
+    transition: left 0.5s;
   }
-  .see_more a{
+  .see_more a {
     max-width: 270px;
     max-height: 270px;
     width: var(--topicWidth);
     height: var(--topicWidth);
   }
-  .btnGroup{
+  .btnGroup {
     display: block;
     position: relative;
   }
-  .btnGroup input{
+  .btnGroup input {
     cursor: pointer;
     display: block;
     position: absolute;
@@ -656,28 +653,27 @@ form span{
     border-top: 5px solid #fff;
     border-left: 5px solid #fff;
   }
-  .btnGroup input:disabled{
+  .btnGroup input:disabled {
     border: 5px solid transparent;
   }
-  .btnGroup input:first-of-type{
+  .btnGroup input:first-of-type {
     left: 0px;
-    transform: translate(0,-50%) rotate(-45deg);
+    transform: translate(0, -50%) rotate(-45deg);
   }
-  .btnGroup input:last-of-type{
+  .btnGroup input:last-of-type {
     right: 0px;
-    transform: translate(0,-50%) rotate(135deg);
+    transform: translate(0, -50%) rotate(135deg);
   }
 }
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   /* 更多主題 */
-  .see_more{
+  .see_more {
     --topicWidth: calc((100vw - 40px) / 4 - 40px);
   }
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   /* 更多主題 */
-  .see_more{
+  .see_more {
     --topicWidth: calc((1200px - 40px) / 4 - 40px);
   }
 }
-

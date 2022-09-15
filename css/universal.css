@@ -1,42 +1,42 @@
-*{
-  font-family:"微軟正黑體","Microsoft JhengHei","Times New Roman";
+* {
+  font-family: '微軟正黑體', 'Microsoft JhengHei', 'Times New Roman';
 }
-html{
+html {
   --main-color: brown;
 }
-img{
+img {
   vertical-align: middle;
 }
-h1{
+h1 {
   text-align: center;
   font-size: 44px;
   font-weight: 600;
 }
-h2{
+h2 {
   font-size: 36px;
 }
-h3{
+h3 {
   font-size: 24px;
 }
-p{
+p {
   font-size: 18px;
 }
-a{
+a {
   text-decoration: none;
 }
 select,
 input {
-  -webkit-appearance: none;  /* Sdc2f02ri 和 Chrome，常用於iOS下移除內建樣式 */
-  -moz-appearance: none;     /* FireFox */
+  -webkit-appearance: none; /* Sdc2f02ri 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none; /* FireFox */
   appearance: none;
 }
 
 /* 卷軸 */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
   background-color: #220000;
 }
-::-webkit-scrollbar-button{
+::-webkit-scrollbar-button {
   height: 2px;
 }
 ::-webkit-scrollbar-thumb {
@@ -45,7 +45,7 @@ input {
 }
 
 /* loading畫面 */
-#loading{
+#loading {
   position: fixed;
   top: 0;
   left: 0;
@@ -55,92 +55,73 @@ input {
   color: #fff;
   z-index: 100;
 }
-#loading .loadingAnimation{
+#loading .loadingAnimation {
   width: 30px;
   height: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: #fff;
-  animation: loading  2s linear  infinite alternate;
+  animation: loading 2s linear infinite alternate;
 }
-@keyframes loading{
-  0%{
-    box-shadow: 0 -30px 0 #ffba08,
-                0 -30px 0 #ffba08,
-                0 -30px 0 #ffba08;
+@keyframes loading {
+  0% {
+    box-shadow: 0 -30px 0 #ffba08, 0 -30px 0 #ffba08, 0 -30px 0 #ffba08;
   }
-  8%{
-    box-shadow: 0 -30px 0 #ffba08,
-                0 -30px 0 #ffba08,
-                -15px -15px 0 #faa307;
+  8% {
+    box-shadow: 0 -30px 0 #ffba08, 0 -30px 0 #ffba08, -15px -15px 0 #faa307;
   }
-  16%{
-    box-shadow: 0 -30px 0 #ffba08,
-                -15px -15px 0 #faa307,
-                -30px 0 0 #f48c06;
+  16% {
+    box-shadow: 0 -30px 0 #ffba08, -15px -15px 0 #faa307, -30px 0 0 #f48c06;
   }
-  24%{
-    box-shadow: -15px -15px 0 #faa307,
-                -30px 0 0 #f48c06,
-                -15px 15px 0 #e85d04;
+  24% {
+    box-shadow: -15px -15px 0 #faa307, -30px 0 0 #f48c06, -15px 15px 0 #e85d04;
   }
-  32%{
-    box-shadow: -30px 0 0 #f48c06,
-                -15px 15px 0 #e85d04,
-                0 30px 0 #dc2f02;
+  32% {
+    box-shadow: -30px 0 0 #f48c06, -15px 15px 0 #e85d04, 0 30px 0 #dc2f02;
   }
-  40%{
-    box-shadow: -15px 15px 0 #e85d04,
-                0 30px 0 #dc2f02,
-                15px 15px 0 #d00000;
+  40% {
+    box-shadow: -15px 15px 0 #e85d04, 0 30px 0 #dc2f02, 15px 15px 0 #d00000;
   }
-  48%{
-    box-shadow: 0 30px 0 #dc2f02,
-                15px 15px 0 #d00000,
-                30px 0 0 #9d0208;
+  48% {
+    box-shadow: 0 30px 0 #dc2f02, 15px 15px 0 #d00000, 30px 0 0 #9d0208;
   }
-  56%{
-    box-shadow: 15px 15px 0 #d00000,
-                30px 0 0 #9d0208,
-                15px -15px 0 #6a040f;
+  56% {
+    box-shadow: 15px 15px 0 #d00000, 30px 0 0 #9d0208, 15px -15px 0 #6a040f;
   }
-  64%{
-    box-shadow: 30px 0 0 #9d0208,
-                15px -15px 0 #6a040f,
-                0 -30px 0 #370617;
+  64% {
+    box-shadow: 30px 0 0 #9d0208, 15px -15px 0 #6a040f, 0 -30px 0 #370617;
   }
-  72%{
-    box-shadow: 15px -15px 0 #6a040f,
-                0 -30px 0 #370617;
+  72% {
+    box-shadow: 15px -15px 0 #6a040f, 0 -30px 0 #370617;
   }
-  80%{
+  80% {
     background-color: #fff;
     box-shadow: 0 -30px 0 #370617;
   }
-  85%{
+  85% {
     background-color: #03071e;
     box-shadow: 0 -5px 30px #fff;
   }
-  90%{
+  90% {
     background-color: #03071e;
     box-shadow: 5px 0 30px #fff;
   }
-  95%{
+  95% {
     background-color: #03071e;
     box-shadow: 0 5px 30px #fff;
   }
-  100%{
+  100% {
     background-color: #03071e;
     box-shadow: -5px 0 30px #fff;
   }
 }
 
 /* 導覽列 */
-.header_float{
-  background-color: rgba(165, 42, 42, .7);
+.header_float {
+  background-color: rgba(165, 42, 42, 0.7);
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -151,10 +132,10 @@ input {
   width: 100%;
   padding: 10px 10px;
 }
-.header_float > a{
+.header_float > a {
   height: 100%;
 }
-.header_float .logo{
+.header_float .logo {
   height: 100%;
 }
 /* 圓形選單 */
@@ -168,20 +149,20 @@ input {
 /* 叉叉 */
 .circular-menu .floating-btn::before,
 .circular-menu .floating-btn::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 38px;
   right: 35px;
   border-radius: 5px;
   width: 30px;
   height: 4px;
-  background-color: #F3D764;
-  transition: .3s;
+  background-color: #f3d764;
+  transition: 0.3s;
 }
 .circular-menu .floating-btn::before {
   top: 18px;
   right: 35px;
-  box-shadow:0 10px 0 0  #F3D764;
+  box-shadow: 0 10px 0 0 #f3d764;
 }
 .circular-menu.active .floating-btn::after {
   top: 28px;
@@ -209,12 +190,12 @@ input {
   z-index: -2;
   background-color: var(--main-color);
   box-shadow: inset 0 0 10px #441111;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .circular-menu.active:after {
   display: block;
   transform: scale(16, 16);
-  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+  transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
 }
 /* 連結 */
 .circular-menu .menu-item {
@@ -232,12 +213,12 @@ input {
   z-index: -1;
   display: block;
   color: hsl(0, 0%, 100%);
-  background: linear-gradient(30deg, #0008 30%,#0000 70%);
-  transition: transform .3s ease;
+  background: linear-gradient(30deg, #0008 30%, #0000 70%);
+  transition: transform 0.3s ease;
 }
 /* 選單連結動態 */
 .circular-menu .menu-item:hover {
-  background: linear-gradient(30deg, #280000 40%,#0000 70%);
+  background: linear-gradient(30deg, #280000 40%, #0000 70%);
 }
 .circular-menu.active .menu-item {
   opacity: 1;
@@ -272,12 +253,12 @@ input {
 }
 
 /* 搜尋欄 */
-.header_float label{
+.header_float label {
   display: none;
 }
 
 /* 頭 */
-.banner{
+.banner {
   height: 65vh;
   width: 100%;
   position: fixed;
@@ -287,14 +268,14 @@ input {
   text-align: center;
   box-shadow: 0 -200px 500px #000 inset;
 }
-.banner h1{
+.banner h1 {
   margin-top: 40vh;
 }
-main{
+main {
   background-color: #090000;
   color: #fff;
 }
-main section:first-child{
+main section:first-child {
   margin-top: 60vh;
 }
 
@@ -302,7 +283,7 @@ main section:first-child{
 #light_off.on {
   display: block;
 }
-#light_off{
+#light_off {
   display: none;
   height: 100vh;
   width: 100%;
@@ -314,7 +295,7 @@ main section:first-child{
 }
 /* 叉叉 */
 #light_off::after,
-#light_off::before{
+#light_off::before {
   content: '';
   width: 40px;
   height: 10px;
@@ -323,14 +304,14 @@ main section:first-child{
   position: absolute;
   right: 50%;
   bottom: 50%;
-  transform: translate(50%,calc(-50% + 50px)) rotate(45deg);
+  transform: translate(50%, calc(-50% + 50px)) rotate(45deg);
 }
-#light_off::after{
-  transform: translate(50%,calc(-50% + 50px)) rotate(-45deg);
+#light_off::after {
+  transform: translate(50%, calc(-50% + 50px)) rotate(-45deg);
 }
 
 /* 尾 */
-footer{
+footer {
   position: relative;
   z-index: 1;
   background-color: #220000;
@@ -342,15 +323,15 @@ footer{
   line-height: 1.5em;
   padding-top: 60px;
 }
-footer div p{
+footer div p {
   font-size: 16px;
 }
-footer h3{
+footer h3 {
   margin-bottom: 10px;
   color: #ddd;
 }
 footer .branch_group,
-footer .other_info{
+footer .other_info {
   border: none;
   display: flex;
   flex-direction: column;
@@ -359,49 +340,43 @@ footer .other_info{
   max-width: 300px;
 }
 footer .branch_group > div,
-footer .other_info > div{
+footer .other_info > div {
   border-left: 3px solid hsl(48, 86%, 67%);
   width: 70%;
   max-width: 235px;
   margin-bottom: 30px;
   padding-left: 10px;
 }
-footer .other_info > div{
+footer .other_info > div {
   border-left: 3px solid var(--main-color);
 }
-footer .follow .link{
+footer .follow .link {
   font-size: 0;
 }
-footer .follow .link a{
+footer .follow .link a {
   display: inline-block;
   padding: 5px 10px 5px 5px;
   height: 40px;
 }
-footer .follow .link img{
+footer .follow .link img {
   height: 40px;
   filter: invert(100%);
 }
 
-.copyright{
+.copyright {
   background-color: #220000;
   text-align: center;
   font-size: 14px;
   color: #888;
 }
-.copyright .logo{
+.copyright .logo {
   width: 50px;
   margin-bottom: 5px;
 }
 
-
-
-
-
-
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /* 導覽列 */
-  .header_float{
+  .header_float {
     justify-content: space-around;
     padding: 5px;
   }
@@ -441,11 +416,11 @@ footer .follow .link img{
   .circular-menu .menu-item:hover {
     background: none;
   }
-  .circular-menu nav{
+  .circular-menu nav {
     font-size: 0;
   }
-  .circular-menu .menu-item::before{
-    content: " ";
+  .circular-menu .menu-item::before {
+    content: ' ';
     width: 100%;
     height: 0;
     position: absolute;
@@ -454,67 +429,63 @@ footer .follow .link img{
     left: 0;
     margin: auto;
     background-color: #44111190;
-    transition: .8s;
+    transition: 0.8s;
   }
-  .circular-menu .menu-item:hover::before{
+  .circular-menu .menu-item:hover::before {
     height: 100%;
   }
   /* 搜尋欄 */
-  .header_float .search_bar{
+  .header_float .search_bar {
     display: block;
   }
-  .header_float label input{
+  .header_float label input {
     width: 70px;
     border: none;
-    background: url('pic/nav-search.png') no-repeat center/16px;
+    background: url('../pic/nav-search.png') no-repeat center/16px;
     caret-color: #aaa;
     color: #fff;
-    opacity: .8;
+    opacity: 0.8;
   }
-  .header_float .search_bar input::placeholder{
+  .header_float .search_bar input::placeholder {
     opacity: 0;
   }
-  .header_float .search_bar input:focus{
+  .header_float .search_bar input:focus {
     background: none;
     border-bottom: 2px solid #fff;
     outline: none;
     opacity: 1;
   }
-  .header_float .search_bar input:focus::placeholder{
+  .header_float .search_bar input:focus::placeholder {
     opacity: 0;
   }
 
-
-
   footer .branch_group,
-  footer .other_info{
+  footer .other_info {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
     max-width: none;
   }
-
-
 }
 
-@media screen and (min-width:992px) {   
+@media screen and (min-width: 992px) {
   /* 選單 */
   .circular-menu .menu-item {
     padding: 17px;
   }
   /* 搜尋欄 */
-  .header_float label input{
-    background: url('pic/nav-search.png') no-repeat right/16px;
+  .header_float label input {
+    background: url('../pic/nav-search.png') no-repeat right/16px;
     border-bottom: 2px solid #fff;
     width: 150px;
-    opacity: .5;
+    opacity: 0.5;
   }
-  .header_float .search_bar input::placeholder{
+  .header_float .search_bar input::placeholder {
     opacity: 1;
     color: #fff;
   }
-  .header_float .search_bar input:focus{
-    background: url('pic/nav-search.png') no-repeat right/16px;
+  .header_float .search_bar input:focus {
+    background: url('../pic/nav-search.png') no-repeat right/16px;
   }
 }

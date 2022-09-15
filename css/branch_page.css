@@ -1,28 +1,28 @@
-.circular-menu .menu-item:nth-child(4){
+.circular-menu .menu-item:nth-child(4) {
   background-color: #441111;
 }
-.banner{
-  background: url('pic/branch_page.webp');
-  background-repeat:no-repeat;
+.banner {
+  background: url('../pic/branch_page.webp');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.address{
+.address {
   line-height: 2em;
   position: relative;
   color: #ddd;
   border-bottom: 2px dashed #280000;
   padding: 30px 0;
 }
-.address >img{
+.address > img {
   display: block;
   height: 280px;
   margin: auto;
   filter: invert(100%);
-  padding: 30px 0; 
+  padding: 30px 0;
 }
-.address label{
+.address label {
   margin: auto;
   cursor: pointer;
   display: block;
@@ -36,7 +36,7 @@
 }
 
 /* 地圖點點 */
-.address > a{
+.address > a {
   position: absolute;
   top: 0;
   left: 50%;
@@ -46,30 +46,30 @@
   background-color: var(--main-color);
   border: 5px solid #441111;
 }
-.address a:nth-of-type(1){
+.address a:nth-of-type(1) {
   top: 90px;
-  transform: translate(-20%,0);
+  transform: translate(-20%, 0);
 }
-.address a:nth-of-type(2){
+.address a:nth-of-type(2) {
   top: 160px;
-  transform: translate(-180%,0);
+  transform: translate(-180%, 0);
 }
-.address a:nth-of-type(3){
+.address a:nth-of-type(3) {
   top: 270px;
-  transform: translate(-170%,0);
+  transform: translate(-170%, 0);
 }
 
 /* 點點名稱 */
-.address a:nth-of-type(1)::before{
-  content: "桃園館";
+.address a:nth-of-type(1)::before {
+  content: '桃園館';
 }
-.address a:nth-of-type(2)::before{
-  content: "台中館";
+.address a:nth-of-type(2)::before {
+  content: '台中館';
 }
-.address a:nth-of-type(3)::before{
-  content: "屏東館";
+.address a:nth-of-type(3)::before {
+  content: '屏東館';
 }
-.address a::before{
+.address a::before {
   position: absolute;
   left: 40px;
   top: -10px;
@@ -80,8 +80,8 @@
   border-radius: 10px;
 }
 
-.address a::after{
-  content: "";
+.address a::after {
+  content: '';
   position: absolute;
   left: 30px;
   top: 6px;
@@ -94,10 +94,10 @@
 }
 
 /* 卡片翻頁效果 */
-.address input{
+.address input {
   display: none;
 }
-.address label .card_front_side{
+.address label .card_front_side {
   border-radius: 10px;
   box-shadow: 0 0 15px #222;
   width: 100%;
@@ -112,14 +112,14 @@
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 }
-.address label .card_back_side{
+.address label .card_back_side {
   border-radius: 10px;
   box-shadow: 0 0 15px #888;
   width: 100%;
   height: 450px;
   padding: 20px 10px;
-  border-block: 3px solid #F3D764;
-  border-inline: 1px dashed #F3D764;
+  border-block: 3px solid #f3d764;
+  border-inline: 1px dashed #f3d764;
   background-color: #0005;
   box-sizing: border-box;
   position: absolute;
@@ -154,63 +154,62 @@ input:checked ~ .card_back_side {
 }
 
 /* 卡片內容 */
-.address label:hover .card_front_side p:first-of-type{
+.address label:hover .card_front_side p:first-of-type {
   height: 65px;
 }
-.address label .card_front_side img{
+.address label .card_front_side img {
   border-radius: 10px 10px 0 0;
   width: 100%;
 }
-.address label .card_front_side .pic{
+.address label .card_front_side .pic {
   max-height: 50%;
   overflow: hidden;
 }
-.address label .card_front_side .detail{
+.address label .card_front_side .detail {
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   flex-grow: 1;
 }
-.address label .card_front_side h2{
+.address label .card_front_side h2 {
   color: #fff;
 }
-.address label .card_front_side button{
+.address label .card_front_side button {
   background-color: transparent;
   color: #ddd;
   border: none;
 }
-.address label .card_back_side .detail p{
+.address label .card_back_side .detail p {
   color: #aaa;
   padding-bottom: 20px;
 }
 
-footer{
+footer {
   background-color: #000;
 }
 
-
-@media screen and (min-width:768px) {
-  .address .row{
+@media screen and (min-width: 768px) {
+  .address .row {
     justify-content: center;
   }
-  .address label{
+  .address label {
     margin: 0;
     width: calc(100% / 3 - 40px);
     max-width: 400px;
     padding: 30px 20px 0 20px;
   }
-  .address label .card_back_side{
+  .address label .card_back_side {
     top: 30px;
     margin: 0 20px;
     width: calc(100% - 40px);
   }
 
-  .address a{
+  .address a {
     display: none;
   }
   /* 地圖點點 */
-  .address .place_point{
+  .address .place_point {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -218,33 +217,33 @@ footer{
     background-color: var(--main-color);
     border: 5px solid #441111;
   }
-  .address .row label:nth-of-type(1) .place_point{
+  .address .row label:nth-of-type(1) .place_point {
     top: -280px;
     left: 150%;
-    transform: translate(-20%,0);
+    transform: translate(-20%, 0);
   }
-  .address .row label:nth-of-type(2) .place_point{
+  .address .row label:nth-of-type(2) .place_point {
     top: -210px;
     left: 50%;
-    transform: translate(-180%,0);
+    transform: translate(-180%, 0);
   }
-  .address .row label:nth-of-type(3) .place_point{
+  .address .row label:nth-of-type(3) .place_point {
     top: -100px;
     left: -50%;
-    transform: translate(-170%,0);
+    transform: translate(-170%, 0);
   }
 
   /* 點點名稱 */
-  .address .row label:nth-of-type(1) .place_point::before{
-    content: "桃園館";
+  .address .row label:nth-of-type(1) .place_point::before {
+    content: '桃園館';
   }
-  .address .row label:nth-of-type(2) .place_point::before{
-    content: "台中館";
+  .address .row label:nth-of-type(2) .place_point::before {
+    content: '台中館';
   }
-  .address .row label:nth-of-type(3) .place_point::before{
-    content: "屏東館";
+  .address .row label:nth-of-type(3) .place_point::before {
+    content: '屏東館';
   }
-  .address .place_point::before{
+  .address .place_point::before {
     position: absolute;
     left: 40px;
     top: -10px;
@@ -255,8 +254,8 @@ footer{
     border-radius: 10px;
   }
 
-  .address .place_point::after{
-    content: "";
+  .address .place_point::after {
+    content: '';
     position: absolute;
     left: 30px;
     top: 6px;
@@ -268,14 +267,14 @@ footer{
     border-bottom: 5px solid transparent;
   }
 
-  footer{
+  footer {
     padding: 0;
-  }  
+  }
   footer .other_info {
     flex-wrap: nowrap;
     padding: 60px;
   }
-  footer .other_info >div{
+  footer .other_info > div {
     max-width: 210px;
     border: 0;
     border-top: 3px solid var(--main-color);
@@ -284,8 +283,8 @@ footer{
   }
 }
 
-@media screen and (min-width:992px) {
-  .address label{
+@media screen and (min-width: 992px) {
+  .address label {
     height: 430px;
   }
   .address label .card_front_side {
@@ -294,8 +293,8 @@ footer{
   .address label .card_back_side {
     height: 430px;
   }
-  
-  footer .other_info >div{
+
+  footer .other_info > div {
     max-width: 235px;
     border: 0;
     border-left: 3px solid var(--main-color);
@@ -304,8 +303,8 @@ footer{
   }
 }
 
-@media screen and (min-width:1275px) {
-  .address label{
+@media screen and (min-width: 1275px) {
+  .address label {
     height: 360px;
   }
   .address label .card_front_side {

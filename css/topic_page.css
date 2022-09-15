@@ -1,16 +1,15 @@
-.circular-menu .menu-item:nth-child(1){
+.circular-menu .menu-item:nth-child(1) {
   background-color: #441111;
 }
-.banner{
-  background: url('pic/topic_page.webp');
-  background-repeat:no-repeat;
+.banner {
+  background: url('../pic/topic_page.webp');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-
 /* 主題 */
-.topic{
+.topic {
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -18,14 +17,14 @@
   margin: auto;
   padding-bottom: 60px;
 }
-.topic h2{
+.topic h2 {
   margin: 60px 20px 20px;
   width: 100%;
   display: flex;
   align-items: center;
 }
-.topic h2::after{
-  content: " ";
+.topic h2::after {
+  content: ' ';
   height: 0;
   width: 40px;
   border-radius: 2px;
@@ -34,11 +33,11 @@
   flex-grow: 1;
   margin-left: 30px;
 }
-.topic h3{
+.topic h3 {
   color: #fff;
   margin: 10px 5px;
 }
-.topic > a{
+.topic > a {
   box-shadow: 1px 2px 10px 3px #fff5;
   border-radius: 30px;
   margin: 20px;
@@ -47,7 +46,7 @@
   position: relative;
   overflow: hidden;
 }
-.topic .info{
+.topic .info {
   position: absolute;
   top: 0;
   left: 0;
@@ -56,40 +55,40 @@
   padding: 20px;
   box-sizing: border-box;
   background-color: #0004;
-  transition: .2s;
+  transition: 0.2s;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   text-align: end;
 }
-.topic > a > img{
+.topic > a > img {
   height: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
-.topic > a:hover .info{
+.topic > a:hover .info {
   background-color: #0001;
 }
-.topic > a:hover > img{
-  transform:scale(1.1,1.1);
+.topic > a:hover > img {
+  transform: scale(1.1, 1.1);
 }
-.topic .game_hard{
+.topic .game_hard {
   margin: 5px;
   font-size: 0;
 }
-.topic .info .icon{
+.topic .info .icon {
   height: 15px;
   margin-right: 5px;
   filter: invert(90%);
 }
-.topic .game_hard .icon{
+.topic .game_hard .icon {
   filter: invert(30%);
 }
-.topic > .eazy .game_hard .icon:nth-of-type(-n+3),
-.topic > .ordinary .game_hard .icon:nth-of-type(-n+4),
-.topic > .difficulty .game_hard .icon{
+.topic > .eazy .game_hard .icon:nth-of-type(-n + 3),
+.topic > .ordinary .game_hard .icon:nth-of-type(-n + 4),
+.topic > .difficulty .game_hard .icon {
   filter: invert(85%) sepia(60%) saturate(600%) hue-rotate(350deg);
 }
-.topic .info span{
+.topic .info span {
   margin: 5px;
   color: #ddd;
   display: flex;
@@ -98,7 +97,7 @@
 }
 
 /* 職業病系列 */
-.topic a .occupational_disease::before{
+.topic a .occupational_disease::before {
   content: '';
   height: 0;
   width: 0;
@@ -110,7 +109,7 @@
   position: absolute;
   z-index: 1;
 }
-.topic a .occupational_disease::after{
+.topic a .occupational_disease::after {
   content: '職業病系列';
   color: #fff;
   top: 36px;
@@ -119,7 +118,7 @@
   z-index: 1;
 }
 /* 高人氣 */
-.topic a .hot::before{
+.topic a .hot::before {
   content: '';
   height: 0;
   width: 0;
@@ -131,7 +130,7 @@
   position: absolute;
   z-index: 1;
 }
-.topic a .hot::after{
+.topic a .hot::after {
   content: '高人氣';
   color: #fff;
   top: 36px;
@@ -140,49 +139,46 @@
   z-index: 1;
 }
 
-
-@media screen and (min-width:480px) {
+@media screen and (min-width: 480px) {
   /* 更多主題 */
-  .topic{
+  .topic {
     max-width: 740px;
   }
-  .topic .info{
+  .topic .info {
     text-align: start;
   }
-  .topic > a{
+  .topic > a {
     margin: 20px;
     width: calc(100% / 2 - 40px);
   }
 
-  .topic .info span{
+  .topic .info span {
     justify-content: flex-start;
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /* 更多主題 */
-  .topic{
+  .topic {
     max-width: 900px;
   }
-  .topic .info{
+  .topic .info {
     text-align: start;
     background-color: #0009;
   }
-  .topic > a{
+  .topic > a {
     margin: 30px;
     height: 350px;
     width: calc(100% / 2 - 60px);
   }
 }
 
-
-
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   /* 更多主題 */
-  .topic{
+  .topic {
     max-width: 1200px;
   }
-  .topic > a{
+  .topic > a {
     width: calc(100% / 3 - 60px);
   }
 }
