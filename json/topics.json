@@ -1,0 +1,178 @@
+[
+	{
+		"game_id": 1001,
+		"game_name": "五十肩",
+		"game_hard": "eazy",
+		"game_players": 3,
+		"game_time": 60,
+		"game_tag": "occupational_disease",
+		"game_place": "桃園金萱館",
+		"game_info": "",
+		"game_pic": ["50shoulder.webp"]
+	},
+	{
+		"game_id": 1002,
+		"game_name": "美麗實驗",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "hot",
+		"game_place": "桃園金萱館",
+		"game_info": "",
+		"game_pic": ["beauty-02.webp"]
+	},
+	{
+		"game_id": 1003,
+		"game_name": "白日夢",
+		"game_hard": "eazy",
+		"game_players": 3,
+		"game_time": 60,
+		"game_tag": "",
+		"game_place": "桃園金萱館",
+		"game_info": "",
+		"game_pic": ["daydream-02.jpg"]
+	},
+	{
+		"game_id": 1004,
+		"game_name": "你的名字",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "",
+		"game_place": "桃園金萱館",
+		"game_info": "",
+		"game_pic": ["yourname.webp"]
+	},
+	{
+		"game_id": 1005,
+		"game_name": "美麗實驗-EX",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "hot",
+		"game_place": "桃園金萱館",
+		"game_info": "",
+		"game_pic": ["beauty-ex.jpg"]
+	},
+	{
+		"game_id": 2001,
+		"game_name": "閃到腰",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "occupational_disease",
+		"game_place": "台中小葉館",
+		"game_info": "",
+		"game_pic": ["waist.webp"]
+	},
+	{
+		"game_id": 2002,
+		"game_name": "離家出走的毛髮",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "occupational_disease",
+		"game_place": "台中小葉館",
+		"game_info": "",
+		"game_pic": ["disapearhair.jpg"]
+	},
+	{
+		"game_id": 2003,
+		"game_name": "說謊的相機",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_place": "台中小葉館",
+		"game_tag": "hot",
+		"game_info": "CFD104號列車，一台沒什麼特別就是特別短的列車，2000年退役，2020年引擎系統汰換後重新行駛上路。\n只有三節的列車，適合舉辦小型活動，感受鐵路風情。\n今天“金孫結婚沒”，看上了搖搖晃晃的列車，一不小心就你摸我我壓你的，董事長金阿罵租下了CFD104號列車，舉辦聯誼活動，期盼早日抱上金孫孫。\n聖誕節不能宅在家，被迫參加了一場在列車上舉辦的聯誼活動，社交能量飛速的被消耗，你好不容易找到空檔往列車尾的廁所躲去，好不湊巧的和你有相同想法的有五位夥伴，在廁所有味道的相遇時，活動車廂卻突如其來的傳來尖叫聲！\n活動聘請的攝影師突然翻臉，煙霧後除了散落一地相片，還有一個滴答響的古怪箱子，以及失速的列車...\n全車的人性命受到威脅，奇怪的攝影師下的戰帖，你敢應下嗎?",
+		"game_pic": ["lie_photo-02.webp"]
+	},
+	{
+		"game_id": 2004,
+		"game_name": "ㄌㄌ",
+		"game_hard": "eazy",
+		"game_players": 3,
+		"game_time": 60,
+		"game_tag": "",
+		"game_place": "台中小葉館",
+		"game_info": "",
+		"game_pic": ["fbi.webp"]
+	},
+	{
+		"game_id": 2005,
+		"game_name": "Hey!Johnny",
+		"game_hard": "ordinary",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "",
+		"game_place": "台中小葉館",
+		"game_info": "",
+		"game_pic": ["johnny.webp"]
+	},
+	{
+		"game_id": 2006,
+		"game_name": "剩蛋液",
+		"game_hard": "eazy",
+		"game_players": 3,
+		"game_time": 60,
+		"game_tag": "",
+		"game_place": "台中小葉館",
+		"game_info": "",
+		"game_pic": ["xmas.webp"]
+	},
+	{
+		"game_id": 2007,
+		"game_name": "追七火葬場",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "",
+		"game_place": "台中小葉館",
+		"game_info": "",
+		"game_pic": ["runningwife.webp"]
+	},
+	{
+		"game_id": 3001,
+		"game_name": "眼中的倒影",
+		"game_hard": "ordinary",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "hot",
+		"game_place": "屏東四季館",
+		"game_info": "",
+		"game_pic": ["circus-02.webp"]
+	},
+	{
+		"game_id": 3002,
+		"game_name": "我們在傘下準備失去對方",
+		"game_hard": "difficulty",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "",
+		"game_place": "屏東四季館",
+		"game_info": "",
+		"game_pic": ["umbrella.webp"]
+	},
+	{
+		"game_id": 3003,
+		"game_name": "哩嘎挖店店",
+		"game_hard": "ordinary",
+		"game_players": 6,
+		"game_time": 120,
+		"game_tag": "",
+		"game_place": "屏東四季館",
+		"game_info": "",
+		"game_pic": ["shhhh.webp"]
+	},
+	{
+		"game_id": 3004,
+		"game_name": "美凰有約",
+		"game_hard": "eazy",
+		"game_players": 3,
+		"game_time": 60,
+		"game_tag": "",
+		"game_place": "屏東四季館",
+		"game_info": "",
+		"game_pic": ["datewithmeifeng.webp"]
+	}
+]
